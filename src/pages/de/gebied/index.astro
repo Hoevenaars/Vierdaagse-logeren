@@ -1,0 +1,28 @@
+---
+import ContentPage from '../../../layouts/ContentPage.astro';
+
+const areas = [
+  { slug: 'groesbeek', name: 'Groesbeek' },
+  { slug: 'wijchen', name: 'Wijchen' },
+  { slug: 'cuijk', name: 'Cuijk' },
+];
+---
+
+<ContentPage
+  title="Übernachten in der Umgebung von Nijmegen — Vierdaagse Logeren"
+  description="Übersicht der Orte rund um Nijmegen, in denen du während des Vierdaagse übernachten kannst."
+  locale="de"
+  h1="Übernachten in der Umgebung von Nijmegen"
+>
+  <p>
+    Nijmegen selbst ist während des Vierdaagse als Erstes ausgebucht. Die umliegenden
+    Gemeinden entlang der Strecke bieten oft mehr Verfügbarkeit bei vergleichbarer
+    Fahrzeit.
+  </p>
+  <ul>
+    {areas.map((area) => (
+      <li><a href={`/de/gebied/${area.slug}`}>{area.name}</a></li>
+    ))}
+  </ul>
+  <p class="callout">Wir erweitern diese Übersicht um weitere Orte entlang der Strecke.</p>
+</ContentPage>

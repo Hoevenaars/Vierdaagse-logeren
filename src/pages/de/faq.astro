@@ -1,0 +1,54 @@
+---
+import ContentPage from '../../layouts/ContentPage.astro';
+
+const faqs = [
+  {
+    q: 'Wann sollte ich für den Vierdaagse buchen?',
+    a: 'So früh wie möglich — sobald die Termine bekannt gegeben werden. Campingplätze und zentrale Hotels sind oft schon Monate im Voraus ausgebucht. Sieh dir den vollständigen Ratgeber für einen konkreten Zeitplan an.',
+  },
+  {
+    q: 'Ist Vierdaagse Logeren die offizielle Website der Veranstaltung?',
+    a: 'Nein. Vierdaagse Logeren ist unabhängig von der Stichting DE4D und der Gemeinde Nijmegen. Wir helfen Besuchern, eine Unterkunft zu finden, getrennt von der offiziellen Organisation.',
+  },
+  {
+    q: 'Was kostet eine Übernachtung während des Vierdaagse?',
+    a: 'Das hängt von der Unterkunftsart ab: Camping ist meist am günstigsten, Privatunterkünfte liegen dazwischen, und Hotels sind am teuersten — besonders zentral gelegene.',
+  },
+  {
+    q: 'Kann ich auch bei einer Privatperson übernachten?',
+    a: 'Ja, Privatunterkünfte (ein Zimmer, Garten oder Stellplatz bei jemandem zu Hause) sind eine beliebte und oft günstigere Alternative. Schau dir unsere Seite zu Privatunterkünften an.',
+  },
+  {
+    q: 'Gibt es auch Optionen außerhalb von Nijmegen?',
+    a: 'Auf jeden Fall. Orte wie Wijchen, Groesbeek und Cuijk liegen an der Strecke und bieten oft mehr Verfügbarkeit als Nijmegen selbst.',
+  },
+  {
+    q: 'Verdient ihr Geld, wenn ich über euch buche?',
+    a: 'Bei manchen Buchungen erhalten wir eine kleine Provision über Affiliate-Links. Das beeinflusst unsere Empfehlungen nicht und kostet dich nichts extra.',
+  },
+];
+---
+
+<ContentPage
+  title="Häufige Fragen — Vierdaagse Logeren"
+  description="Häufige Fragen zur Übernachtung während des Vierdaagse Nijmegen."
+  locale="de"
+  h1="Häufige Fragen zur Übernachtung während des Vierdaagse"
+>
+  <div itemscope itemtype="https://schema.org/FAQPage">
+    {faqs.map((item) => (
+      <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="faq-item">
+        <h2 itemprop="name">{item.q}</h2>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">{item.a}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</ContentPage>
+
+<style>
+  .faq-item {
+    margin-bottom: var(--space-5);
+  }
+</style>

@@ -1,0 +1,54 @@
+---
+import ContentPage from '../layouts/ContentPage.astro';
+
+const faqs = [
+  {
+    q: 'Wanneer moet ik boeken voor de Vierdaagse?',
+    a: 'Zo vroeg mogelijk — zodra de data bekend zijn. Campings en centrale hotels raken vaak al maanden van tevoren vol. Lees de volledige gids voor een concrete planning.',
+  },
+  {
+    q: 'Is Vierdaagse Logeren de officiële website van het evenement?',
+    a: 'Nee. Vierdaagse Logeren is onafhankelijk van Stichting DE4D en de gemeente Nijmegen. Wij helpen bezoekers een slaapplek te vinden, los van de officiële organisatie.',
+  },
+  {
+    q: 'Wat kost een overnachting tijdens de Vierdaagse?',
+    a: 'Dat verschilt per type verblijf: kamperen is doorgaans het goedkoopst, particuliere verhuur zit er vaak tussenin, en hotels zijn het duurst — zeker centraal gelegen.',
+  },
+  {
+    q: 'Kan ik ook bij een particulier slapen?',
+    a: 'Ja, particuliere verhuur (een kamer, tuin of oprit bij iemand thuis) is een populair en vaak goedkoper alternatief. Bekijk onze pagina over particuliere verhuur voor meer info.',
+  },
+  {
+    q: 'Zijn er ook opties buiten Nijmegen?',
+    a: 'Zeker. Plaatsen als Wijchen, Groesbeek en Cuijk liggen aan de route en bieden vaak meer beschikbaarheid dan Nijmegen zelf.',
+  },
+  {
+    q: 'Ontvangen jullie geld als ik via jullie boek?',
+    a: 'Bij sommige boekingen ontvangen wij een kleine commissie via affiliate-links. Dit heeft geen invloed op onze aanbevelingen en kost jou niets extra.',
+  },
+];
+---
+
+<ContentPage
+  title="Veelgestelde vragen — Vierdaagse Logeren"
+  description="Veelgestelde vragen over overnachten tijdens de Vierdaagse Nijmegen."
+  locale="nl"
+  h1="Veelgestelde vragen over overnachten tijdens de Vierdaagse"
+>
+  <div itemscope itemtype="https://schema.org/FAQPage">
+    {faqs.map((item) => (
+      <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="faq-item">
+        <h2 itemprop="name">{item.q}</h2>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">{item.a}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</ContentPage>
+
+<style>
+  .faq-item {
+    margin-bottom: var(--space-5);
+  }
+</style>

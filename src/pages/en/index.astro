@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InfoCard from '../../components/InfoCard.astro';
+import { useTranslations } from '../../i18n/utils';
+
+const locale = 'en' as const;
+const t = useTranslations(locale);
+---
+
+<BaseLayout
+  title="Vierdaagse Logeren — Book your Four Days Marches stay in time"
+  description="Find a place to stay during the Nijmegen Four Days Marches in time: camping, a private stay, or a hotel."
+  locale={locale}
+>
+  <section class="hero">
+    <h1>{t('home.h1')}</h1>
+    <p class="intro">{t('home.intro')}</p>
+  </section>
+
+  <section class="cards" aria-label="Type of stay">
+    <InfoCard title={t('card.camping.title')} text={t('card.camping.text')} href="/en/camping" />
+    <InfoCard title={t('card.particulier.title')} text={t('card.particulier.text')} href="/en/particuliere-verhuur" />
+    <InfoCard title={t('card.hotels.title')} text={t('card.hotels.text')} href="/en/hotels-bb" />
+  </section>
+
+  <section class="urgency">
+    <h2>When should you book?</h2>
+    <p>
+      Campsites and central accommodations are typically the first to sell out, often months
+      before the event. Start early — it saves both money and stress.
+    </p>
+    <a href="/en/gids/wanneer-boeken">Read the full guide &rarr;</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    text-align: center;
+    max-width: 40rem;
+    margin: 0 auto var(--space-6);
+  }
+  .hero h1 {
+    font-size: var(--font-size-2xl);
+    color: var(--color-primary);
+  }
+  .intro {
+    font-size: var(--font-size-lg);
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+  }
+  .urgency {
+    background: var(--color-secondary);
+    padding: var(--space-5);
+    border-radius: var(--radius-base);
+  }
+  .urgency h2 {
+    color: var(--color-accent-1);
+    margin-top: 0;
+  }
+</style>

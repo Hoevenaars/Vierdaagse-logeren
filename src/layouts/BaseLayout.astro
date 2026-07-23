@@ -1,0 +1,214 @@
+---
+import '../styles/tokens.css';
+import { languages, type Locale } from '../i18n/ui';
+import { useTranslations, getLocalizedPath } from '../i18n/utils';
+
+interface Props {
+  title: string;
+  description: string;
+  locale: Locale;
+}
+
+const { title, description, locale } = Astro.props;
+const t = useTranslations(locale);
+const currentPath = Astro.url.pathname;
+const canonicalUrl = new URL(currentPath, Astro.site);
+const ogImageUrl = new URL('/og-image.png', Astro.site);
+
+// hreflang: alle taalversies van dezelfde pagina, plus x-default (NL, geen prefix)
+const hreflangMap = {
+  nl: 'nl',
+  en: 'en',
+  de: 'de',
+} as const;
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/logos/logo-icon-effen.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="canonical" href={canonicalUrl} />
+
+    {/* hreflang — wijst zoekmachines naar de juiste taalversie per zoeker */}
+    {Object.keys(languages).map((code) => (
+      <link
+        rel="alternate"
+        hreflang={hreflangMap[code as Locale]}
+        href={new URL(getLocalizedPath(currentPath, code as Locale), Astro.site)}
+      />
+    ))}
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={new URL(getLocalizedPath(currentPath, 'nl'), Astro.site)}
+    />
+
+    {/* Open Graph */}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:locale" content={locale} />
+    <meta property="og:site_name" content="Vierdaagse Logeren" />
+
+    {/* Twitter Card */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Direct naar inhoud</a>
+
+    <header>
+      <div class="header-inner">
+        <a href={getLocalizedPath('/', locale)} class="logo-link">
+          <img src="/logos/logo-horizontaal.svg" alt="Vierdaagse Logeren" height="40" />
+        </a>
+        <nav aria-label="Hoofdnavigatie">
+          <ul>
+            <li><a href={getLocalizedPath('/camping', locale)}>{t('nav.camping')}</a></li>
+            <li><a href={getLocalizedPath('/particuliere-verhuur', locale)}>{t('nav.particulier')}</a></li>
+            <li><a href={getLocalizedPath('/hotels-bb', locale)}>{t('nav.hotels')}</a></li>
+            <li><a href={getLocalizedPath('/gebied', locale)}>{t('nav.gebieden')}</a></li>
+            <li><a href={getLocalizedPath('/gids/wanneer-boeken', locale)}>{t('nav.gids')}</a></li>
+          </ul>
+        </nav>
+        <div class="lang-switch" role="group" aria-label="Taal wisselen">
+          {Object.keys(languages).map((code) => (
+            <a
+              href={getLocalizedPath(currentPath, code as Locale)}
+              aria-current={code === locale ? 'true' : undefined}
+            >
+              {code.toUpperCase()}
+            </a>
+          ))}
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <nav aria-label="Footer-navigatie">
+          <a href={getLocalizedPath('/over-ons', locale)}>{t('nav.overons')}</a>
+          <a href={getLocalizedPath('/faq', locale)}>{t('nav.faq')}</a>
+        </nav>
+        <p class="disclosure">{t('footer.disclosure')}</p>
+      </div>
+    </footer>
+
+    <style>
+      :global(body) {
+        margin: 0;
+        font-family: var(--font-family-base);
+        color: var(--color-text-dark);
+        background: var(--color-white);
+        line-height: 1.6;
+      }
+
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        background: var(--color-primary);
+        color: var(--color-text-light);
+        padding: var(--space-2) var(--space-3);
+        z-index: 100;
+      }
+      .skip-link:focus {
+        left: var(--space-2);
+        top: var(--space-2);
+      }
+
+      header {
+        border-bottom: 1px solid var(--color-border);
+      }
+      .header-inner {
+        max-width: var(--max-width-content);
+        margin: 0 auto;
+        padding: var(--space-3) var(--space-4);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-4);
+        flex-wrap: wrap;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: var(--space-4);
+        margin: 0;
+        padding: 0;
+      }
+      nav a {
+        color: var(--color-text-dark);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      nav a:hover,
+      nav a:focus-visible {
+        color: var(--color-primary);
+        text-decoration: underline;
+      }
+      .lang-switch {
+        display: flex;
+        gap: var(--space-2);
+      }
+      .lang-switch a {
+        color: var(--color-text-dark);
+        text-decoration: none;
+        font-size: var(--font-size-sm);
+        padding: var(--space-1) var(--space-2);
+        border-radius: var(--radius-base);
+      }
+      .lang-switch a[aria-current='true'] {
+        background: var(--color-secondary);
+        color: var(--color-primary);
+        font-weight: 700;
+      }
+
+      main {
+        max-width: var(--max-width-content);
+        margin: 0 auto;
+        padding: var(--space-5) var(--space-4);
+      }
+
+      footer {
+        background: var(--color-secondary);
+        margin-top: var(--space-7);
+      }
+      .footer-inner {
+        max-width: var(--max-width-content);
+        margin: 0 auto;
+        padding: var(--space-5) var(--space-4);
+      }
+      .footer-inner nav {
+        display: flex;
+        gap: var(--space-4);
+        margin-bottom: var(--space-3);
+      }
+      .disclosure {
+        font-size: var(--font-size-sm);
+        color: var(--color-text-dark);
+        opacity: 0.8;
+      }
+
+      a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid var(--color-accent-2);
+        outline-offset: 2px;
+      }
+    </style>
+  </body>
+</html>
