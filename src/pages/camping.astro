@@ -1,5 +1,7 @@
 ---
 import ContentPage from '../layouts/ContentPage.astro';
+import AanmeldFormulier from '../components/AanmeldFormulier.astro';
+import campings from '../data/campings.json';
 ---
 
 <ContentPage
@@ -27,11 +29,36 @@ import ContentPage from '../layouts/ContentPage.astro';
     voorzieningen.
   </p>
 
-  <h2>Campings in dit gebied</h2>
-  <p class="callout">
-    We werken aan een overzicht van concrete campings met boekingslinks. Bekijk
-    ondertussen <a href="/gebied">de gebieden rond Nijmegen</a> voor algemene informatie.
-  </p>
+  {campings.length > 0 ? (
+    <>
+      <h2>Campings in dit gebied</h2>
+      <div class="location-list">
+        {campings.map((c: any) => (
+          <div class="location-card">
+            <h3>{c.naam} — {c.plaats}</h3>
+            <p class="location-type">{c.type}</p>
+            <p>{c.beschrijving}</p>
+            <p class="location-contact">Contact: {c.contact}</p>
+          </div>
+        ))}
+      </div>
+    </>
+  ) : (
+    <>
+      <h2>Campings in dit gebied</h2>
+      <p class="callout">
+        We werken aan een overzicht van concrete campings met boekingslinks. Bekijk
+        ondertussen <a href="/gebied">de gebieden rond Nijmegen</a> voor algemene informatie.
+      </p>
+    </>
+  )}
+
+  <AanmeldFormulier
+    categorie="camping"
+    typeOpties={['Camping', 'Kampeerboerderij', 'Anders']}
+    titel="Camping-eigenaar? Meld je aan"
+    introtekst="Heb je een camping in de omgeving van Nijmegen en wil je zichtbaar zijn tijdens de Vierdaagse? Meld je hieronder aan. We nemen contact op om de plaatsing en eventuele boekingslink te bespreken."
+  />
 
   <h2>Nog geen plek gevonden?</h2>
   <p>
@@ -39,3 +66,29 @@ import ContentPage from '../layouts/ContentPage.astro';
     <a href="/hotels-bb">hotels & B&B</a>.
   </p>
 </ContentPage>
+
+<style>
+  .location-list {
+    display: grid;
+    gap: var(--space-4);
+    margin-bottom: var(--space-5);
+  }
+  .location-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-base);
+    padding: var(--space-4);
+  }
+  .location-card h3 {
+    color: var(--color-primary);
+    margin: 0 0 var(--space-1);
+  }
+  .location-type {
+    font-weight: 600;
+    color: var(--color-accent-1);
+    margin: 0 0 var(--space-2);
+  }
+  .location-contact {
+    font-size: var(--font-size-sm);
+    opacity: 0.8;
+  }
+</style>

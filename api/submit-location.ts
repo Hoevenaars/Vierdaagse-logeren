@@ -18,7 +18,7 @@ export default async function handler(request: Request): Promise<Response> {
 
   try {
     const body = await request.json();
-    const { naam, plaats, type, beschrijving, contact, website_hp } = body;
+    const { naam, plaats, type, beschrijving, contact, categorie, website_hp } = body;
 
     // Honeypot-veld: bots vullen verborgen velden vaak automatisch in.
     // Een mens laat dit leeg; als het gevuld is, doen we alsof het gelukt is
@@ -59,17 +59,19 @@ export default async function handler(request: Request): Promise<Response> {
       body: JSON.stringify({
         from: 'Vierdaagse Logeren <aanmeldingen@vierdaagselogeren.nl>',
         to: [ownerEmail],
-        subject: `Nieuwe aanmelding particuliere verhuur: ${naam}`,
+        subject: `Nieuwe aanmelding (${categorie || 'onbekend type'}): ${naam}`,
         text: [
-          `Nieuwe aanmelding voor particuliere verhuur:`,
+          `Nieuwe aanmelding via Vierdaagse Logeren:`,
           ``,
+          `Categorie: ${categorie || '(niet opgegeven)'}`,
           `Naam: ${naam}`,
           `Plaats: ${plaats}`,
           `Type: ${type || '(niet opgegeven)'}`,
           `Beschrijving: ${beschrijving || '(niet opgegeven)'}`,
           `Contact: ${contact}`,
           ``,
-          `Goedkeuren? Voeg dit toe aan src/data/locations.json en redeploy.`,
+          `Goedkeuren? Voeg dit toe aan het juiste databestand (src/data/locations.json voor`,
+          `particulier, src/data/campings.json of src/data/hotels.json) en redeploy.`,
         ].join('\n'),
       }),
     });
