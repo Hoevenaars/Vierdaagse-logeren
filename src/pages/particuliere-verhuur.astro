@@ -1,5 +1,6 @@
 ---
 import ContentPage from '../layouts/ContentPage.astro';
+import locations from '../data/locations.json';
 ---
 
 <ContentPage
@@ -34,8 +35,190 @@ import ContentPage from '../layouts/ContentPage.astro';
     <li>Duidelijke afspraken over aankomst- en vertrektijden</li>
   </ul>
 
+  {locations.length > 0 && (
+    <>
+      <h2>Beschikbare locaties</h2>
+      <div class="location-list">
+        {locations.map((loc: any) => (
+          <div class="location-card">
+            <h3>{loc.naam} — {loc.plaats}</h3>
+            <p class="location-type">{loc.type}</p>
+            <p>{loc.beschrijving}</p>
+            <p class="location-contact">Contact: {loc.contact}</p>
+          </div>
+        ))}
+      </div>
+    </>
+  )}
+
+  <h2>Zelf een plek aanbieden?</h2>
+  <p>
+    Heb je een tuin, kamer of oprit die je tijdens de Vierdaagse wilt aanbieden? Meld je
+    hieronder aan. Elke aanmelding wordt handmatig gecontroleerd voordat deze zichtbaar
+    wordt — dit duurt meestal een paar dagen.
+  </p>
+
+  <form id="location-form" class="location-form">
+    <div class="form-field">
+      <label for="naam">Naam *</label>
+      <input type="text" id="naam" name="naam" required />
+    </div>
+    <div class="form-field">
+      <label for="plaats">Plaats *</label>
+      <input type="text" id="plaats" name="plaats" required />
+    </div>
+    <div class="form-field">
+      <label for="type">Type verblijf</label>
+      <select id="type" name="type">
+        <option value="Tuin/kampeerplek">Tuin/kampeerplek</option>
+        <option value="Kamer">Kamer</option>
+        <option value="Oprit">Oprit</option>
+        <option value="Anders">Anders</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <label for="beschrijving">Beschrijving</label>
+      <textarea id="beschrijving" name="beschrijving" rows="4"></textarea>
+    </div>
+    <div class="form-field">
+      <label for="contact">E-mailadres *</label>
+      <input type="email" id="contact" name="contact" required />
+    </div>
+
+    {/* Honeypot-veld tegen spam — onzichtbaar voor mensen, aantrekkelijk voor bots */}
+    <div class="honeypot" aria-hidden="true">
+      <label for="website_hp">Laat dit veld leeg</label>
+      <input type="text" id="website_hp" name="website_hp" tabindex="-1" autocomplete="off" />
+    </div>
+
+    <button type="submit">Aanmelden</button>
+    <p id="form-status" role="status" aria-live="polite"></p>
+  </form>
+
   <h2>Nog geen plek gevonden?</h2>
   <p>
     Bekijk ook <a href="/camping">camping</a> of <a href="/hotels-bb">hotels & B&B</a>.
   </p>
 </ContentPage>
+
+<script>
+  const form = document.getElementById('location-form') as HTMLFormElement;
+  const status = document.getElementById('form-status') as HTMLParagraphElement;
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.textContent = 'Versturen...';
+
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch('/api/submit-location', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        status.textContent = result.error || 'Er ging iets mis. Probeer het later opnieuw.';
+        return;
+      }
+
+      status.textContent = 'Bedankt! Je aanmelding is verstuurd en wordt binnenkort gecontroleerd.';
+      form.reset();
+    } catch {
+      status.textContent = 'Er ging iets mis. Controleer je internetverbinding en probeer het opnieuw.';
+    }
+  });
+</script>
+
+<style>
+  .location-list {
+    display: grid;
+    gap: var(--space-4);
+    margin-bottom: var(--space-5);
+  }
+  .location-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-base);
+    padding: var(--space-4);
+  }
+  .location-card h3 {
+    color: var(--color-primary);
+    margin: 0 0 var(--space-1);
+  }
+  .location-type {
+    font-weight: 600;
+    color: var(--color-accent-1);
+    margin: 0 0 var(--space-2);
+  }
+  .location-contact {
+    font-size: var(--font-size-sm);
+    opacity: 0.8;
+  }
+
+  .location-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    max-width: 28rem;
+    background: var(--color-secondary);
+    padding: var(--space-4);
+    border-radius: var(--radius-base);
+  }
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+  .form-field label {
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+  }
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    padding: var(--space-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-base);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+  }
+  .form-field input:focus-visible,
+  .form-field select:focus-visible,
+  .form-field textarea:focus-visible {
+    outline: 3px solid var(--color-accent-2);
+    outline-offset: 1px;
+  }
+  .honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  .location-form button {
+    background: var(--color-primary);
+    color: var(--color-text-light);
+    border: none;
+    padding: var(--space-3);
+    border-radius: var(--radius-base);
+    font-weight: 700;
+    font-size: var(--font-size-base);
+    cursor: pointer;
+  }
+  .location-form button:hover {
+    opacity: 0.9;
+  }
+  .location-form button:focus-visible {
+    outline: 3px solid var(--color-accent-2);
+    outline-offset: 2px;
+  }
+  #form-status {
+    font-size: var(--font-size-sm);
+    margin: 0;
+  }
+</style>
+
