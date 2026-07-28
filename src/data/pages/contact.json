@@ -1,0 +1,28 @@
+{
+  "titel": { "nl": "Contact", "de": "Kontakt", "en": "Contact" },
+  "seoBeschrijving": {
+    "nl": "Vragen of feedback over Vierdaagse Logeren? Neem contact op via dit formulier.",
+    "de": "Fragen oder Feedback zu Vierdaagse Logeren? Kontaktiere uns über dieses Formular.",
+    "en": "Questions or feedback about Vierdaagse Logeren? Get in touch via this form."
+  },
+  "intro": {
+    "nl": "Vraag, feedback, of iets anders? Stuur ons een bericht via onderstaand formulier — we reageren zo snel mogelijk.",
+    "de": "Frage, Feedback oder etwas anderes? Schick uns eine Nachricht über das folgende Formular — wir melden uns so schnell wie möglich zurück.",
+    "en": "Question, feedback, or something else? Send us a message using the form below — we'll get back to you as soon as possible."
+  },
+  "labels": {
+    "naam": { "nl": "Naam *", "de": "Name *", "en": "Name *" },
+    "email": { "nl": "E-mailadres *", "de": "E-Mail-Adresse *", "en": "Email address *" },
+    "telefoon": { "nl": "Telefoonnummer (optioneel)", "de": "Telefonnummer (optional)", "en": "Phone number (optional)" },
+    "bericht": { "nl": "Bericht *", "de": "Nachricht *", "en": "Message *" },
+    "honeypot": { "nl": "Laat dit veld leeg", "de": "Dieses Feld leer lassen", "en": "Leave this field empty" },
+    "verstuur": { "nl": "Versturen", "de": "Senden", "en": "Send" }
+  },
+  "statusberichten": {
+    "versturen": { "nl": "Versturen...", "de": "Wird gesendet...", "en": "Sending..." },
+    "gelukt": { "nl": "Bedankt! Je bericht is verstuurd.", "de": "Danke! Deine Nachricht wurde gesendet.", "en": "Thanks! Your message has been sent." },
+    "serverfout": { "nl": "Er ging iets mis. Probeer het later opnieuw.", "de": "Etwas ist schiefgelaufen. Bitte versuche es später erneut.", "en": "Something went wrong. Please try again later." },
+    "netwerkfout": { "nl": "Er ging iets mis. Controleer je internetverbinding en probeer het opnieuw.", "de": "Etwas ist schiefgelaufen. Überprüfe deine Internetverbindung und versuche es erneut.", "en": "Something went wrong. Check your internet connection and try again." }
+  },
+  "vertaalstatus": { "de": "gecontroleerd", "en": "gecontroleerd" }
+}

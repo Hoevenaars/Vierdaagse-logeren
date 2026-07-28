@@ -1,0 +1,156 @@
+---
+interface Props {
+  categorie: 'particulier' | 'camping' | 'hotel' | 'blarenzorg';
+  typeOpties: string[];
+  titel: string;
+  introtekst: string;
+}
+const { categorie, typeOpties, titel, introtekst } = Astro.props;
+const formId = `location-form-${categorie}`;
+const statusId = `form-status-${categorie}`;
+---
+
+<h2>{titel}</h2>
+<p>{introtekst}</p>
+
+<form id={formId} class="location-form" data-status-id={statusId}>
+  <input type="hidden" name="categorie" value={categorie} />
+
+  <div class="form-field">
+    <label for={`naam-${categorie}`}>Naam *</label>
+    <input type="text" id={`naam-${categorie}`} name="naam" required />
+  </div>
+  <div class="form-field">
+    <label for={`plaats-${categorie}`}>Plaats *</label>
+    <input type="text" id={`plaats-${categorie}`} name="plaats" required />
+  </div>
+  <div class="form-field">
+    <label for={`type-${categorie}`}>Type</label>
+    <select id={`type-${categorie}`} name="type">
+      {typeOpties.map((optie) => <option value={optie}>{optie}</option>)}
+    </select>
+  </div>
+  <div class="form-field">
+    <label for={`beschrijving-${categorie}`}>Beschrijving</label>
+    <textarea id={`beschrijving-${categorie}`} name="beschrijving" rows="4"></textarea>
+  </div>
+  <div class="form-field">
+    <label for={`contact-${categorie}`}>E-mailadres *</label>
+    <input type="email" id={`contact-${categorie}`} name="contact" required />
+  </div>
+
+  {/* Honeypot-veld tegen spam */}
+  <div class="honeypot" aria-hidden="true">
+    <label for={`website_hp-${categorie}`}>Laat dit veld leeg</label>
+    <input type="text" id={`website_hp-${categorie}`} name="website_hp" tabindex="-1" autocomplete="off" />
+  </div>
+
+  <button type="submit">Aanmelden</button>
+  <p id={statusId} role="status" aria-live="polite"></p>
+</form>
+
+<style>
+  .location-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    max-width: 28rem;
+    background: var(--color-secondary);
+    padding: var(--space-4);
+    border-radius: var(--radius-base);
+    margin-top: var(--space-3);
+  }
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+  .form-field label {
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+  }
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    padding: var(--space-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-base);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+  }
+  .form-field input:focus-visible,
+  .form-field select:focus-visible,
+  .form-field textarea:focus-visible {
+    outline: 3px solid var(--color-accent-2);
+    outline-offset: 1px;
+  }
+  .honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  .location-form button {
+    background: var(--color-primary);
+    color: var(--color-text-light);
+    border: none;
+    padding: var(--space-3);
+    border-radius: var(--radius-base);
+    font-weight: 700;
+    font-size: var(--font-size-base);
+    cursor: pointer;
+  }
+  .location-form button:hover {
+    opacity: 0.9;
+  }
+  .location-form button:focus-visible {
+    outline: 3px solid var(--color-accent-2);
+    outline-offset: 2px;
+  }
+  .location-form p[role='status'] {
+    font-size: var(--font-size-sm);
+    margin: 0;
+  }
+</style>
+
+<script>
+  // Eén generieke handler voor alle aanmeldformulieren op de pagina
+  document.querySelectorAll('form.location-form').forEach((form) => {
+    const htmlForm = form as HTMLFormElement;
+    const statusId = htmlForm.dataset.statusId;
+    const status = statusId ? document.getElementById(statusId) : null;
+
+    htmlForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (status) status.textContent = 'Versturen...';
+
+      const formData = new FormData(htmlForm);
+      const payload = Object.fromEntries(formData.entries());
+
+      try {
+        const response = await fetch('/api/submit-location', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+          if (status) status.textContent = result.error || 'Er ging iets mis. Probeer het later opnieuw.';
+          return;
+        }
+
+        if (status) {
+          status.textContent = 'Bedankt! Je aanmelding is verstuurd en wordt binnenkort gecontroleerd.';
+        }
+        htmlForm.reset();
+      } catch {
+        if (status) {
+          status.textContent = 'Er ging iets mis. Controleer je internetverbinding en probeer het opnieuw.';
+        }
+      }
+    });
+  });
+</script>

@@ -1,0 +1,44 @@
+---
+import ContentPage from './ContentPage.astro';
+import type { Locale } from '../i18n/ui';
+import { marked } from 'marked';
+
+interface Veld {
+  nl: string;
+  de: string;
+  en: string;
+}
+
+interface Props {
+  data: {
+    titel: Veld;
+    seoBeschrijving: Veld;
+    inhoud: Veld;
+    paginaTitel?: Veld;
+  };
+  locale: Locale;
+  /** Vervangt {{placeholders}} in de markdown door echte, taal-specifieke paden. */
+  links?: Record<string, string>;
+}
+
+const { data, locale, links = {} } = Astro.props;
+
+function veld(v: Veld): string {
+  return v[locale]?.trim() ? v[locale] : v.nl;
+}
+
+let inhoudMarkdown = veld(data.inhoud);
+for (const [placeholder, url] of Object.entries(links)) {
+  inhoudMarkdown = inhoudMarkdown.replaceAll(`{{${placeholder}}}`, url);
+}
+const inhoudHtml = marked.parse(inhoudMarkdown) as string;
+---
+
+<ContentPage
+  title={data.paginaTitel ? veld(data.paginaTitel) : `${veld(data.titel)} — Vierdaagse Logeren`}
+  description={veld(data.seoBeschrijving)}
+  locale={locale}
+  h1={veld(data.titel)}
+>
+  <Fragment set:html={inhoudHtml} />
+</ContentPage>

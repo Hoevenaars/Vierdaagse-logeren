@@ -1,0 +1,95 @@
+{
+  "titel": {
+    "nl": "Veelgestelde vragen",
+    "de": "Häufige Fragen",
+    "en": "Frequently asked questions"
+  },
+  "seoBeschrijving": {
+    "nl": "Veelgestelde vragen over overnachten tijdens de Vierdaagse Nijmegen.",
+    "de": "Häufige Fragen zur Übernachtung während des Vierdaagse Nijmegen.",
+    "en": "Frequently asked questions about staying overnight during the Nijmegen Four Days Marches."
+  },
+  "h1": {
+    "nl": "Veelgestelde vragen over overnachten tijdens de Vierdaagse",
+    "de": "Häufige Fragen zur Übernachtung während des Vierdaagse",
+    "en": "Frequently asked questions about staying during the Four Days Marches"
+  },
+  "vragen": [
+    {
+      "vraag": {
+        "nl": "Wanneer moet ik boeken voor de Vierdaagse?",
+        "de": "Wann sollte ich für den Vierdaagse buchen?",
+        "en": "When should I book for the Four Days Marches?"
+      },
+      "antwoord": {
+        "nl": "Zo vroeg mogelijk — zodra de data bekend zijn. Campings en centrale hotels raken vaak al maanden van tevoren vol. Lees de volledige gids voor een concrete planning.",
+        "de": "So früh wie möglich — sobald die Termine bekannt gegeben werden. Campingplätze und zentrale Hotels sind oft schon Monate im Voraus ausgebucht. Sieh dir den vollständigen Ratgeber für einen konkreten Zeitplan an.",
+        "en": "As early as possible — as soon as the dates are announced. Campsites and central hotels often fill up months in advance. See the full guide for a concrete timeline."
+      }
+    },
+    {
+      "vraag": {
+        "nl": "Is Vierdaagse Logeren de officiële website van het evenement?",
+        "de": "Ist Vierdaagse Logeren die offizielle Website der Veranstaltung?",
+        "en": "Is Vierdaagse Logeren the official website of the event?"
+      },
+      "antwoord": {
+        "nl": "Nee. Vierdaagse Logeren is onafhankelijk van Stichting DE4D en de gemeente Nijmegen. Wij helpen bezoekers een slaapplek te vinden, los van de officiële organisatie.",
+        "de": "Nein. Vierdaagse Logeren ist unabhängig von der Stichting DE4D und der Gemeinde Nijmegen. Wir helfen Besuchern, eine Unterkunft zu finden, getrennt von der offiziellen Organisation.",
+        "en": "No. Vierdaagse Logeren is independent from Stichting DE4D and the municipality of Nijmegen. We help visitors find a place to stay, separate from the official organisation."
+      }
+    },
+    {
+      "vraag": {
+        "nl": "Wat kost een overnachting tijdens de Vierdaagse?",
+        "de": "Was kostet eine Übernachtung während des Vierdaagse?",
+        "en": "What does an overnight stay cost during the Four Days Marches?"
+      },
+      "antwoord": {
+        "nl": "Dat verschilt per type verblijf: kamperen is doorgaans het goedkoopst, particuliere verhuur zit er vaak tussenin, en hotels zijn het duurst — zeker centraal gelegen.",
+        "de": "Das hängt von der Unterkunftsart ab: Camping ist meist am günstigsten, Privatunterkünfte liegen dazwischen, und Hotels sind am teuersten — besonders zentral gelegene.",
+        "en": "It depends on the type of stay: camping is usually the cheapest, private stays fall in between, and hotels are the most expensive — especially centrally located ones."
+      }
+    },
+    {
+      "vraag": {
+        "nl": "Kan ik ook bij een particulier slapen?",
+        "de": "Kann ich auch bei einer Privatperson übernachten?",
+        "en": "Can I stay with a local?"
+      },
+      "antwoord": {
+        "nl": "Ja, particuliere verhuur (een kamer, tuin of oprit bij iemand thuis) is een populair en vaak goedkoper alternatief. Bekijk onze pagina over particuliere verhuur voor meer info.",
+        "de": "Ja, Privatunterkünfte (ein Zimmer, Garten oder Stellplatz bei jemandem zu Hause) sind eine beliebte und oft günstigere Alternative. Schau dir unsere Seite zu Privatunterkünften an.",
+        "en": "Yes, private stays (a room, garden, or driveway at someone’s home) are a popular and often more affordable alternative. Check our private stays page for more info."
+      }
+    },
+    {
+      "vraag": {
+        "nl": "Zijn er ook opties buiten Nijmegen?",
+        "de": "Gibt es auch Optionen außerhalb von Nijmegen?",
+        "en": "Are there options outside Nijmegen?"
+      },
+      "antwoord": {
+        "nl": "Zeker. Plaatsen als Wijchen, Groesbeek en Cuijk liggen aan de route en bieden vaak meer beschikbaarheid dan Nijmegen zelf.",
+        "de": "Auf jeden Fall. Orte wie Wijchen, Groesbeek und Cuijk liegen an der Strecke und bieten oft mehr Verfügbarkeit als Nijmegen selbst.",
+        "en": "Definitely. Towns like Wijchen, Groesbeek, and Cuijk are along the route and often offer more availability than Nijmegen itself."
+      }
+    },
+    {
+      "vraag": {
+        "nl": "Ontvangen jullie geld als ik via jullie boek?",
+        "de": "Verdient ihr Geld, wenn ich über euch buche?",
+        "en": "Do you earn money if I book through you?"
+      },
+      "antwoord": {
+        "nl": "Bij sommige boekingen ontvangen wij een kleine commissie via affiliate-links. Dit heeft geen invloed op onze aanbevelingen en kost jou niets extra.",
+        "de": "Bei manchen Buchungen erhalten wir eine kleine Provision über Affiliate-Links. Das beeinflusst unsere Empfehlungen nicht und kostet dich nichts extra.",
+        "en": "For some bookings we receive a small commission through affiliate links. This does not affect our recommendations and costs you nothing extra."
+      }
+    }
+  ],
+  "vertaalstatus": {
+    "de": "gecontroleerd",
+    "en": "gecontroleerd"
+  }
+}
