@@ -1,43 +1,64 @@
-# Astro Starter Kit: Minimal
+---
+import ContentPage from '../../layouts/ContentPage.astro';
+import AanmeldFormulier from '../../components/AanmeldFormulier.astro';
+import hotelsData from '../../data/hotels.json';
+import data from '../../data/pages/hotels-bb.json';
+import { linkify } from '../../i18n/utils';
 
-```sh
-npm create astro@latest -- --template minimal
-```
+const hotels = hotelsData.hotels;
+const locale = 'en' as const;
+function v(field: Record<string, string>) { return field[locale]?.trim() ? field[locale] : field.nl; }
+function vArr(field: Record<string, string[]>) { return field[locale]?.length ? field[locale] : field.nl; }
+const links = { campingPath: '/camping', particulierPath: '/particuliere-verhuur' };
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+<ContentPage title={v(data.paginaTitel)} description={v(data.seoBeschrijving)} locale={locale} h1={v(data.titel)}>
+  <p>{v(data.intro)}</p>
 
-## 🚀 Project Structure
+  <h2>{v(data.verwachtTitel)}</h2>
+  <p>{v(data.verwachtTekst)}</p>
 
-Inside of your Astro project, you'll see the following folders and files:
+  <h2>{v(data.waarTitel)}</h2>
+  <ul>
+    {vArr(data.waarItems).map((item: string) => <li>{item}</li>)}
+  </ul>
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+  {hotels.length > 0 ? (
+    <>
+      <h2>{v(data.lijstTitel)}</h2>
+      <div class="location-list">
+        {hotels.map((h: any) => (
+          <div class="location-card">
+            <h3>{h.naam} — {h.plaats}</h3>
+            <p class="location-type">{h.type}</p>
+            <p>{h.beschrijving}</p>
+            <p class="location-contact">Contact: {h.contact}</p>
+          </div>
+        ))}
+      </div>
+    </>
+  ) : (
+    <>
+      <h2>{v(data.leegTitel)}</h2>
+      <p class="callout callout--tip">{v(data.leegTekst)}</p>
+    </>
+  )}
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+  <AanmeldFormulier
+    categorie="hotel"
+    typeOpties={['Hotel', 'B&B', 'Anders']}
+    titel={v(data.aanmeldTitel)}
+    introtekst={v(data.aanmeldIntro)}
+  />
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+  <h2>{v(data.slotTitel)}</h2>
+  <p set:html={linkify(v(data.slotTekst), links)} />
+</ContentPage>
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+<style>
+  .location-list { display: grid; gap: var(--space-4); margin-bottom: var(--space-5); }
+  .location-card { border: 1px solid var(--color-border); border-radius: var(--radius-base); padding: var(--space-4); }
+  .location-card h3 { color: var(--color-primary); margin: 0 0 var(--space-1); }
+  .location-type { font-weight: 600; color: var(--color-accent-1); margin: 0 0 var(--space-2); }
+  .location-contact { font-size: var(--font-size-sm); opacity: 0.8; }
+</style>

@@ -1,15 +1,27 @@
 ---
-import GebiedTemplate from '../../../layouts/GebiedTemplate.astro';
+import ContentPage from '../../layouts/ContentPage.astro';
 
-export function getStaticPaths() {
-  const gebiedenModules = import.meta.glob('../../../data/gebieden/*.json', { eager: true });
-  return Object.values(gebiedenModules).map((mod: any) => ({
-    params: { slug: mod.default.slug },
-    props: { data: mod.default },
-  }));
-}
-
-const { data } = Astro.props;
+const gebiedenModules = import.meta.glob('../../data/gebieden/*.json', { eager: true });
+const areas = Object.values(gebiedenModules)
+  .map((mod: any) => mod.default)
+  .sort((a, b) => a.naam.localeCompare(b.naam));
 ---
 
-<GebiedTemplate data={data} locale="de" />
+<ContentPage
+  title="Overnachten in de omgeving van Nijmegen — Vierdaagse Logeren"
+  description="Overzicht van plaatsen rond Nijmegen waar je tijdens de Vierdaagse kunt overnachten."
+  locale="nl"
+  h1="Overnachten in de omgeving van Nijmegen"
+>
+  <p>
+    Nijmegen zelf is tijdens de Vierdaagse het eerst volgeboekt. De omliggende
+    gemeenten langs de route bieden vaak meer beschikbaarheid, tegen een vergelijkbare
+    reistijd.
+  </p>
+  <ul>
+    {areas.map((area: any) => (
+      <li><a href={`/gebied/${area.slug}`}>{area.naam}</a></li>
+    ))}
+  </ul>
+  <p class="callout callout--open">We breiden dit overzicht uit met meer route-gemeenten.</p>
+</ContentPage>

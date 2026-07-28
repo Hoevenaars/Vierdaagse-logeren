@@ -1,5 +1,51 @@
----
-import FaqTemplate from '../layouts/FaqTemplate.astro';
-import data from '../data/pages/faq.json';
----
-<FaqTemplate data={data} locale="nl" />
+name: AI-vertaalconcepten bijwerken
+
+# Draait zodra iemand (via het CMS of direct in Git) NL-content wijzigt.
+# Zet alleen concepten klaar met status "concept" — publiceert nooit
+# automatisch. Zie scripts/translate-content.mjs voor de precieze regels.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/data/gebieden/**.json"
+      - "src/data/site-strings.json"
+
+# Voorkomt dat de commit die dit workflow zelf maakt, de workflow opnieuw triggert.
+concurrency:
+  group: translate-content
+  cancel-in-progress: false
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Dependencies installeren
+        run: npm ci
+
+      - name: Vertaalconcepten genereren
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/translate-content.mjs
+
+      - name: Wijzigingen terugzetten (indien aanwezig)
+        run: |
+          git config user.name "vierdaagse-logeren-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if ! git diff --quiet; then
+            git add src/data/gebieden src/data/site-strings.json
+            git commit -m "chore: AI-vertaalconcepten bijwerken [skip ci]"
+            git push
+          else
+            echo "Geen vertaalconcepten nodig — niets te committen."
+          fi

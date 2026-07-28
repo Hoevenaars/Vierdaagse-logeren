@@ -1,20 +1,6 @@
-# Vierdaagse Logeren
-
-> Onafhankelijk platform dat wandelaars en bezoekers helpt op tijd een slaapplek te
-> vinden tijdens de Vierdaagse Nijmegen. Niet verbonden aan Stichting DE4D of de
-> gemeente Nijmegen.
-
-## Kernpagina's
-
-- [Homepage](https://vierdaagselogeren.nl/): overzicht van alle verblijfsopties
-- [Camping](https://vierdaagselogeren.nl/camping): kamperen tijdens de Vierdaagse
-- [Particuliere verhuur](https://vierdaagselogeren.nl/particuliere-verhuur): logeren bij een local
-- [Hotels & B&B](https://vierdaagselogeren.nl/hotels-bb): hotelovernachtingen in de regio
-- [Wanneer boeken](https://vierdaagselogeren.nl/gids/wanneer-boeken): planningsgids
-- [Internationale lopers](https://vierdaagselogeren.nl/gids/internationale-lopers): gids voor buitenlandse bezoekers
-- [FAQ](https://vierdaagselogeren.nl/faq): veelgestelde vragen
-- [Over ons](https://vierdaagselogeren.nl/over-ons): onafhankelijkheidsverklaring
-
-## Talen
-
-Beschikbaar in het Nederlands (default, geen prefix), Engels (/en/) en Duits (/de/).
+<svg width="300" height="90" viewBox="0 0 300 90" xmlns="http://www.w3.org/2000/svg">
+  <path d="M42 6 Q45 2 48 6 L75 32 Q78 35 73 36 L69 35 L70 72 Q70 76 66 76 L18 76 Q14 76 14 72 L15 35 L11 36 Q6 35 9 32 Z" fill="none" stroke="#0F6E56" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="42" y="58" text-anchor="middle" font-size="28" font-weight="600" fill="#0F6E56" font-family="Arial, sans-serif" transform="rotate(-2 42 58)">4</text>
+  <text x="100" y="42" font-size="22" font-weight="600" fill="#0F6E56" font-family="Arial, sans-serif">Vierdaagse</text>
+  <text x="100" y="68" font-size="22" font-weight="600" fill="#D85A30" font-family="Arial, sans-serif">Logeren</text>
+</svg>

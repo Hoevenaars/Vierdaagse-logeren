@@ -1,64 +1,62 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import InfoCard from '../../components/InfoCard.astro';
-import { useTranslations } from '../../i18n/utils';
+import ContentPage from '../../layouts/ContentPage.astro';
+import AanmeldFormulier from '../../components/AanmeldFormulier.astro';
+import locationsData from '../../data/locations.json';
+import data from '../../data/pages/particuliere-verhuur.json';
+import { linkify } from '../../i18n/utils';
 
+const locations = locationsData.locations;
 const locale = 'de' as const;
-const t = useTranslations(locale);
+function v(field: Record<string, string>) { return field[locale]?.trim() ? field[locale] : field.nl; }
+function vArr(field: Record<string, string[]>) { return field[locale]?.length ? field[locale] : field.nl; }
+const links = { campingPath: '/de/camping', hotelsPath: '/de/hotels-bb' };
 ---
 
-<BaseLayout
-  title="Vierdaagse Logeren — Rechtzeitig eine Unterkunft für den Vierdaagse"
-  description="Finde rechtzeitig eine Unterkunft für den Vierdaagse Nijmegen: Camping, Privatunterkunft oder Hotel."
-  locale={locale}
->
-  <section class="hero">
-    <h1>{t('home.h1')}</h1>
-    <p class="intro">{t('home.intro')}</p>
-  </section>
+<ContentPage title={v(data.paginaTitel)} description={v(data.seoBeschrijving)} locale={locale} h1={v(data.titel)}>
+  <p>{v(data.intro)}</p>
 
-  <section class="cards" aria-label="Art der Unterkunft">
-    <InfoCard title={t('card.camping.title')} text={t('card.camping.text')} href="/de/camping" />
-    <InfoCard title={t('card.particulier.title')} text={t('card.particulier.text')} href="/de/particuliere-verhuur" />
-    <InfoCard title={t('card.hotels.title')} text={t('card.hotels.text')} href="/de/hotels-bb" />
-  </section>
+  <h2>{v(data.verwachtTitel)}</h2>
+  <p>{v(data.verwachtTekst)}</p>
 
-  <section class="urgency">
-    <h2>Wann solltest du buchen?</h2>
-    <p>
-      Campingplätze und zentral gelegene Unterkünfte sind meist als Erstes ausgebucht, oft
-      schon Monate vor der Veranstaltung. Fang früh an — das spart Geld und Stress.
-    </p>
-    <a href="/de/gids/wanneer-boeken">Zum vollständigen Ratgeber &rarr;</a>
-  </section>
-</BaseLayout>
+  <h2>{v(data.kostTitel)}</h2>
+  <p>{v(data.kostTekst)}</p>
+
+  <h2>{v(data.letOpTitel)}</h2>
+  <ul>
+    {vArr(data.letOpItems).map((item: string) => <li>{item}</li>)}
+  </ul>
+
+  {locations.length > 0 && (
+    <>
+      <h2>{v(data.lijstTitel)}</h2>
+      <div class="location-list">
+        {locations.map((loc: any) => (
+          <div class="location-card">
+            <h3>{loc.naam} — {loc.plaats}</h3>
+            <p class="location-type">{loc.type}</p>
+            <p>{loc.beschrijving}</p>
+            <p class="location-contact">Contact: {loc.contact}</p>
+          </div>
+        ))}
+      </div>
+    </>
+  )}
+
+  <AanmeldFormulier
+    categorie="particulier"
+    typeOpties={['Tuin/kampeerplek', 'Kamer', 'Oprit', 'Anders']}
+    titel={v(data.aanmeldTitel)}
+    introtekst={v(data.aanmeldIntro)}
+  />
+
+  <h2>{v(data.slotTitel)}</h2>
+  <p set:html={linkify(v(data.slotTekst), links)} />
+</ContentPage>
 
 <style>
-  .hero {
-    text-align: center;
-    max-width: 40rem;
-    margin: 0 auto var(--space-6);
-  }
-  .hero h1 {
-    font-size: var(--font-size-2xl);
-    color: var(--color-primary);
-  }
-  .intro {
-    font-size: var(--font-size-lg);
-  }
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    gap: var(--space-4);
-    margin-bottom: var(--space-6);
-  }
-  .urgency {
-    background: var(--color-secondary);
-    padding: var(--space-5);
-    border-radius: var(--radius-base);
-  }
-  .urgency h2 {
-    color: var(--color-accent-1);
-    margin-top: 0;
-  }
+  .location-list { display: grid; gap: var(--space-4); margin-bottom: var(--space-5); }
+  .location-card { border: 1px solid var(--color-border); border-radius: var(--radius-base); padding: var(--space-4); }
+  .location-card h3 { color: var(--color-primary); margin: 0 0 var(--space-1); }
+  .location-type { font-weight: 600; color: var(--color-accent-1); margin: 0 0 var(--space-2); }
+  .location-contact { font-size: var(--font-size-sm); opacity: 0.8; }
 </style>

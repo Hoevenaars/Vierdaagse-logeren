@@ -1,5 +1,11 @@
----
-import PageTemplate from '../layouts/PageTemplate.astro';
-import data from '../data/pages/over-ons.json';
----
-<PageTemplate data={data} locale="nl" links={{ contactPath: '/contact' }} />
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "command": "./node_modules/.bin/astro dev",
+      "name": "Development server",
+      "request": "launch",
+      "type": "node-terminal"
+    }
+  ]
+}

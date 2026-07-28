@@ -1,69 +1,45 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import type { Locale } from '../i18n/ui';
-
 interface Props {
   title: string;
-  description: string;
-  locale: Locale;
-  h1: string;
+  text: string;
+  href: string;
 }
-const { title, description, locale, h1 } = Astro.props;
+const { title, text, href } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description} locale={locale}>
-  <article class="content-page">
-    <h1>{h1}</h1>
-    <slot />
-  </article>
-</BaseLayout>
+<a class="card" href={href}>
+  <h3>{title}</h3>
+  <p>{text}</p>
+</a>
 
 <style>
-  .content-page {
-    max-width: 42rem;
-    margin: 0 auto;
-  }
-  .content-page :global(h1) {
-    color: var(--color-primary);
-    font-size: var(--font-size-2xl);
-  }
-  .content-page :global(h2) {
-    color: var(--color-accent-1);
-    font-size: var(--font-size-xl);
-    margin-top: var(--space-6);
-  }
-  .content-page :global(p) {
-    font-size: var(--font-size-base);
-  }
-  .content-page :global(ul) {
-    padding-left: var(--space-4);
-  }
-  .content-page :global(a) {
-    color: var(--color-primary);
-    font-weight: 600;
-  }
-  .content-page :global(.callout) {
-    background: var(--color-secondary);
+  .card {
+    display: block;
     padding: var(--space-4);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-base);
-    margin: var(--space-5) 0;
-  }
-  /* Alias van .callout — expliciet voor afgeronde, gecontroleerde tips. */
-  .content-page :global(.callout--tip) {
-    background: var(--color-secondary);
-  }
-  /* Nog in te vullen door de redactie — bewust anders zodat dit nooit
-     verward wordt met afgewerkte content. Zie brandbook §16/restyle-notitie. */
-  .content-page :global(.callout--open) {
-    background: var(--color-white);
-    border: 1px dashed var(--color-accent-2);
+    text-decoration: none;
     color: var(--color-text-dark);
-    font-style: italic;
+    background: var(--color-white);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
-  .content-page :global(.callout--open)::before {
-    content: '\270E  Nog aan te vullen — ';
-    font-style: normal;
-    font-weight: 600;
-    color: var(--color-accent-2);
+  .card:hover,
+  .card:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(4, 52, 44, 0.1);
+  }
+  .card h3 {
+    font-family: var(--font-family-heading);
+    color: var(--color-primary);
+    margin: 0 0 var(--space-2);
+  }
+  .card p {
+    margin: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card {
+      transition: none;
+    }
   }
 </style>
