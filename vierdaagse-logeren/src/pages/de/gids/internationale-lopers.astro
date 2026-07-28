@@ -1,9 +1,0 @@
----
-import PageTemplate from '../../../layouts/PageTemplate.astro';
-import data from '../../../data/pages/gids-internationale-lopers.json';
----
-<PageTemplate
-  data={data}
-  locale="de"
-  links={{ campingPath: '/de/camping', particulierPath: '/de/particuliere-verhuur', hotelsPath: '/de/hotels-bb' }}
-/>
