@@ -1,15 +1,15 @@
 ---
-import ContentPage from '../../layouts/ContentPage.astro';
-import AanmeldFormulier from '../../components/AanmeldFormulier.astro';
-import locationsData from '../../data/locations.json';
-import data from '../../data/pages/particuliere-verhuur.json';
-import { linkify } from '../../i18n/utils';
+import ContentPage from '../layouts/ContentPage.astro';
+import AanmeldFormulier from '../components/AanmeldFormulier.astro';
+import locationsData from '../data/locations.json';
+import data from '../data/pages/particuliere-verhuur.json';
+import { linkify } from '../i18n/utils';
 
 const locations = locationsData.locations;
-const locale = 'en' as const;
+const locale = 'nl' as const;
 function v(field: Record<string, string>) { return field[locale]?.trim() ? field[locale] : field.nl; }
 function vArr(field: Record<string, string[]>) { return field[locale]?.length ? field[locale] : field.nl; }
-const links = { campingPath: '/en/camping', hotelsPath: '/en/hotels-bb' };
+const links = { campingPath: '/camping', hotelsPath: '/hotels-bb' };
 ---
 
 <ContentPage title={v(data.paginaTitel)} description={v(data.seoBeschrijving)} locale={locale} h1={v(data.titel)}>

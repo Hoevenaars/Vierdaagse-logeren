@@ -1,50 +1,49 @@
 ---
-import ContentPage from '../../layouts/ContentPage.astro';
-import AanmeldFormulier from '../../components/AanmeldFormulier.astro';
-import locationsData from '../../data/locations.json';
-import data from '../../data/pages/particuliere-verhuur.json';
-import { linkify } from '../../i18n/utils';
+import ContentPage from '../layouts/ContentPage.astro';
+import AanmeldFormulier from '../components/AanmeldFormulier.astro';
+import campingsData from '../data/campings.json';
+import data from '../data/pages/camping.json';
+import { linkify } from '../i18n/utils';
 
-const locations = locationsData.locations;
-const locale = 'en' as const;
+const campings = campingsData.campings;
+const locale = 'nl' as const;
 function v(field: Record<string, string>) { return field[locale]?.trim() ? field[locale] : field.nl; }
-function vArr(field: Record<string, string[]>) { return field[locale]?.length ? field[locale] : field.nl; }
-const links = { campingPath: '/en/camping', hotelsPath: '/en/hotels-bb' };
+const links = { gebiedPath: '/gebied', particulierPath: '/particuliere-verhuur', hotelsPath: '/hotels-bb' };
 ---
 
 <ContentPage title={v(data.paginaTitel)} description={v(data.seoBeschrijving)} locale={locale} h1={v(data.titel)}>
   <p>{v(data.intro)}</p>
 
+  <h2>{v(data.prijsTitel)}</h2>
+  <p>{v(data.prijsTekst)}</p>
+
   <h2>{v(data.verwachtTitel)}</h2>
   <p>{v(data.verwachtTekst)}</p>
 
-  <h2>{v(data.kostTitel)}</h2>
-  <p>{v(data.kostTekst)}</p>
-
-  <h2>{v(data.letOpTitel)}</h2>
-  <ul>
-    {vArr(data.letOpItems).map((item: string) => <li>{item}</li>)}
-  </ul>
-
-  {locations.length > 0 && (
+  {campings.length > 0 ? (
     <>
       <h2>{v(data.lijstTitel)}</h2>
       <div class="location-list">
-        {locations.map((loc: any) => (
+        {campings.map((c: any) => (
           <div class="location-card">
-            <h3>{loc.naam} — {loc.plaats}</h3>
-            <p class="location-type">{loc.type}</p>
-            <p>{loc.beschrijving}</p>
-            <p class="location-contact">Contact: {loc.contact}</p>
+            <h3>{c.naam} — {c.plaats}</h3>
+            <p class="location-type">{c.type}</p>
+            <p>{c.beschrijving}</p>
+            <p class="location-contact">Contact: {c.contact}</p>
           </div>
         ))}
       </div>
     </>
+  ) : (
+    <>
+      <h2>{v(data.lijstTitel)}</h2>
+      <p class="callout callout--open" set:html={linkify(v(data.leegTekst), links)} />
+    </>
   )}
 
   <AanmeldFormulier
-    categorie="particulier"
-    typeOpties={['Tuin/kampeerplek', 'Kamer', 'Oprit', 'Anders']}
+    categorie="camping"
+    typeOpties={['Camping', 'Kampeerboerderij', 'Anders']}
     titel={v(data.aanmeldTitel)}
     introtekst={v(data.aanmeldIntro)}
   />

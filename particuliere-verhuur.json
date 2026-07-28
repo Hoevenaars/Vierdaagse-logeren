@@ -1,0 +1,78 @@
+---
+import ContentPage from './ContentPage.astro';
+import type { Locale } from '../i18n/ui';
+import { useTranslations } from '../i18n/utils';
+
+interface GebiedVeld {
+  nl: string;
+  de: string;
+  en: string;
+}
+
+interface GebiedData {
+  slug: string;
+  naam: string;
+  titel: GebiedVeld;
+  seoBeschrijving: GebiedVeld;
+  intro: GebiedVeld;
+  afstand: GebiedVeld;
+  typeVerblijf: GebiedVeld;
+  praktisch: GebiedVeld;
+}
+
+interface Props {
+  data: GebiedData;
+  locale: Locale;
+}
+
+const { data, locale } = Astro.props;
+const t = useTranslations(locale);
+
+// Val terug op NL zolang een vertaling nog leeg is (concept nog niet gecontroleerd).
+function veld(v: GebiedVeld): string {
+  return v[locale]?.trim() ? v[locale] : v.nl;
+}
+
+// Onderscheid "nog in te vullen" van een echte, afgeronde tip — zodat een halve
+// gemeentepagina er niet uitziet als een complete. Zie brandbook-restyle-notitie.
+function isPlaceholder(text: string): boolean {
+  return /^\[.*\]$/.test(text.trim());
+}
+
+const labels = {
+  afstand: { nl: 'Afstand tot Nijmegen/de route', de: 'Entfernung nach Nijmegen/zur Route', en: 'Distance to Nijmegen/the route' },
+  type: { nl: 'Type verblijf in dit gebied', de: 'Unterkunftsarten in dieser Region', en: 'Type of stay in this area' },
+  praktisch: { nl: 'Praktisch', de: 'Praktisches', en: 'Practical info' },
+  gidsLink: { nl: 'Bekijk ook: wanneer moet je boeken?', de: 'Siehe auch: Wann solltest du buchen?', en: 'Also see: when should you book?' },
+} as const;
+
+const afstandText = veld(data.afstand);
+const typeText = veld(data.typeVerblijf);
+const praktischText = veld(data.praktisch);
+---
+
+<ContentPage
+  title={`${veld(data.titel)} — Vierdaagse Logeren`}
+  description={veld(data.seoBeschrijving)}
+  locale={locale}
+  h1={veld(data.titel)}
+>
+  <p>{veld(data.intro)}</p>
+
+  <h2>{labels.afstand[locale]}</h2>
+  <p class={isPlaceholder(afstandText) ? 'callout callout--open' : 'callout callout--tip'}>
+    {afstandText}
+  </p>
+
+  <h2>{labels.type[locale]}</h2>
+  <p class={isPlaceholder(typeText) ? 'callout callout--open' : 'callout callout--tip'}>
+    {typeText}
+  </p>
+
+  <h2>{labels.praktisch[locale]}</h2>
+  <p class={isPlaceholder(praktischText) ? 'callout callout--open' : 'callout callout--tip'}>
+    {praktischText}
+  </p>
+
+  <p><a href={`/${locale === 'nl' ? '' : locale + '/'}gids/wanneer-boeken`}>{labels.gidsLink[locale]} &rarr;</a></p>
+</ContentPage>

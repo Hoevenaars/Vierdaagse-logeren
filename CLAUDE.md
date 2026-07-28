@@ -1,22 +1,55 @@
-## Development
+---
+import ContentPage from '../../layouts/ContentPage.astro';
+import AanmeldFormulier from '../../components/AanmeldFormulier.astro';
+import blarenzorgData from '../../data/blarenzorg.json';
+import data from '../../data/pages/blarenzorg.json';
+import { linkify } from '../../i18n/utils';
 
-When starting the dev server, use background mode:
+const aanbieders = blarenzorgData.blarenzorg;
+const locale = 'en' as const;
+function v(field: Record<string, string>) { return field[locale]?.trim() ? field[locale] : field.nl; }
+const links = { gidsPath: '/en/gids/wanneer-boeken' };
+---
 
-```
-astro dev --background
-```
+<ContentPage title={v(data.paginaTitel)} description={v(data.seoBeschrijving)} locale={locale} h1={v(data.titel)}>
+  <p>{v(data.intro)}</p>
 
-Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
+  <h2>{v(data.verwachtTitel)}</h2>
+  <p>{v(data.verwachtTekst)}</p>
 
-## Documentation
+  {aanbieders.length > 0 ? (
+    <>
+      <h2>{v(data.lijstTitel)}</h2>
+      <div class="location-list">
+        {aanbieders.map((a: any) => (
+          <div class="location-card">
+            <h3>{a.naam} — {a.plaats}</h3>
+            <p class="location-type">{a.type}</p>
+            <p>{a.beschrijving}</p>
+            <p class="location-contact">Contact: {a.contact}</p>
+          </div>
+        ))}
+      </div>
+    </>
+  ) : (
+    <p class="callout callout--open">{v(data.leegTekst)}</p>
+  )}
 
-Full documentation: https://docs.astro.build
+  <AanmeldFormulier
+    categorie="blarenzorg"
+    typeOpties={['Blarenprikker', '(Sport)masseur', 'Pedicure', 'Podotherapeut', 'Anders']}
+    titel={v(data.aanmeldTitel)}
+    introtekst={v(data.aanmeldIntro)}
+  />
 
-Consult these guides before working on related tasks:
+  <h2>{v(data.slotTitel)}</h2>
+  <p set:html={linkify(v(data.slotTekst), links)} />
+</ContentPage>
 
-- [Adding pages, dynamic routes, or middleware](https://docs.astro.build/en/guides/routing/)
-- [Working with Astro components](https://docs.astro.build/en/basics/astro-components/)
-- [Using React, Vue, Svelte, or other framework components](https://docs.astro.build/en/guides/framework-components/)
-- [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
-- [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
-- [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+<style>
+  .location-list { display: grid; gap: var(--space-4); margin-bottom: var(--space-5); }
+  .location-card { border: 1px solid var(--color-border); border-radius: var(--radius-base); padding: var(--space-4); }
+  .location-card h3 { color: var(--color-primary); margin: 0 0 var(--space-1); }
+  .location-type { font-weight: 600; color: var(--color-accent-1); margin: 0 0 var(--space-2); }
+  .location-contact { font-size: var(--font-size-sm); opacity: 0.8; }
+</style>
