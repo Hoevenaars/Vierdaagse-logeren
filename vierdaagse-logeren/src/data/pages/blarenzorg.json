@@ -1,0 +1,66 @@
+{
+  "titel": {
+    "nl": "Blarenzorg en massage tijdens de Vierdaagse",
+    "de": "Blasenpflege und Massage während des Vierdaagse",
+    "en": "Blister care and massage during the Four Days Marches"
+  },
+  "paginaTitel": {
+    "nl": "Blarenzorg en massage tijdens de Vierdaagse — Vierdaagse Logeren",
+    "de": "Blasenpflege und Massage während des Vierdaagse — Vierdaagse Logeren",
+    "en": "Blister care and massage during the Four Days Marches — Vierdaagse Logeren"
+  },
+  "seoBeschrijving": {
+    "nl": "Podotherapeut, sportmasseur of pedicure nodig tijdens de Vierdaagse? Overzicht van aanbieders in en rond Nijmegen.",
+    "de": "Podologe, Sportmasseur oder Fußpflege während des Vierdaagse gesucht? Übersicht der Anbieter in und um Nijmegen.",
+    "en": "Need a podiatrist, sports masseur, or pedicure during the Four Days Marches? Overview of providers in and around Nijmegen."
+  },
+  "intro": {
+    "nl": "Blaren, spierpijn, of gewoon een goede voetverzorging vóór de volgende dagmars — tijdens de Vierdaagse is er extra vraag naar podotherapeuten, sportmasseurs en pedicures in en rond Nijmegen. Hier vind je een overzicht.",
+    "de": "Blasen, Muskelkater oder einfach eine gute Fußpflege vor der nächsten Tagesetappe — während des Vierdaagse gibt es erhöhte Nachfrage nach Podologen, Sportmasseuren und Fußpflegern in und um Nijmegen. Hier eine Übersicht.",
+    "en": "Blisters, sore muscles, or just good foot care before the next day's march — during the Four Days Marches there's extra demand for podiatrists, sports masseurs, and pedicures in and around Nijmegen. Here's an overview."
+  },
+  "verwachtTitel": {
+    "nl": "Wat kun je verwachten",
+    "de": "Was dich erwartet",
+    "en": "What to expect"
+  },
+  "verwachtTekst": {
+    "nl": "Van eerste hulp bij blaren tot een sportmassage ter voorbereiding of herstel. Sommige aanbieders werken op afspraak, anderen bieden inloopspreekuur tijdens de Vierdaagse-week zelf.",
+    "de": "Von Erster Hilfe bei Blasen bis zu einer Sportmassage zur Vorbereitung oder Erholung. Manche Anbieter arbeiten nach Termin, andere bieten während der Vierdaagse-Woche selbst offene Sprechstunden an.",
+    "en": "From first aid for blisters to a sports massage for preparation or recovery. Some providers work by appointment, others offer walk-in hours during the Four Days Marches week itself."
+  },
+  "lijstTitel": {
+    "nl": "Aanbieders in dit gebied",
+    "de": "Anbieter in dieser Region",
+    "en": "Providers in this area"
+  },
+  "leegTekst": {
+    "nl": "We bouwen momenteel een overzicht van aanbieders op. Ben je zelf podotherapeut, sportmasseur of pedicure? Meld je hieronder aan.",
+    "de": "Wir bauen gerade eine Übersicht der Anbieter auf. Bist du Podologe, Sportmasseur oder Fußpfleger? Melde dich unten an.",
+    "en": "We're building an overview of providers. Are you a podiatrist, sports masseur, or pedicure? Sign up below."
+  },
+  "aanmeldTitel": {
+    "nl": "Zelf blarenzorg of massage aanbieden?",
+    "de": "Selbst Blasenpflege oder Massage anbieten?",
+    "en": "Offer blister care or massage yourself?"
+  },
+  "aanmeldIntro": {
+    "nl": "Ben je podotherapeut, sportmasseur of pedicure en wil je zichtbaar zijn tijdens de Vierdaagse? Meld je hieronder aan.",
+    "de": "Bist du Podologe, Sportmasseur oder Fußpfleger und möchtest während des Vierdaagse sichtbar sein? Melde dich unten an.",
+    "en": "Are you a podiatrist, sports masseur, or pedicure and want to be visible during the Four Days Marches? Sign up below."
+  },
+  "slotTitel": {
+    "nl": "Overig praktisch",
+    "de": "Weitere praktische Infos",
+    "en": "Other practical info"
+  },
+  "slotTekst": {
+    "nl": "Bekijk ook onze [gids over plannen en voorbereiden]({{gidsPath}}) voor de Vierdaagse.",
+    "de": "Schau dir auch unseren [Ratgeber zur Planung und Vorbereitung]({{gidsPath}}) des Vierdaagse an.",
+    "en": "Also check our [guide on planning and preparing]({{gidsPath}}) for the Four Days Marches."
+  },
+  "vertaalstatus": {
+    "de": "gecontroleerd",
+    "en": "gecontroleerd"
+  }
+}
