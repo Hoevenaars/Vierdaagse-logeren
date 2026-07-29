@@ -1,4 +1,4 @@
-name: AI-vertaalconcepten bijwerken
+name: Vertaalconcepten bijwerken (DeepL)
 
 # Draait zodra iemand (via het CMS of direct in Git) NL-content wijzigt.
 # Zet alleen concepten klaar met status "concept" — publiceert nooit
@@ -35,7 +35,7 @@ jobs:
 
       - name: Vertaalconcepten genereren
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
         run: node scripts/translate-content.mjs
 
       - name: Wijzigingen terugzetten (indien aanwezig)
@@ -44,9 +44,8 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           if ! git diff --quiet; then
             git add src/data/gebieden src/data/site-strings.json
-            git commit -m "chore: AI-vertaalconcepten bijwerken [skip ci]"
+            git commit -m "chore: vertaalconcepten bijwerken (DeepL) [skip ci]"
             git push
           else
             echo "Geen vertaalconcepten nodig — niets te committen."
           fi
-        
