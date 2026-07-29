@@ -45,7 +45,14 @@ export default async function handler(req: any, res: any) {
       provider: 'github',
     };
 
-    // Decap CMS verwacht dit exacte postMessage-protocol
+    // Robuust protocol: stuur de token op twee manieren tegelijk.
+    // (1) Direct bij het laden van dit venster — werkt met CMS-versies die
+    //     geen "authorizing:github"-handshake terugsturen.
+    // (2) Via de handshake — werkt met CMS-versies die dat wel verwachten.
+    // Beide sturen naar '*' (elke origin), acceptabel omdat de token zelf
+    // pas geldig is na een succesvolle GitHub-autorisatie met onze eigen
+    // client secret; alleen deze pop-up kent de token op dit moment.
+    const message = `authorization:github:success:${JSON.stringify(content)}`;
     const script = `
       <!doctype html>
       <html>
@@ -53,15 +60,31 @@ export default async function handler(req: any, res: any) {
         <body>
           <script>
             (function() {
-              function receiveMessage(message) {
-                window.opener.postMessage(
-                  'authorization:github:success:${JSON.stringify(content).replace(/'/g, "\\'")}',
-                  message.origin
-                );
+              var message = ${JSON.stringify(message)};
+
+              function sendToOpener() {
+                if (window.opener) {
+                  window.opener.postMessage(message, '*');
+                }
+              }
+
+              // Directe poging
+              sendToOpener();
+
+              // Handshake-poging (voor CMS-versies die dit protocol verwachten)
+              function receiveMessage() {
+                sendToOpener();
                 window.removeEventListener('message', receiveMessage, false);
               }
               window.addEventListener('message', receiveMessage, false);
-              window.opener.postMessage('authorizing:github', '*');
+              if (window.opener) {
+                window.opener.postMessage('authorizing:github', '*');
+              }
+
+              // Nogmaals na een korte vertraging, voor het geval het
+              // hoofdvenster de listener nog niet had geregistreerd toen
+              // dit venster opende.
+              setTimeout(sendToOpener, 500);
             })();
           <\/script>
         </body>
