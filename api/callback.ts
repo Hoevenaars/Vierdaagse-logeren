@@ -84,7 +84,10 @@ export default async function handler(req: any, res: any) {
               // Nogmaals na een korte vertraging, voor het geval het
               // hoofdvenster de listener nog niet had geregistreerd toen
               // dit venster opende.
-              setTimeout(sendToOpener, 500);
+              setTimeout(function() {
+                sendToOpener();
+                setTimeout(function() { window.close(); }, 300);
+              }, 500);
             })();
           <\/script>
         </body>
