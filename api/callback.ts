@@ -47,19 +47,25 @@ export default async function handler(req: any, res: any) {
 
     // Decap CMS verwacht dit exacte postMessage-protocol
     const script = `
-      <script>
-        (function() {
-          function receiveMessage(message) {
-            window.opener.postMessage(
-              'authorization:github:success:${JSON.stringify(content).replace(/'/g, "\\'")}',
-              message.origin
-            );
-            window.removeEventListener('message', receiveMessage, false);
-          }
-          window.addEventListener('message', receiveMessage, false);
-          window.opener.postMessage('authorizing:github', '*');
-        })();
-      </script>
+      <!doctype html>
+      <html>
+        <head><meta charset="utf-8" /></head>
+        <body>
+          <script>
+            (function() {
+              function receiveMessage(message) {
+                window.opener.postMessage(
+                  'authorization:github:success:${JSON.stringify(content).replace(/'/g, "\\'")}',
+                  message.origin
+                );
+                window.removeEventListener('message', receiveMessage, false);
+              }
+              window.addEventListener('message', receiveMessage, false);
+              window.opener.postMessage('authorizing:github', '*');
+            })();
+          <\/script>
+        </body>
+      </html>
     `;
 
     res.setHeader('Content-Type', 'text/html');
