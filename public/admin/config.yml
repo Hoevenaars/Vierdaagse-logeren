@@ -2,7 +2,7 @@ backend:
   name: github
   repo: Hoevenaars/Vierdaagse-logeren
   branch: main
-  base_url: https://vierdaagselogeren.nl
+  base_url: https://www.vierdaagselogeren.nl
   auth_endpoint: api/auth
 
 # Media-uploads (bijv. voor toekomstige afbeeldingen bij aanmeldingen) belanden hier
