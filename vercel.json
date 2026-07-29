@@ -1,5 +1,7 @@
 {
   "redirects": [
+    { "source": "/(.*)", "has": [{ "type": "host", "value": "www.vierdaagselogeren.nl" }], "destination": "https://vierdaagselogeren.nl/$1", "permanent": true },
+
     { "source": "/(.*)", "has": [{ "type": "host", "value": "vierdaagsekamperen.nl" }], "destination": "https://vierdaagselogeren.nl/camping", "permanent": true },
     { "source": "/(.*)", "has": [{ "type": "host", "value": "www.vierdaagsekamperen.nl" }], "destination": "https://vierdaagselogeren.nl/camping", "permanent": true },
 
