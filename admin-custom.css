@@ -1,0 +1,74 @@
+/* Vierdaagse Logeren — Decap CMS restyle
+   Brand tokens: teal #0F6E56, sand #F5EFE1, coral #D85A30, ochre #EF9F27
+   Doel: generieke Decap-look vervangen door herkenbare merkstijl, zonder de CMS-structuur zelf aan te passen. */
+
+:root {
+  --vl-teal: #0F6E56;
+  --vl-sand: #F5EFE1;
+  --vl-coral: #D85A30;
+  --vl-ochre: #EF9F27;
+  --vl-ink: #1F2A28;
+  --vl-radius: 10px;
+}
+
+body, .app {
+  background: var(--vl-sand) !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  color: var(--vl-ink) !important;
+}
+
+/* Top navigatiebalk */
+nav[class*="TopBarContainer"],
+div[class*="AppHeader"] {
+  background: var(--vl-teal) !important;
+  border-bottom: none !important;
+}
+
+/* Primaire knoppen (Publiceren, Opslaan) */
+button[class*="Publish"],
+button[class*="primary"] {
+  background: var(--vl-teal) !important;
+  border-radius: var(--vl-radius) !important;
+  font-weight: 600 !important;
+  transition: background 0.15s ease;
+}
+button[class*="Publish"]:hover,
+button[class*="primary"]:hover {
+  background: #0c5a44 !important;
+}
+
+/* Secundaire/annuleer-knoppen */
+button[class*="secondary"] {
+  border-radius: var(--vl-radius) !important;
+  border-color: var(--vl-teal) !important;
+  color: var(--vl-teal) !important;
+}
+
+/* Cards / collectie-items */
+li[class*="CardTop"],
+div[class*="CardContainer"] {
+  border-radius: var(--vl-radius) !important;
+  box-shadow: 0 1px 3px rgba(15, 110, 86, 0.08) !important;
+}
+
+/* Formuliervelden */
+input, textarea, select {
+  border-radius: 8px !important;
+  border-color: #d8cdb8 !important;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--vl-teal) !important;
+  box-shadow: 0 0 0 2px rgba(15, 110, 86, 0.15) !important;
+}
+
+/* Statuslabels (status-veld uit lead-workflow) */
+span[class*="StatusLabel"] {
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+}
+
+/* Sidebar-navigatie (collecties) */
+ul[class*="SidebarNavList"] a[class*="active"] {
+  color: var(--vl-teal) !important;
+  border-left: 3px solid var(--vl-ochre) !important;
+}

@@ -1,0 +1,79 @@
+---
+import ContentPage from '../../../layouts/ContentPage.astro';
+import gebiedenData from '../../../data/gebieden.json';
+
+const locale = 'de' as const;
+const voorbeelden = ['cuijk', 'boxmeer', 'arnhem', 'oss'];
+const gebieden = gebiedenData.gebieden.filter((g: any) => voorbeelden.includes(g.slug));
+---
+
+<ContentPage
+  title="Vierdaagse Logeren für internationale Teilnehmer"
+  description="Praktische Informationen für ausländische Wanderer und Besucher: Sprache, Buchungssysteme, Reiseentfernung und Planung rund um den Vierdaagse."
+  locale={locale}
+  h1="Für internationale Teilnehmer"
+>
+  <p>
+    47.000 Wanderer aus 77 Ländern nehmen am Vierdaagse teil. Wer von außerhalb der Niederlande kommt,
+    trifft auf ein paar praktische Punkte, die etwas anders sind als für niederländische Teilnehmer.
+  </p>
+
+  <h2>Sprache und Buchungssysteme</h2>
+  <p>
+    Große Plattformen wie Booking.com arbeiten auf Englisch, aber private Vermieter in der Region
+    kommunizieren nicht immer auf Englisch. Rechnen Sie bei einer direkten Anfrage bei einem lokalen
+    Anbieter mit niederländischsprachigen Antworten — eine kurze, freundliche Frage auf Englisch wird
+    in der Regel gut verstanden, auch wenn die Antwort auf Niederländisch zurückkommt.
+  </p>
+
+  <h2>Reiseentfernung: eine echte Option, kein letzter Ausweg</h2>
+  <p>
+    Für einen niederländischen Teilnehmer, der mit dem Auto anreist, ist "eine halbe Stunde weiter"
+    eine kleine Unannehmlichkeit. Für einen internationalen Besucher, der mit Zug oder Flugzeug
+    anreist, sieht diese Abwägung anders aus. Dennoch ist eine Übernachtung etwas weiter von Nijmegen
+    entfernt oft eine bewusste, kostengünstige Wahl — kein Notbehelf, wenn die Stadt selbst voll ist.
+  </p>
+
+  <table class="gebied-tabel">
+    <thead>
+      <tr><th>Ort</th><th>Entfernung</th><th>ÖPNV</th><th>Bahnhof</th></tr>
+    </thead>
+    <tbody>
+      {gebieden.map((g: any) => (
+        <tr>
+          <td><a href={`/de/gebied/${g.slug}`}>{g.naam}</a></td>
+          <td>{g.afstandKm}</td>
+          <td>{g.ov}</td>
+          <td>{g.station}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+  <p>
+    Alle diese Orte sind mit dem Zug erreichbar, mit Fahrzeiten zwischen 12 und 20 Minuten nach
+    Nijmegen. Sehen Sie die vollständige Übersicht <a href="/de/gebied">aller Gebiete rund um Nijmegen</a>.
+  </p>
+
+  <h2>An- und Abreise planen</h2>
+  <p>
+    Die Innenstadt von Nijmegen ist während der Vierdaagse-Woche deutlich voller als sonst, vor allem
+    um die Mittagszeit und am frühen Abend. Planen Sie zusätzliche Reisezeit zu und von Ihrer
+    Unterkunft an den Wandertagen ein und prüfen Sie den aktuellen NS-Fahrplan für die letzten Züge —
+    dieser kann während der Veranstaltung von einer normalen Woche abweichen.
+  </p>
+  <p class="callout callout--open">
+    Prüfen Sie den aktuellen Fahrplan und eventuelle Shuttledienste kurz vor dem Termin der
+    Veranstaltung selbst; dies variiert von Ausgabe zu Ausgabe.
+  </p>
+</ContentPage>
+
+<style>
+  .gebied-tabel { width: 100%; border-collapse: collapse; margin: var(--space-4) 0; }
+  .gebied-tabel th, .gebied-tabel td {
+    text-align: left;
+    padding: var(--space-2) var(--space-3);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .gebied-tabel th { color: var(--color-primary); font-weight: 600; }
+</style>
