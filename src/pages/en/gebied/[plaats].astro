@@ -1,0 +1,55 @@
+---
+import ContentPage from '../../../layouts/ContentPage.astro';
+import gebiedenData from '../../../data/gebieden.json';
+
+export function getStaticPaths() {
+  return gebiedenData.gebieden.map((g: any) => ({
+    params: { plaats: g.slug },
+    props: { gebied: g },
+  }));
+}
+
+const { gebied } = Astro.props;
+const locale = 'en' as const;
+function o(field: Record<string, string>) { return field[locale]?.trim() ? field[locale] : field.nl; }
+
+const titel = `${gebied.naam} — staying overnight during the Four Days Marches`;
+const seoBeschrijving = `${gebied.naam} is ${gebied.afstandKm} from Nijmegen. Travel time by car ${gebied.auto}, bike ${gebied.fiets}, public transport ${gebied.ov}. ${o(gebied.opmerking)}.`;
+---
+
+<ContentPage title={titel} description={seoBeschrijving} locale={locale} h1={`Staying in ${gebied.naam}`}>
+  <p>
+    {gebied.naam} is about {gebied.afstandKm} from Nijmegen. By car it takes {gebied.auto},
+    by bike {gebied.fiets}. By public transport count on {gebied.ov}
+    {gebied.station !== 'Geen station' ? <>, via {gebied.station} station</> : <>, there is no train station in {gebied.naam} itself</>}.
+  </p>
+
+  <p class="callout callout--open">{o(gebied.opmerking)}.</p>
+
+  <h2>Practical overview</h2>
+  <table class="gebied-tabel">
+    <tbody>
+      <tr><th>Distance to Wedren</th><td>{gebied.afstandKm}</td></tr>
+      <tr><th>Car</th><td>{gebied.auto}</td></tr>
+      <tr><th>Bike</th><td>{gebied.fiets}</td></tr>
+      <tr><th>Public transport</th><td>{gebied.ov}</td></tr>
+      <tr><th>Station</th><td>{gebied.station}</td></tr>
+    </tbody>
+  </table>
+
+  <p>
+    Looking for a specific place in {gebied.naam} or nearby? Check the listings for
+    <a href="/en/camping">camping</a>, <a href="/en/hotels-bb">hotels &amp; B&amp;Bs</a> or
+    <a href="/en/particuliere-verhuur">private accommodation</a>.
+  </p>
+</ContentPage>
+
+<style>
+  .gebied-tabel { width: 100%; border-collapse: collapse; margin: var(--space-4) 0; }
+  .gebied-tabel th, .gebied-tabel td {
+    text-align: left;
+    padding: var(--space-2) var(--space-3);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .gebied-tabel th { color: var(--color-primary); font-weight: 600; width: 40%; }
+</style>

@@ -1,27 +1,29 @@
 ---
 import ContentPage from '../../layouts/ContentPage.astro';
+import gebiedenData from '../../data/gebieden.json';
 
-const gebiedenModules = import.meta.glob('../../data/gebieden/*.json', { eager: true });
-const areas = Object.values(gebiedenModules)
-  .map((mod: any) => mod.default)
-  .sort((a, b) => a.naam.localeCompare(b.naam));
+const locale = 'nl' as const;
+function o(field: Record<string, string>) { return field[locale]?.trim() ? field[locale] : field.nl; }
+const gebieden = [...gebiedenData.gebieden].sort((a: any, b: any) => a.naam.localeCompare(b.naam));
 ---
 
-<ContentPage
-  title="Overnachten in de omgeving van Nijmegen — Vierdaagse Logeren"
-  description="Overzicht van plaatsen rond Nijmegen waar je tijdens de Vierdaagse kunt overnachten."
-  locale="nl"
-  h1="Overnachten in de omgeving van Nijmegen"
->
-  <p>
-    Nijmegen zelf is tijdens de Vierdaagse het eerst volgeboekt. De omliggende
-    gemeenten langs de route bieden vaak meer beschikbaarheid, tegen een vergelijkbare
-    reistijd.
-  </p>
-  <ul>
-    {areas.map((area: any) => (
-      <li><a href={`/gebied/${area.slug}`}>{area.naam}</a></li>
+<ContentPage title="Gebieden rond Nijmegen — Vierdaagse Logeren" description="Overzicht van alle plaatsen rond Nijmegen om te overnachten tijdens de Vierdaagse, met afstand en reistijd." locale={locale} h1="Overnachten rond Nijmegen">
+  <p>Nijmegen zelf raakt vroeg vol. Deze plaatsen in de omgeving bieden vaak nog ruimte — van vlakbij tot een eindje verderop.</p>
+
+  <div class="gebied-grid">
+    {gebieden.map((g: any) => (
+      <a href={`/gebied/${g.slug}`} class="gebied-card">
+        <h2>{g.naam}</h2>
+        <p class="gebied-afstand">{g.afstandKm} — {o(g.opmerking)}</p>
+      </a>
     ))}
-  </ul>
-  <p class="callout callout--open">We breiden dit overzicht uit met meer route-gemeenten.</p>
+  </div>
 </ContentPage>
+
+<style>
+  .gebied-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-3); margin-top: var(--space-4); }
+  .gebied-card { display: block; padding: var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-base); text-decoration: none; color: inherit; transition: box-shadow 0.15s ease; }
+  .gebied-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .gebied-card h2 { color: var(--color-primary); margin: 0 0 var(--space-1); font-size: var(--font-size-base); }
+  .gebied-afstand { margin: 0; font-size: var(--font-size-sm); opacity: 0.8; }
+</style>

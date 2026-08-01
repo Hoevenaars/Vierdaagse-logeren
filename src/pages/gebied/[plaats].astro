@@ -1,0 +1,55 @@
+---
+import ContentPage from '../../layouts/ContentPage.astro';
+import gebiedenData from '../../data/gebieden.json';
+
+export function getStaticPaths() {
+  return gebiedenData.gebieden.map((g: any) => ({
+    params: { plaats: g.slug },
+    props: { gebied: g },
+  }));
+}
+
+const { gebied } = Astro.props;
+const locale = 'nl' as const;
+function o(field: Record<string, string>) { return field[locale]?.trim() ? field[locale] : field.nl; }
+
+const titel = `${gebied.naam} — overnachten tijdens de Vierdaagse`;
+const seoBeschrijving = `${gebied.naam} ligt op ${gebied.afstandKm} van Nijmegen. Reistijd auto ${gebied.auto}, fiets ${gebied.fiets}, OV ${gebied.ov}. ${o(gebied.opmerking)}.`;
+---
+
+<ContentPage title={titel} description={seoBeschrijving} locale={locale} h1={`Overnachten in ${gebied.naam}`}>
+  <p>
+    {gebied.naam} ligt op zo'n {gebied.afstandKm} van Nijmegen. Met de auto ben je er in {gebied.auto},
+    op de fiets in {gebied.fiets}. Met het OV reken je op {gebied.ov}
+    {gebied.station !== 'Geen station' ? <>, via station {gebied.station}</> : <>, er is in {gebied.naam} zelf geen treinstation</>}.
+  </p>
+
+  <p class="callout callout--open">{o(gebied.opmerking)}.</p>
+
+  <h2>Praktisch overzicht</h2>
+  <table class="gebied-tabel">
+    <tbody>
+      <tr><th>Afstand tot Wedren</th><td>{gebied.afstandKm}</td></tr>
+      <tr><th>Auto</th><td>{gebied.auto}</td></tr>
+      <tr><th>Fiets</th><td>{gebied.fiets}</td></tr>
+      <tr><th>OV</th><td>{gebied.ov}</td></tr>
+      <tr><th>Station</th><td>{gebied.station}</td></tr>
+    </tbody>
+  </table>
+
+  <p>
+    Op zoek naar een concrete plek in {gebied.naam} of de omgeving? Bekijk het aanbod bij
+    <a href="/camping">camping</a>, <a href="/hotels-bb">hotels &amp; B&amp;B</a> of
+    <a href="/particuliere-verhuur">particuliere verhuur</a>.
+  </p>
+</ContentPage>
+
+<style>
+  .gebied-tabel { width: 100%; border-collapse: collapse; margin: var(--space-4) 0; }
+  .gebied-tabel th, .gebied-tabel td {
+    text-align: left;
+    padding: var(--space-2) var(--space-3);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .gebied-tabel th { color: var(--color-primary); font-weight: 600; width: 40%; }
+</style>
