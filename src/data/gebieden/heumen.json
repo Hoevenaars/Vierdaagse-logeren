@@ -3,33 +3,57 @@
   "naam": "Heumen",
   "titel": {
     "nl": "Overnachten in Heumen tijdens de Vierdaagse",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeiten in Heumen während der Vierdaagse",
+    "en": "Where to Stay in Heumen During the Four Days Marches",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Heumen tijdens de Vierdaagse, 10 km van Nijmegen, auto 15 min, OV 25 min. Rustige omgeving.",
-    "de": "",
-    "en": ""
+    "de": "Übernachtung in Heumen während der Vierdaagse, 10 km von Nijmegen entfernt, mit dem Auto 15 Min., mit öffentlichen Verkehrsmitteln 25 Min. Ruhige Umgebung.",
+    "en": "Accommodations in Heumen during the Four Days Marches, 10 km from Nijmegen; 15 min by car, 25 min by public transportation. Quiet surroundings.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "intro": {
     "nl": "Heumen ligt rustig ten zuiden van Nijmegen. Je slaapt buiten de grootste drukte, met een acceptabele rit naar de stad. Geschikt als je stilte zoekt en niet per se lopend naar de start wilt.",
-    "de": "",
-    "en": ""
+    "de": "Heumen liegt ruhig südlich von Nijmegen. Man übernachtet abseits des größten Trubels, wobei die Fahrt in die Stadt gut zu bewältigen ist. Ideal, wenn man Ruhe sucht und nicht unbedingt zu Fuß zum Start gehen möchte.",
+    "en": "Heumen is situated in a quiet area south of Nijmegen. You'll be staying away from the hustle and bustle, with a reasonable drive to the city. It's a good choice if you're looking for peace and quiet and don't necessarily want to walk to the starting line.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "afstand": {
     "nl": "Afstand tot de Wedren: ongeveer 10 km. Met de auto zo'n 15 min. Op de fiets reken je op ongeveer 30 min. Met het OV reken je op 25 min. Dichtstbijzijnde/relevante station: Mook-Molenhoek. Tip: rustige omgeving.",
-    "de": "",
-    "en": ""
+    "de": "Entfernung zu den Wedren: ca. 10 km. Mit dem Auto etwa 15 Minuten. Mit dem Fahrrad rechnet man mit etwa 30 Minuten. Mit öffentlichen Verkehrsmitteln rechnet man mit 25 Minuten. Nächstgelegener/relevanter Bahnhof: Mook-Molenhoek. Tipp: ruhige Umgebung.",
+    "en": "Distance to the Wedren: about 10 km. About 15 minutes by car. By bike, it takes about 30 minutes. By public transportation, it takes 25 minutes. Nearest/relevant station: Mook-Molenhoek. Tip: quiet neighborhood.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "typeVerblijf": {
     "nl": "Particuliere verhuur, B&B's en campings in de regio komen voor. Hotels zijn beperkter. Kijk ook naar Mook-Molenhoek voor treinbereikbaarheid in dezelfde corridor.",
-    "de": "",
-    "en": ""
+    "de": "In der Region gibt es Privatunterkünfte, B&Bs und Campingplätze. Das Angebot an Hotels ist begrenzter. Informieren Sie sich auch über Mook-Molenhoek, um die Erreichbarkeit mit dem Zug im selben Korridor zu prüfen.",
+    "en": "Private rentals, B&Bs, and campgrounds are available in the region. Hotels are more limited. See also Mook-Molenhoek for train access along the same corridor.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "praktisch": {
     "nl": "OV ongeveer 25 minuten; station Mook-Molenhoek is het dichtstbijzijnde treinstation in de buurt. Auto of fiets (rond 30 minuten) zijn vaak praktischer. Plan ochtendvertrek met buffer.",
-    "de": "",
-    "en": ""
+    "de": "Mit öffentlichen Verkehrsmitteln ca. 25 Minuten; der Bahnhof Mook-Molenhoek ist der nächstgelegene Bahnhof. Mit dem Auto oder Fahrrad (ca. 30 Minuten) ist die Anfahrt oft praktischer. Planen Sie die Abfahrt am Morgen mit etwas Zeitpuffer ein.",
+    "en": "About 25 minutes by public transportation; Mook-Molenhoek is the nearest train station. Traveling by car or bike (about 30 minutes) is often more practical. Plan to leave in the morning and allow for some extra time.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "vertaalstatus": {
     "de": "leeg",

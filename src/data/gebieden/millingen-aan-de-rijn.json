@@ -3,33 +3,57 @@
   "naam": "Millingen aan de Rijn",
   "titel": {
     "nl": "Overnachten in Millingen aan de Rijn tijdens de Vierdaagse",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeiten in Millingen am Rhein während der Vierdaagse",
+    "en": "Where to Stay in Millingen aan de Rijn During the Four Days Marches",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Millingen aan de Rijn tijdens de Vierdaagse, 18 km van Nijmegen, auto 30 min, OV 50 min bus. Rustige ligging.",
-    "de": "",
-    "en": ""
+    "de": "Übernachtung in Millingen am Rhein während der Vierdaagse, 18 km von Nijmegen entfernt, mit dem Auto 30 Min., mit öffentlichen Verkehrsmitteln 50 Min. mit dem Bus. Ruhige Lage.",
+    "en": "Accommodations in Millingen aan de Rijn during the Four Days Marches, 18 km from Nijmegen; 30 minutes by car, 50 minutes by bus. Quiet location.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "intro": {
     "nl": "Millingen aan de Rijn ligt rustig aan de oostkant, verder van de Wedren. Goed als alternatief wanneer dichterbij gelegen plaatsen vol zijn, of als je bewust stilte zoekt en een langere ochtendrit accepteert.",
-    "de": "",
-    "en": ""
+    "de": "Millingen am Rhein liegt ruhig auf der Ostseite, etwas weiter entfernt von den Wedren. Eine gute Alternative, wenn die näher gelegenen Plätze ausgebucht sind oder wenn man bewusst die Ruhe sucht und eine längere Fahrt am Vormittag in Kauf nimmt.",
+    "en": "Millingen aan de Rijn is situated in a quiet area on the east side, farther from the Wedren. It’s a good alternative when nearby spots are full, or if you’re specifically looking for peace and quiet and don’t mind a longer morning ride.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "afstand": {
     "nl": "Afstand tot de Wedren: ongeveer 18 km. Met de auto zo'n 30 min. Op de fiets reken je op ongeveer 55 min. Met het OV reken je op 50 min bus. Millingen aan de Rijn heeft zelf geen treinstation. Tip: rustige ligging.",
-    "de": "",
-    "en": ""
+    "de": "Entfernung zu den Wedren: ca. 18 km. Mit dem Auto etwa 30 Minuten. Mit dem Fahrrad rechnet man mit etwa 55 Minuten. Mit öffentlichen Verkehrsmitteln rechnet man mit 50 Minuten Busfahrt. Millingen aan de Rijn hat selbst keinen Bahnhof. Tipp: ruhige Lage.",
+    "en": "Distance to the Wedren: about 18 km. By car, it takes about 30 minutes. By bike, allow about 55 minutes. By public transportation, allow 50 minutes by bus. Millingen aan de Rijn does not have its own train station. Tip: quiet location.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "typeVerblijf": {
     "nl": "Particuliere verhuur en kleinere accommodaties zijn realistischer dan grootschalige hotels. Check ook Gennep/Cuijk/Arnhem als je meer hotelcapaciteit nodig hebt.",
-    "de": "",
-    "en": ""
+    "de": "Privatunterkünfte und kleinere Unterkünfte sind realistischer als große Hotels. Schauen Sie sich auch Gennep/Cuijk/Arnhem an, wenn Sie mehr Hotelkapazitäten benötigen.",
+    "en": "Private rentals and smaller accommodations are a more realistic option than large-scale hotels. Also check out Gennep/Cuijk/Arnhem if you need more hotel capacity.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "praktisch": {
     "nl": "Geen treinstation; OV per bus duurt rond de 50 minuten. Auto is vaak nodig voor een voorspelbare ochtend. Plan ruim in, dit is geen “vijf-minuten-naar-de-start”-locatie.",
-    "de": "",
-    "en": ""
+    "de": "Es gibt keinen Bahnhof; die Fahrt mit öffentlichen Verkehrsmitteln (Bus) dauert etwa 50 Minuten. Um den Morgen gut zu planen, ist oft ein Auto erforderlich. Planen Sie reichlich Zeit ein, denn dies ist kein Ort, von dem aus man in „fünf Minuten am Start“ ist.",
+    "en": "There is no train station; the bus ride takes about 50 minutes. A car is often necessary to ensure a smooth morning. Allow plenty of time—this is not a “five-minute walk to the start” location.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "vertaalstatus": {
     "de": "leeg",

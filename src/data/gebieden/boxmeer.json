@@ -3,33 +3,57 @@
   "naam": "Boxmeer",
   "titel": {
     "nl": "Overnachten in Boxmeer tijdens de Vierdaagse",
-    "de": "",
-    "en": ""
+    "de": "Übernachten in Boxmeer während der Vierdaagse",
+    "en": "Where to Stay in Boxmeer During the Four Days Marches",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Boxmeer tijdens de Vierdaagse, 28 km van Nijmegen, auto 30 min, OV 20 min trein. Goede treinverbinding.",
-    "de": "",
-    "en": ""
+    "de": "Übernachtung in Boxmeer während der Vierdaagse, 28 km von Nijmegen entfernt, mit dem Auto 30 Min., mit öffentlichen Verkehrsmitteln 20 Min. mit dem Zug. Gute Zugverbindung.",
+    "en": "Staying overnight in Boxmeer during the Four Days Marches, 28 km from Nijmegen; 30 minutes by car, 20 minutes by train. Good train service.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "intro": {
     "nl": "Boxmeer ligt verder weg (rond 28 km), maar heeft een treinstation en daarmee een duidelijke OV-route naar Nijmegen. Bruikbaar als dichterbij alles vol zit, of als je bewust goedkopere/ruimere accommodatie zoekt.",
-    "de": "",
-    "en": ""
+    "de": "Boxmeer liegt zwar weiter entfernt (etwa 28 km), verfügt aber über einen Bahnhof und damit über eine gute Anbindung mit öffentlichen Verkehrsmitteln nach Nimwegen. Eine gute Alternative, wenn in der näheren Umgebung alles ausgebucht ist oder wenn man bewusst nach einer günstigeren/geräumigeren Unterkunft sucht.",
+    "en": "Boxmeer is farther away (about 28 km), but it has a train station and therefore a direct public transportation route to Nijmegen. It’s a good option if everything closer by is fully booked, or if you’re specifically looking for cheaper or more spacious accommodations.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "afstand": {
     "nl": "Afstand tot de Wedren: ongeveer 28 km. Met de auto zo'n 30 min. Op de fiets reken je op ongeveer 75 min. Met het OV reken je op 20 min trein. Dichtstbijzijnde/relevante station: Boxmeer. Tip: goede treinverbinding.",
-    "de": "",
-    "en": ""
+    "de": "Entfernung zu den Wedren: ca. 28 km. Mit dem Auto etwa 30 Min. Mit dem Fahrrad rechnest du mit etwa 75 Min. Mit öffentlichen Verkehrsmitteln rechnest du mit 20 Min. Zugfahrt. Nächstgelegener/relevanter Bahnhof: Boxmeer. Tipp: gute Zugverbindung.",
+    "en": "Distance to the Wedren: about 28 km. By car, it takes about 30 minutes. By bike, allow about 75 minutes. By public transportation, allow 20 minutes by train. Closest/most relevant station: Boxmeer. Tip: good train service.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "typeVerblijf": {
     "nl": "Hotels, B&B's en soms camping in de regio. Minder “Vierdaagse-dorp”-sfeer dan Groesbeek of Mook, wel meer kans op beschikbaarheid later in het seizoen.",
-    "de": "",
-    "en": ""
+    "de": "Hotels, B&Bs und manchmal auch Campingplätze in der Region. Weniger „Vierdaagse-Dorf“-Atmosphäre als in Groesbeek oder Mook, dafür aber bessere Chancen auf freie Unterkünfte später in der Saison.",
+    "en": "Hotels, B&Bs, and occasionally campgrounds in the region. Less of a “Four Days Marches” village atmosphere than Groesbeek or Mook, but a better chance of finding availability later in the season.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "praktisch": {
     "nl": "Trein vanaf station Boxmeer (rond 20 minuten). Auto ongeveer 30 minuten. Fietsen is voor de meeste lopers te ver als dagelijkse forensrit. Bouw ochtendbuffer in voor overstappen.",
-    "de": "",
-    "en": ""
+    "de": "Zug ab Bahnhof Boxmeer (ca. 20 Minuten). Mit dem Auto ca. 30 Minuten. Für die meisten Läufer ist die Strecke mit dem Fahrrad als täglicher Arbeitsweg zu weit. Planen Sie morgens etwas Zeit für das Umsteigen ein.",
+    "en": "Train from Boxmeer Station (about 20 minutes). By car, about 30 minutes. For most runners, cycling is too far for a daily commute. Allow extra time in the morning for transfers.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "vertaalstatus": {
     "de": "leeg",

@@ -3,33 +3,57 @@
   "naam": "Molenhoek",
   "titel": {
     "nl": "Overnachten in Molenhoek tijdens de Vierdaagse",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeiten in Molenhoek während der Vierdaagse",
+    "en": "Where to Stay in Molenhoek During the Four Days Marches",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Molenhoek tijdens de Vierdaagse, 11 km van Nijmegen, auto 15 min, OV 12 min trein. Goede OV-verbinding.",
-    "de": "",
-    "en": ""
+    "de": "Übernachtung in Molenhoek während der Vierdaagse, 11 km von Nijmegen entfernt, mit dem Auto 15 Minuten, mit öffentlichen Verkehrsmitteln 12 Minuten mit dem Zug. Gute Anbindung an den öffentlichen Nahverkehr.",
+    "en": "Accommodations in Molenhoek during the Four Days Marches, 11 km from Nijmegen; 15 minutes by car, 12 minutes by train. Good public transportation connections.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "intro": {
     "nl": "Molenhoek deelt het treinstation Mook-Molenhoek en ligt iets dichter bij Nijmegen dan Mook zelf. Goede OV-verbinding, kortere reistijd, en vaak net iets sneller op pad in de ochtend.",
-    "de": "",
-    "en": ""
+    "de": "Molenhoek teilt sich den Bahnhof Mook-Molenhoek und liegt etwas näher an Nijmegen als Mook selbst. Gute Anbindung an den öffentlichen Nahverkehr, kürzere Fahrzeit und morgens oft etwas schneller unterwegs.",
+    "en": "Molenhoek shares the Mook-Molenhoek train station and is located slightly closer to Nijmegen than Mook itself. Good public transportation connections, shorter travel time, and often a slightly faster start to the day in the morning.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "afstand": {
     "nl": "Afstand tot de Wedren: ongeveer 11 km. Met de auto zo'n 15 min. Op de fiets reken je op ongeveer 30 min. Met het OV reken je op 12 min trein. Dichtstbijzijnde/relevante station: Mook-Molenhoek. Tip: goede ov-verbinding.",
-    "de": "",
-    "en": ""
+    "de": "Entfernung zu den Wedren: ca. 11 km. Mit dem Auto etwa 15 Minuten. Mit dem Fahrrad rechnet man mit etwa 30 Minuten. Mit öffentlichen Verkehrsmitteln rechnet man mit 12 Minuten Zugfahrt. Nächstgelegener/relevanter Bahnhof: Mook-Molenhoek. Tipp: Gute Anbindung an den öffentlichen Nahverkehr.",
+    "en": "Distance to the Wedren: about 11 km. About 15 minutes by car. By bike, it takes about 30 minutes. By public transit, it’s a 12-minute train ride. Nearest/relevant station: Mook-Molenhoek. Tip: Good public transportation connections.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "typeVerblijf": {
     "nl": "Mix van B&B, particulier en camping in de omgeving. Hotelcapaciteit is beperkt, reken op vroeg boeken of uitwijken naar Nijmegen/Mook/Cuijk.",
-    "de": "",
-    "en": ""
+    "de": "Eine Mischung aus B&Bs, Privatunterkünften und Campingplätzen in der Umgebung. Die Hotelkapazitäten sind begrenzt; Sie sollten daher frühzeitig buchen oder auf Unterkünfte in Nijmegen, Mook oder Cuijk ausweichen.",
+    "en": "There’s a mix of B&Bs, private accommodations, and campgrounds in the area. Hotel capacity is limited, so be sure to book early or consider staying in Nijmegen, Mook, or Cuijk instead.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "praktisch": {
     "nl": "Trein via Mook-Molenhoek (rond 12 minuten). Fiets ongeveer 30 minuten. Handig voor lopers zonder auto. Houd rekening met drukte op het station in de ochtendspits van de Vierdaagse-dagen.",
-    "de": "",
-    "en": ""
+    "de": "Zug über Mook-Molenhoek (ca. 12 Minuten). Mit dem Fahrrad ca. 30 Minuten. Praktisch für Läufer ohne Auto. Rechnen Sie während der Morgenstundenspitze an den Tagen der Vierdaagse mit großem Andrang am Bahnhof.",
+    "en": "Take the train via Mook-Molenhoek (about 12 minutes). Cycle for about 30 minutes. Convenient for walkers without a car. Be prepared for crowds at the station during the morning rush hour on the days of the Four Days Marches.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "vertaalstatus": {
     "de": "leeg",

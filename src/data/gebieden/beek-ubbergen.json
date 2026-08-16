@@ -3,33 +3,57 @@
   "naam": "Beek-Ubbergen",
   "titel": {
     "nl": "Overnachten in Beek-Ubbergen tijdens de Vierdaagse",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeiten in Beek-Ubbergen während der Vierdaagse",
+    "en": "Where to Stay in Beek-Ubbergen During the Four Days Marches",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Beek-Ubbergen tijdens de Vierdaagse, 6 km van Nijmegen, auto 12 min, OV 20 min bus. Dicht bij natuur.",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeit in Beek-Ubbergen während der Vierdaagse, 6 km von Nijmegen entfernt, mit dem Auto 12 Min., mit öffentlichen Verkehrsmitteln 20 Min. mit dem Bus. In der Nähe der Natur.",
+    "en": "Accommodations in Beek-Ubbergen during the Four Days Marches, 6 km from Nijmegen; 12 min by car, 20 min by bus. Close to nature.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "intro": {
     "nl": "Beek-Ubbergen ligt dicht bij Nijmegen en de stuwwal: groen, dichtbij, en toch net buiten de grootste stadsdrukte. Sterke keuze als je natuur dichtbij wilt zonder ver te reizen.",
-    "de": "",
-    "en": ""
+    "de": "Beek-Ubbergen liegt in der Nähe von Nimwegen und dem Moränenwall: grün, in der Nähe und doch etwas abseits des großen Stadttrubels. Eine gute Wahl, wenn man die Natur in der Nähe genießen möchte, ohne weit fahren zu müssen.",
+    "en": "Beek-Ubbergen is located close to Nijmegen and the moraine: green, nearby, and yet just outside the hustle and bustle of the big city. A great choice if you want to be close to nature without having to travel far.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "afstand": {
     "nl": "Afstand tot de Wedren: ongeveer 6 km. Met de auto zo'n 12 min. Op de fiets reken je op ongeveer 20 min. Met het OV reken je op 20 min bus. Dichtstbijzijnde/relevante station: Nijmegen. Tip: dicht bij natuur.",
-    "de": "",
-    "en": ""
+    "de": "Entfernung zu den Wedren: ca. 6 km. Mit dem Auto etwa 12 Minuten. Mit dem Fahrrad rechnet man mit etwa 20 Minuten. Mit öffentlichen Verkehrsmitteln rechnet man mit 20 Minuten Busfahrt. Nächstgelegener/relevanter Bahnhof: Nijmegen. Tipp: in der Nähe der Natur.",
+    "en": "Distance to the Wedren: about 6 km. About 12 minutes by car. By bike, allow about 20 minutes. By public transportation, allow 20 minutes by bus. Nearest/relevant station: Nijmegen. Tip: close to nature.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "typeVerblijf": {
     "nl": "B&B's, kleinere hotels en particuliere plekken passen bij dit gebied. Campings vind je in de bredere zuidoost-corridor (richting Groesbeek/Berg en Dal).",
-    "de": "",
-    "en": ""
+    "de": "B&Bs, kleinere Hotels und Privatunterkünfte passen gut zu dieser Gegend. Campingplätze findest du im weiteren Südostkorridor (Richtung Groesbeek/Berg en Dal).",
+    "en": "B&Bs, smaller hotels, and private accommodations are a good fit for this area. Campgrounds can be found in the broader southeastern corridor (toward Groesbeek/Berg en Dal).",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "praktisch": {
     "nl": "OV per bus (rond 20 minuten); trein via Nijmegen. Fietsen naar de stad is haalbaar (rond 20 minuten). Parkeren is meestal eenvoudiger dan in het centrum, maar lokale wegen kunnen smal zijn.",
-    "de": "",
-    "en": ""
+    "de": "Öffentliche Verkehrsmittel: mit dem Bus (ca. 20 Minuten); mit dem Zug über Nijmegen. Die Fahrt mit dem Fahrrad in die Stadt ist machbar (ca. 20 Minuten). Das Parken ist meist einfacher als im Stadtzentrum, allerdings können die örtlichen Straßen schmal sein.",
+    "en": "Public transportation by bus (about 20 minutes); by train via Nijmegen. Cycling to the city is feasible (about 20 minutes). Parking is usually easier than in the city center, but local roads can be narrow.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "vertaalstatus": {
     "de": "leeg",

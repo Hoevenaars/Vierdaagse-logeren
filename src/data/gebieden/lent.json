@@ -3,33 +3,57 @@
   "naam": "Lent",
   "titel": {
     "nl": "Overnachten in Lent tijdens de Vierdaagse",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeiten in Lent während der Vierdaagse",
+    "en": "Where to Stay in Lent During the Four Days Marches",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Lent tijdens de Vierdaagse, 4 km van Nijmegen, auto 10 min, OV 10 min. Snelle treinverbinding.",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeit in Lent während der Vierdaagse, 4 km von Nijmegen entfernt, 10 Min. mit dem Auto, 10 Min. mit öffentlichen Verkehrsmitteln. Schnelle Zugverbindung.",
+    "en": "Accommodations in Lent during the Four Days Marches, 4 km from Nijmegen; 10-minute drive or 10-minute public transit ride. Fast train connection.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "intro": {
     "nl": "Lent ligt vlakbij Nijmegen, aan de noordkant van de Waal. Je bent snel in de stad, hebt een eigen treinstation en vaak iets meer rust dan in het centrum. Een sterke keuze als je dichtbij wilt slapen zonder midden in de drukte te zitten.",
-    "de": "",
-    "en": ""
+    "de": "Lent liegt in der Nähe von Nimwegen, am nördlichen Ufer der Waal. Man ist schnell in der Stadt, hat einen eigenen Bahnhof und oft etwas mehr Ruhe als im Zentrum. Eine gute Wahl, wenn man in der Nähe übernachten möchte, ohne mitten im Trubel zu sein.",
+    "en": "Lent is located near Nijmegen, on the north side of the Waal River. You can get to the city quickly, it has its own train station, and it’s often a bit quieter than the city center. It’s a great choice if you want to stay close by without being right in the middle of the hustle and bustle.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "afstand": {
     "nl": "Afstand tot de Wedren: ongeveer 4 km. Met de auto zo'n 10 min. Op de fiets reken je op ongeveer 15 min. Met het OV reken je op 10 min. Dichtstbijzijnde/relevante station: Lent. Tip: snelle treinverbinding.",
-    "de": "",
-    "en": ""
+    "de": "Entfernung zu den Wedren: ca. 4 km. Mit dem Auto etwa 10 Min. Mit dem Fahrrad rechnet man mit etwa 15 Min. Mit öffentlichen Verkehrsmitteln rechnet man mit 10 Min. Nächstgelegener/relevanter Bahnhof: Lent. Tipp: schnelle Zugverbindung.",
+    "en": "Distance to the Wedren: about 4 km. By car, it takes about 10 minutes. By bike, allow about 15 minutes. By public transportation, allow 10 minutes. Nearest/relevant station: Lent. Tip: fast train connection.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "typeVerblijf": {
     "nl": "In Lent vind je vooral hotels, appartmenten en soms particuliere verhuur. Campings liggen vaker iets verderop. Door de korte afstand naar Nijmegen werkt dit goed als je 's ochtends snel naar de start wilt.",
-    "de": "",
-    "en": ""
+    "de": "In Lent gibt es vor allem Hotels, Ferienwohnungen und gelegentlich auch Privatunterkünfte. Campingplätze liegen meist etwas weiter entfernt. Aufgrund der kurzen Entfernung nach Nijmegen ist dies eine gute Wahl, wenn man morgens schnell zum Start gelangen möchte.",
+    "en": "In Lent, you'll mainly find hotels, apartments, and occasionally private rentals. Campgrounds are usually located a little further away. Because of the short distance to Nijmegen, this works well if you want to get to the starting line quickly in the morning.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "praktisch": {
     "nl": "Station Lent verbindt snel met Nijmegen. Fietsen naar het centrum is haalbaar (rond de 15 minuten). Tijdens de Vierdaagse-week kan de Waalbrug-route druk zijn; houd rekening met extra reistijd in de spits.",
-    "de": "",
-    "en": ""
+    "de": "Der Bahnhof Lent bietet eine schnelle Verbindung nach Nimwegen. Die Fahrt mit dem Fahrrad ins Zentrum ist machbar (etwa 15 Minuten). Während der „Vierdaagse“-Woche kann es auf der Route über die Waalbrücke zu hohem Verkehrsaufkommen kommen; rechnen Sie in den Stoßzeiten mit einer längeren Fahrzeit.",
+    "en": "Lent Station offers quick access to Nijmegen. Cycling to the city center is feasible (about 15 minutes). During the Four Days Marches week, the Waalbrug route can be busy; allow for extra travel time during rush hour.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "vertaalstatus": {
     "de": "leeg",

@@ -3,33 +3,57 @@
   "naam": "Mook",
   "titel": {
     "nl": "Overnachten in Mook tijdens de Vierdaagse",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeiten in Mook während der Vierdaagse",
+    "en": "Staying Overnight in Mook During the Four Days Marches",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Mook tijdens de Vierdaagse, 13 km van Nijmegen, auto 18 min, OV 15 min trein. Populaire overnachtingsplaats.",
-    "de": "",
-    "en": ""
+    "de": "Übernachtung in Mook während der Vierdaagse, 13 km von Nijmegen entfernt, mit dem Auto 18 Min., mit öffentlichen Verkehrsmitteln 15 Min. mit dem Zug. Beliebter Übernachtungsort.",
+    "en": "Staying overnight in Mook during the Four Days Marches, 13 km from Nijmegen—18 minutes by car, 15 minutes by train. A popular place to stay.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "intro": {
     "nl": "Mook is een bekende overnachtingsplaats rond de Vierdaagse: rustiger dan Nijmegen, met treinstation Mook-Molenhoek en een prettige afstand tot de route. Veel wandelaars kiezen hier bewust voor rust + bereikbaarheid.",
-    "de": "",
-    "en": ""
+    "de": "Mook ist ein beliebter Übernachtungsort rund um die Vierdaagse: ruhiger als Nijmegen, mit dem Bahnhof Mook-Molenhoek und in angenehmer Entfernung zur Wanderroute. Viele Wanderer entscheiden sich hier bewusst für Ruhe und gute Erreichbarkeit.",
+    "en": "Mook is a popular place to stay during the Four Days Marches: it’s quieter than Nijmegen, has the Mook-Molenhoek train station, and is a convenient distance from the route. Many walkers choose this location specifically for its tranquility and accessibility.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "afstand": {
     "nl": "Afstand tot de Wedren: ongeveer 13 km. Met de auto zo'n 18 min. Op de fiets reken je op ongeveer 35 min. Met het OV reken je op 15 min trein. Dichtstbijzijnde/relevante station: Mook-Molenhoek. Tip: populaire overnachtingsplaats.",
-    "de": "",
-    "en": ""
+    "de": "Entfernung zu den Wedren: ca. 13 km. Mit dem Auto etwa 18 Min. Mit dem Fahrrad rechnet man mit etwa 35 Min. Mit öffentlichen Verkehrsmitteln rechnet man mit 15 Min. Zugfahrt. Nächstgelegener/relevanter Bahnhof: Mook-Molenhoek. Tipp: beliebter Übernachtungsort.",
+    "en": "Distance to the Wedren: about 13 km. By car, it takes about 18 minutes. By bike, allow about 35 minutes. By public transportation, allow 15 minutes by train. Nearest/relevant station: Mook-Molenhoek. Tip: a popular place to stay overnight.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "typeVerblijf": {
     "nl": "Campings, B&B's en particuliere plekken komen veel voor. Hotels vind je spaarzamer, maar de trein maakt Mook aantrekkelijk voor wie zonder auto reist.",
-    "de": "",
-    "en": ""
+    "de": "Campingplätze, B&Bs und private Übernachtungsmöglichkeiten sind weit verbreitet. Hotels gibt es eher selten, aber dank der Bahnverbindung ist Mook ein attraktives Reiseziel für alle, die ohne Auto unterwegs sind.",
+    "en": "Campgrounds, B&Bs, and private campsites are common. Hotels are fewer and farther between, but the train makes Mook an attractive destination for those traveling without a car.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "praktisch": {
     "nl": "Station Mook-Molenhoek: ongeveer 15 minuten met de trein naar Nijmegen. Fietsen duurt rond de 35 minuten. Parkeren is doorgaans eenvoudiger dan in de stad; check wel lokale drukte in de Vierdaagse-week.",
-    "de": "",
-    "en": ""
+    "de": "Bahnhof Mook-Molenhoek: Mit dem Zug sind es etwa 15 Minuten bis nach Nimwegen. Mit dem Fahrrad dauert die Fahrt etwa 35 Minuten. Das Parken ist in der Regel einfacher als in der Stadt; informieren Sie sich jedoch während der Vierdaagse-Woche über die lokale Auslastung.",
+    "en": "Mook-Molenhoek Station: about a 15-minute train ride to Nijmegen. Cycling takes around 35 minutes. Parking is generally easier than in the city; be sure to check for local crowds during Vierdaagse week.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "vertaalstatus": {
     "de": "leeg",

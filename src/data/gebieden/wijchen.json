@@ -3,33 +3,57 @@
   "naam": "Wijchen",
   "titel": {
     "nl": "Overnachten in Wijchen tijdens de Vierdaagse",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeiten in Wijchen während der Vierdaagse",
+    "en": "Where to Stay in Wijchen During the Four Days Marches",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Wijchen tijdens de Vierdaagse, 13 km van Nijmegen, 15 minuten met de trein, populair onder wandelaars.",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeiten in Wijchen während der Vierdaagse, 13 km von Nijmegen entfernt, 15 Minuten mit dem Zug, bei Wanderern sehr beliebt.",
+    "en": "Staying overnight in Wijchen during the Four Days Marches, 13 km from Nijmegen, 15 minutes by train, popular among hikers.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "intro": {
     "nl": "Wijchen ligt zo'n 13 km van Nijmegen en is een van de meest gekozen overnachtingsplaatsen rond de Vierdaagse: dichtbij genoeg, met een eigen treinstation en vaak meer beschikbaarheid dan het centrum.",
-    "de": "",
-    "en": ""
+    "de": "Wijchen liegt etwa 13 km von Nijmegen entfernt und ist einer der beliebtesten Übernachtungsorte rund um die Vierdaagse: nah genug, mit einem eigenen Bahnhof und oft mehr freien Zimmern als im Stadtzentrum.",
+    "en": "Wijchen is located about 13 km from Nijmegen and is one of the most popular places to stay during the Four Days Marches: close enough, with its own train station, and often with more availability than the city center.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "afstand": {
     "nl": "Ongeveer 13 km tot de Wedren. Met de auto zo'n 20 minuten, op de fiets rond de 40 minuten. Met de trein ben je in ongeveer 15 minuten op station Wijchen, een snelle verbinding naar Nijmegen Centraal.",
-    "de": "",
-    "en": ""
+    "de": "Etwa 13 km bis zum Wedren. Mit dem Auto etwa 20 Minuten, mit dem Fahrrad etwa 40 Minuten. Mit dem Zug bist du in etwa 15 Minuten am Bahnhof Wijchen, von wo aus es eine schnelle Verbindung zum Hauptbahnhof Nijmegen gibt.",
+    "en": "It's about 13 km to the Wedren. By car, it takes about 20 minutes; by bike, around 40 minutes. By train, you can reach Wijchen Station in about 15 minutes, which offers a quick connection to Nijmegen Central Station.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "typeVerblijf": {
     "nl": "In en rond Wijchen vind je hotels, B&B's, campings en particuliere verhuur. Door de treinstation-verbinding is het vooral aantrekkelijk als je zonder auto reist. Check het actuele aanbod op de camping-, hotel- en particulier-pagina's.",
-    "de": "",
-    "en": ""
+    "de": "In und um Wijchen findest du Hotels, B&Bs, Campingplätze und Privatunterkünfte. Dank der Bahnanbindung ist die Gegend besonders attraktiv, wenn du ohne Auto unterwegs bist. Informiere dich über das aktuelle Angebot auf den Seiten zu Campingplätzen, Hotels und Privatunterkünften.",
+    "en": "In and around Wijchen, you'll find hotels, B&Bs, campgrounds, and private rentals. Thanks to the train station connection, it's especially appealing if you're traveling without a car. Check out the current listings on the campground, hotel, and private rental pages.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "praktisch": {
     "nl": "Station Wijchen ligt centraal; van daaruit is Nijmegen Centraal een korte treinrit. Parkeren is over het algemeen makkelijker dan in Nijmegen-centrum, maar plan tijdens de Vierdaagse-week wel extra reistijd. Neem de trein of fiets als je de drukte wilt vermijden.",
-    "de": "",
-    "en": ""
+    "de": "Der Bahnhof Wijchen liegt zentral; von dort aus ist es nur eine kurze Zugfahrt bis zum Hauptbahnhof Nijmegen. Das Parken ist im Allgemeinen einfacher als im Zentrum von Nijmegen, aber planen Sie während der Vierdaagse-Woche etwas mehr Reisezeit ein. Nehmen Sie den Zug oder das Fahrrad, wenn Sie den Andrang vermeiden möchten.",
+    "en": "Wijchen Station is centrally located; from there, it’s a short train ride to Nijmegen Central Station. Parking is generally easier than in downtown Nijmegen, but be sure to allow extra travel time during the Four Days Marches week. Take the train or ride a bike if you want to avoid the crowds.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "vertaalstatus": {
     "de": "leeg",

@@ -3,33 +3,57 @@
   "naam": "Elst",
   "titel": {
     "nl": "Overnachten in Elst tijdens de Vierdaagse",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeiten in Elst während der Vierdaagse",
+    "en": "Staying Overnight in Elst During the Four Days Marches",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Elst tijdens de Vierdaagse, 12 km van Nijmegen, auto 18 min, OV 12 min trein. Uitstekende treinverbinding.",
-    "de": "",
-    "en": ""
+    "de": "Übernachtung in Elst während der Vierdaagse, 12 km von Nijmegen entfernt, mit dem Auto 18 Minuten, mit öffentlichen Verkehrsmitteln 12 Minuten mit dem Zug. Hervorragende Zugverbindung.",
+    "en": "Staying overnight in Elst during the Four Days Marches, 12 km from Nijmegen; 18 minutes by car, 12 minutes by train. Excellent train service.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "intro": {
     "nl": "Elst heeft een sterke troef: een snelle trein naar Nijmegen (ongeveer 12 minuten). Daardoor is slapen in Elst praktisch, ook als je geen auto hebt. Populair bij wandelaars die comfort en bereikbaarheid combineren.",
-    "de": "",
-    "en": ""
+    "de": "Elst hat einen großen Vorteil: eine schnelle Zugverbindung nach Nimwegen (ca. 12 Minuten). Dadurch ist eine Übernachtung in Elst praktisch, auch wenn man kein Auto hat. Beliebt bei Wanderern, die Komfort und gute Erreichbarkeit miteinander verbinden.",
+    "en": "Elst has a major advantage: a fast train to Nijmegen (about 12 minutes). This makes staying overnight in Elst a practical option, even if you don’t have a car. It’s popular with hikers who want to combine comfort and accessibility.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "afstand": {
     "nl": "Afstand tot de Wedren: ongeveer 12 km. Met de auto zo'n 18 min. Op de fiets reken je op ongeveer 40 min. Met het OV reken je op 12 min trein. Dichtstbijzijnde/relevante station: Elst. Tip: uitstekende treinverbinding.",
-    "de": "",
-    "en": ""
+    "de": "Entfernung zu den Wedren: ca. 12 km. Mit dem Auto etwa 18 Minuten. Mit dem Fahrrad rechnet man mit etwa 40 Minuten. Mit öffentlichen Verkehrsmitteln rechnet man mit 12 Minuten Zugfahrt. Nächstgelegener/relevanter Bahnhof: Elst. Tipp: hervorragende Zugverbindung.",
+    "en": "Distance to the Wedren: about 12 km. By car, it takes about 18 minutes. By bike, allow about 40 minutes. By public transportation, allow 12 minutes by train. Nearest/relevant station: Elst. Tip: excellent train service.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "typeVerblijf": {
     "nl": "Hotels, B&B's en particuliere verhuur komen voor; camping vaker in de omgeving. Door de treinlijn is Elst aantrekkelijk voor internationale lopers die met bagage reizen.",
-    "de": "",
-    "en": ""
+    "de": "Es gibt Hotels, B&Bs und Privatunterkünfte; Campingplätze findet man häufiger in der Umgebung. Dank der Bahnverbindung ist Elst für internationale Läufer attraktiv, die mit Gepäck reisen.",
+    "en": "There are hotels, B&Bs, and private rentals; campsites are more common in the surrounding area. Thanks to the train line, Elst is an attractive destination for international runners traveling with luggage.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "praktisch": {
     "nl": "Station Elst ligt gunstig. Vanuit daar ben je snel op Nijmegen Centraal. Parkeren is meestal makkelijker dan in Nijmegen. Houd tijdens de Vierdaagse-week rekening met vollere treinen in de ochtendspits.",
-    "de": "",
-    "en": ""
+    "de": "Der Bahnhof Elst liegt verkehrsgünstig. Von dort aus gelangt man schnell zum Hauptbahnhof Nijmegen. Das Parken ist dort meist einfacher als in Nijmegen. Rechnen Sie während der Vierdaagse-Woche mit volleren Zügen in der morgendlichen Hauptverkehrszeit.",
+    "en": "Elst Station is conveniently located. From there, you can quickly reach Nijmegen Central Station. Parking is usually easier than in Nijmegen. During the Four Days Marches week, expect trains to be more crowded during the morning rush hour.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "vertaalstatus": {
     "de": "leeg",

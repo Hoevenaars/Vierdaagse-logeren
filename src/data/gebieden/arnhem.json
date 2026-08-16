@@ -3,33 +3,57 @@
   "naam": "Arnhem",
   "titel": {
     "nl": "Overnachten in Arnhem tijdens de Vierdaagse",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeiten in Arnheim während der Vierdaagse",
+    "en": "Where to Stay in Arnhem During the Four Days Marches",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Arnhem tijdens de Vierdaagse, 24 km van Nijmegen, auto 30 min, OV 15 min trein. Veel hotelcapaciteit.",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeiten in Arnheim während der Vierdaagse, 24 km von Nimwegen entfernt, mit dem Auto 30 Minuten, mit öffentlichen Verkehrsmitteln 15 Minuten mit dem Zug. Großes Hotelangebot.",
+    "en": "Accommodations in Arnhem during the Four Days Marches, 24 km from Nijmegen; 30 minutes by car, 15 minutes by train. Plenty of hotel rooms available.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "intro": {
     "nl": "Arnhem biedt veel hotelcapaciteit en een snelle trein naar Nijmegen (ongeveer 15 minuten). Sterke optie als Nijmegen vol is, of als je stedelijk comfort wilt met betrouwbaar OV.",
-    "de": "",
-    "en": ""
+    "de": "Arnheim bietet zahlreiche Hotelmöglichkeiten und eine schnelle Zugverbindung nach Nimwegen (ca. 15 Minuten). Eine gute Alternative, wenn in Nimwegen keine Unterkünfte mehr frei sind oder wenn Sie städtischen Komfort mit zuverlässigen öffentlichen Verkehrsmitteln wünschen.",
+    "en": "Arnhem offers plenty of hotel accommodations and a fast train to Nijmegen (about 15 minutes). It’s a great option if Nijmegen is fully booked, or if you want urban amenities with reliable public transportation.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "afstand": {
     "nl": "Afstand tot de Wedren: ongeveer 24 km. Met de auto zo'n 30 min. Op de fiets reken je op ongeveer 75 min. Met het OV reken je op 15 min trein. Dichtstbijzijnde/relevante station: Arnhem Centraal. Tip: veel hotelcapaciteit.",
-    "de": "",
-    "en": ""
+    "de": "Entfernung zu den Wedren: ca. 24 km. Mit dem Auto etwa 30 Min. Mit dem Fahrrad rechnet man mit etwa 75 Min. Mit öffentlichen Verkehrsmitteln rechnet man mit 15 Min. Zugfahrt. Nächstgelegener/relevanter Bahnhof: Arnhem Centraal. Tipp: großes Hotelangebot.",
+    "en": "Distance to the Wedren: approximately 24 km. About 30 minutes by car. By bike, allow about 75 minutes. By public transportation, allow 15 minutes by train. Nearest/relevant station: Arnhem Centraal. Tip: plenty of hotel accommodations available.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "typeVerblijf": {
     "nl": "Veel hotels en B&B's, plus appartementen. Camping en particulier zijn minder kenmerkend, maar mogelijk in de regio. Arnhem is vooral een hotelstrategie.",
-    "de": "",
-    "en": ""
+    "de": "Zahlreiche Hotels und B&Bs sowie Ferienwohnungen. Campingplätze und Privatunterkünfte sind weniger verbreitet, aber in der Region durchaus möglich. In Arnheim überwiegen vor allem Hotels.",
+    "en": "There are many hotels and B&Bs, as well as apartments. Campgrounds and private accommodations are less common, but available in the region. Arnhem is primarily a hotel destination.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "praktisch": {
     "nl": "Station Arnhem Centraal is uitstekend verbonden. Trein naar Nijmegen is kort; houd rekening met ochtenddrukte. Parkeren in Arnhem kan, maar OV is vaak efficiënter tijdens evenementdagen.",
-    "de": "",
-    "en": ""
+    "de": "Der Bahnhof Arnhem Centraal ist hervorragend angebunden. Die Zugfahrt nach Nijmegen ist kurz; rechnen Sie morgens mit hohem Fahrgastaufkommen. In Arnhem gibt es Parkmöglichkeiten, doch an Veranstaltungstagen ist die Anreise mit öffentlichen Verkehrsmitteln oft effizienter.",
+    "en": "Arnhem Centraal Station has excellent transportation connections. The train ride to Nijmegen is short; be prepared for morning rush hour. Parking is available in Arnhem, but public transportation is often more efficient on event days.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "vertaalstatus": {
     "de": "leeg",

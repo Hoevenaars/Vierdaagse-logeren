@@ -3,33 +3,57 @@
   "naam": "Cuijk",
   "titel": {
     "nl": "Overnachten in Cuijk tijdens de Vierdaagse",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeiten in Cuijk während der Vierdaagse",
+    "en": "Where to Stay in Cuijk During the Four Days Marches",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Cuijk tijdens de Vierdaagse, 18 km van Nijmegen, snelle treinverbinding, populair bij wandelaars.",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeiten in Cuijk während der Vierdaagse, 18 km von Nijmegen entfernt, schnelle Zugverbindung, bei Wanderern beliebt.",
+    "en": "Staying overnight in Cuijk during the Four Days Marches, 18 km from Nijmegen, with a fast train connection; popular with hikers.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "intro": {
     "nl": "Cuijk ligt zo'n 18 km ten zuiden van Nijmegen aan de Maas. Wandelaars kiezen Cuijk vaak omdat er een treinstation is, de reistijd naar Nijmegen kort blijft, en er meer rust en beschikbaarheid is dan in de stad.",
-    "de": "",
-    "en": ""
+    "de": "Cuijk liegt etwa 18 km südlich von Nijmegen an der Maas. Wanderer entscheiden sich oft für Cuijk, weil es dort einen Bahnhof gibt, die Fahrzeit nach Nijmegen kurz ist und es dort ruhiger ist und mehr Platz bietet als in der Stadt.",
+    "en": "Cuijk is located about 18 km south of Nijmegen on the Meuse River. Hikers often choose Cuijk because it has a train station, the travel time to Nijmegen is short, and it offers more peace and quiet and has more accommodations available than the city does.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "afstand": {
     "nl": "Ongeveer 18 km tot de Wedren. Met de auto zo'n 22 minuten, op de fiets rond de 55 minuten. Met de trein ben je in ongeveer 12 minuten op station Cuijk, een van de snelste OV-opties in de regio.",
-    "de": "",
-    "en": ""
+    "de": "Etwa 18 km bis zum Wedren. Mit dem Auto etwa 22 Minuten, mit dem Fahrrad etwa 55 Minuten. Mit dem Zug bist du in etwa 12 Minuten am Bahnhof Cuijk – eine der schnellsten öffentlichen Verkehrsverbindungen in der Region.",
+    "en": "It's about 18 km to the Wedren. By car, it takes about 22 minutes; by bike, around 55 minutes. By train, you can reach Cuijk Station in about 12 minutes—one of the fastest public transportation options in the region.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "typeVerblijf": {
     "nl": "Cuijk en omgeving bieden hotels, B&B's, campings en particuliere plekken. Door de directe treinlijn naar Nijmegen is het een sterke optie als je bagage wilt minimaliseren en 's ochtends snel naar de start wilt. Bekijk het actuele aanbod op de listing-pagina's.",
-    "de": "",
-    "en": ""
+    "de": "Cuijk und Umgebung bieten Hotels, B&Bs, Campingplätze und private Unterkünfte. Dank der direkten Zugverbindung nach Nijmegen ist dies eine gute Wahl, wenn Sie Ihr Gepäck auf ein Minimum beschränken und morgens schnell zum Start gelangen möchten. Das aktuelle Angebot finden Sie auf den Übersichtsseiten.",
+    "en": "Cuijk and the surrounding area offer hotels, B&Bs, campgrounds, and private accommodations. Thanks to the direct train line to Nijmegen, it’s a great option if you want to pack light and get to the starting line quickly in the morning. Check out the current listings on the listing pages.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "praktisch": {
     "nl": "Station Cuijk ligt gunstig; de rit naar Nijmegen is kort. Plan wel genoeg buffer in tijdens de Vierdaagse-week: treinen en stations kunnen drukker zijn. Parkeren is doorgaans eenvoudiger dan in Nijmegen; combineer anders auto + trein.",
-    "de": "",
-    "en": ""
+    "de": "Der Bahnhof Cuijk liegt verkehrsgünstig; die Fahrt nach Nimwegen ist kurz. Planen Sie während der Vierdaagse-Woche jedoch genügend Zeit ein: Züge und Bahnhöfe können stärker frequentiert sein. Das Parken ist in der Regel einfacher als in Nimwegen; andernfalls kombinieren Sie Auto und Zug.",
+    "en": "Cuijk Station is conveniently located; the trip to Nijmegen is short. Be sure to allow plenty of extra time during the Four Days Marches week: trains and stations may be busier than usual. Parking is generally easier than in Nijmegen; otherwise, consider combining car and train travel.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "vertaalstatus": {
     "de": "leeg",

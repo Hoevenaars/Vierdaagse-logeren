@@ -3,33 +3,57 @@
   "naam": "Oosterhout (GLD)",
   "titel": {
     "nl": "Overnachten in Oosterhout (GLD) tijdens de Vierdaagse",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeiten in Oosterhout (GLD) während der Vierdaagse",
+    "en": "Where to Stay in Oosterhout (GLD) During the Four Days Marches",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Oosterhout (GLD) tijdens de Vierdaagse, 8 km van Nijmegen, auto 15 min, OV 25 min. Rustige ligging.",
-    "de": "",
-    "en": ""
+    "de": "Übernachtung in Oosterhout (GLD) während der Vierdaagse, 8 km von Nijmegen entfernt, mit dem Auto 15 Min., mit öffentlichen Verkehrsmitteln 25 Min. Ruhige Lage.",
+    "en": "Accommodations in Oosterhout (GLD) during the Four Days Marches, 8 km from Nijmegen; 15 min by car, 25 min by public transportation. Quiet location.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "intro": {
     "nl": "Oosterhout (Gelderland) ligt rustig ten noorden van Nijmegen. Je bent met de auto of OV nog dichtbij genoeg, maar slaapt buiten de grootste drukte. Handig als je stilte wilt en toch een korte ochtendrit accepteert.",
-    "de": "",
-    "en": ""
+    "de": "Oosterhout (Gelderland) liegt ruhig nördlich von Nijmegen. Mit dem Auto oder den öffentlichen Verkehrsmitteln ist man noch nah genug dran, übernachtet aber abseits des größten Trubels. Praktisch, wenn man Ruhe sucht und dennoch eine kurze Fahrt am Morgen in Kauf nimmt.",
+    "en": "Oosterhout (Gelderland) is situated in a quiet area north of Nijmegen. It’s still close enough to reach by car or public transportation, but you’ll be staying away from the hustle and bustle. This is ideal if you want some peace and quiet but don’t mind a short morning drive.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "afstand": {
     "nl": "Afstand tot de Wedren: ongeveer 8 km. Met de auto zo'n 15 min. Op de fiets reken je op ongeveer 30 min. Met het OV reken je op 25 min. Dichtstbijzijnde/relevante station: Nijmegen Lent. Tip: rustige ligging.",
-    "de": "",
-    "en": ""
+    "de": "Entfernung zu den Wedren: ca. 8 km. Mit dem Auto etwa 15 Min. Mit dem Fahrrad etwa 30 Min. Mit öffentlichen Verkehrsmitteln etwa 25 Min. Nächstgelegener/relevanter Bahnhof: Nijmegen Lent. Tipp: ruhige Lage.",
+    "en": "Distance to the Wedren: about 8 km. By car, it takes about 15 minutes. By bike, allow about 30 minutes. By public transportation, allow 25 minutes. Nearest/relevant station: Nijmegen Lent. Tip: quiet location.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "typeVerblijf": {
     "nl": "Verwacht vooral particuliere plekken, kleinere accommodaties en soms campings in de buurt. Hotels zijn dunner gezaaid dan in Nijmegen of Arnhem. Check camping, particulier én hotels in de wijde omgeving.",
-    "de": "",
-    "en": ""
+    "de": "Rechnen Sie vor allem mit privaten Unterkünften, kleineren Unterkünften und gelegentlich auch mit Campingplätzen in der Umgebung. Hotels sind hier seltener anzutreffen als in Nimwegen oder Arnheim. Schauen Sie sich Campingplätze, private Unterkünfte und Hotels in der weiteren Umgebung an.",
+    "en": "Expect mostly private accommodations, smaller lodgings, and occasionally campgrounds in the area. Hotels are fewer and farther between than in Nijmegen or Arnhem. Check out campgrounds, private accommodations, and hotels in the wider area.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "praktisch": {
     "nl": "OV loopt via Nijmegen Lent of busverbindingen; reken op ongeveer 25 minuten. Parkeren is doorgaans eenvoudiger dan in de stad. Plan je vertrek 's ochtends ruim in als je afhankelijk bent van bus of overstap.",
-    "de": "",
-    "en": ""
+    "de": "Die Anfahrt mit öffentlichen Verkehrsmitteln erfolgt über Nijmegen Lent oder mit Busverbindungen; rechnen Sie mit etwa 25 Minuten. Das Parken ist in der Regel einfacher als in der Stadt. Planen Sie morgens ausreichend Zeit für die Abfahrt ein, wenn Sie auf Bus oder Umstiege angewiesen sind.",
+    "en": "Public transportation goes through Nijmegen Lent or via bus connections; allow about 25 minutes. Parking is generally easier than in the city. Be sure to leave plenty of time in the morning if you’re relying on a bus or a transfer.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "vertaalstatus": {
     "de": "leeg",

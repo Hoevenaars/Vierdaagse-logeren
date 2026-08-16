@@ -3,33 +3,57 @@
   "naam": "Groesbeek",
   "titel": {
     "nl": "Overnachten in Groesbeek tijdens de Vierdaagse",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeiten in Groesbeek während der Vierdaagse",
+    "en": "Where to Stay in Groesbeek During the Four Days Marches",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Groesbeek tijdens de Vierdaagse, 12 km van Nijmegen, veel campings en B&B's in een bosrijke omgeving.",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeiten in Groesbeek während der Vierdaagse, 12 km von Nijmegen entfernt, viele Campingplätze und B&Bs in einer waldreichen Umgebung.",
+    "en": "Staying overnight in Groesbeek during the Four Days Marches, 12 km from Nijmegen; many campgrounds and B&Bs in a wooded area.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "intro": {
     "nl": "Groesbeek ligt zo'n 12 km ten zuidoosten van Nijmegen, in heuvelachtig en bosrijk gebied. Het is een klassieke Vierdaagse-bestemming: veel campings en B&B's, dichter bij de natuur, en vaak nog plek als Nijmegen zelf vol is.",
-    "de": "",
-    "en": ""
+    "de": "Groesbeek liegt etwa 12 km südöstlich von Nijmegen in einer hügeligen und waldreichen Gegend. Es ist ein klassisches Ziel für die „Vierdaagse“: viele Campingplätze und Bed & Breakfasts, näher an der Natur und oft noch Plätze frei, wenn Nijmegen selbst bereits ausgebucht ist.",
+    "en": "Groesbeek is located about 12 km southeast of Nijmegen, in a hilly and wooded area. It’s a classic Vierdaagse destination: plenty of campgrounds and B&Bs, closer to nature, and often still has availability even when Nijmegen itself is full.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "afstand": {
     "nl": "Ongeveer 12 km tot de Wedren. Met de auto zo'n 18 minuten, op de fiets rond de 35 minuten. Met het OV reken je op ongeveer 25 minuten bus; Groesbeek heeft zelf geen treinstation.",
-    "de": "",
-    "en": ""
+    "de": "Etwa 12 km bis nach Wedren. Mit dem Auto etwa 18 Minuten, mit dem Fahrrad etwa 35 Minuten. Mit öffentlichen Verkehrsmitteln musst du mit einer Busfahrt von etwa 25 Minuten rechnen; Groesbeek selbst hat keinen Bahnhof.",
+    "en": "It's about 12 km to the Wedren. By car, it takes about 18 minutes; by bike, around 35 minutes. By public transportation, it takes about 25 minutes by bus; Groesbeek itself does not have a train station.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "typeVerblijf": {
     "nl": "Groesbeek staat bekend om campings, kampeerboerderijen en B&B's. Particuliere verhuur komt ook voor. Ideaal als je liever buiten de stad slaapt en 's ochtends met auto, fiets of bus naar Nijmegen gaat. Check camping, hotels & B&B en particulier voor actueel aanbod.",
-    "de": "",
-    "en": ""
+    "de": "Groesbeek ist bekannt für Campingplätze, Campingbauernhöfe und B&Bs. Auch Privatunterkünfte gibt es. Ideal, wenn Sie lieber außerhalb der Stadt übernachten und morgens mit dem Auto, dem Fahrrad oder dem Bus nach Nijmegen fahren möchten. Schauen Sie unter „Campingplätze, Hotels & B&Bs“ und „Privatunterkünfte“ nach aktuellen Angeboten.",
+    "en": "Groesbeek is known for its campgrounds, farm stays, and B&Bs. There are also private rentals available. This is ideal if you’d rather stay outside the city and travel to Nijmegen in the morning by car, bike, or bus. Check out campgrounds, hotels, B&Bs, and private rentals for current listings.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "praktisch": {
     "nl": "Er is geen treinstation in Groesbeek; reken op bus of eigen vervoer. Parkeren is meestal makkelijker dan in Nijmegen, maar tijdens de Vierdaagse-week kan de aanvoerdrukte toenemen. Plan je ochtendrit ruim in en check actuele buslijnen vooraf.",
-    "de": "",
-    "en": ""
+    "de": "In Groesbeek gibt es keinen Bahnhof; Sie sollten daher den Bus oder ein eigenes Fahrzeug nutzen. Das Parken ist in der Regel einfacher als in Nijmegen, doch während der „Vierdaagse“-Woche kann es zu erhöhtem Parkdruck kommen. Planen Sie Ihre Fahrt am Morgen großzügig ein und informieren Sie sich vorab über die aktuellen Busverbindungen.",
+    "en": "There is no train station in Groesbeek; you’ll need to take the bus or use your own transportation. Parking is usually easier than in Nijmegen, but during the Four Days Marches week, traffic can get heavier. Allow plenty of time for your morning commute and check the current bus schedules in advance.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "vertaalstatus": {
     "de": "leeg",

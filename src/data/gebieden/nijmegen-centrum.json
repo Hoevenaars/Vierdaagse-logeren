@@ -3,33 +3,57 @@
   "naam": "Nijmegen Centrum",
   "titel": {
     "nl": "Overnachten in Nijmegen Centrum tijdens de Vierdaagse",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeiten im Zentrum von Nijmegen während der Vierdaagse",
+    "en": "Where to Stay in Downtown Nijmegen During the Four Days Marches",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Nijmegen Centrum tijdens de Vierdaagse, 0-2 km van Nijmegen, auto 5 min, OV Lopend. Ideale locatie.",
-    "de": "",
-    "en": ""
+    "de": "Übernachtungsmöglichkeiten im Zentrum von Nijmegen während der Vierdaagse, 0–2 km von Nijmegen entfernt, 5 Min. mit dem Auto, mit öffentlichen Verkehrsmitteln oder zu Fuß erreichbar. Ideale Lage.",
+    "en": "Accommodations in Nijmegen City Center during the Four Days Marches, 0–2 km from Nijmegen; 5-minute drive; public transportation: walking distance. Ideal location.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "intro": {
     "nl": "Nijmegen-centrum is de kortste route naar start en finish: je zit midden in de Vierdaagse-sfeer. Dat is ideaal voor comfort, maar ook het eerst volgeboekt en het duurst. Wie hier slaapt, wint tijd, en moet vroeg reserveren.",
-    "de": "",
-    "en": ""
+    "de": "Das Zentrum von Nijmegen ist der kürzeste Weg zum Start und Ziel: Hier taucht man mitten in die Atmosphäre der Vierdaagse ein. Das ist ideal in puncto Komfort, aber auch am schnellsten ausgebucht und am teuersten. Wer hier übernachtet, spart Zeit und muss frühzeitig reservieren.",
+    "en": "Downtown Nijmegen is the shortest route to the start and finish lines: you’re right in the heart of the Four Days Marches atmosphere. That’s ideal for comfort, but it’s also the first to sell out and the most expensive. If you stay here, you’ll save time, but you’ll need to book early.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "afstand": {
     "nl": "Afstand tot de Wedren: ongeveer 0-2 km. Met de auto zo'n 5 min. Op de fiets reken je op ongeveer 5 min. Met het OV reken je op Lopend. Dichtstbijzijnde/relevante station: Nijmegen Centraal. Tip: ideale locatie.",
-    "de": "",
-    "en": ""
+    "de": "Entfernung zu den Wedren: ca. 0–2 km. Mit dem Auto etwa 5 Min. Mit dem Fahrrad etwa 5 Min. Mit öffentlichen Verkehrsmitteln: zu Fuß. Nächstgelegener/relevanter Bahnhof: Nijmegen Centraal. Tipp: ideale Lage.",
+    "en": "Distance to the Wedren: approximately 0–2 km. About 5 minutes by car. By bike, it takes about 5 minutes. By public transportation, you’ll need to walk. Nearest/relevant station: Nijmegen Centraal. Tip: ideal location.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "typeVerblijf": {
     "nl": "Hier vind je vooral hotels, appartementen en B&B's. Campings liggen buiten het centrum. Particuliere kamers komen incidenteel voor, maar concurrentie is groot. Begin bij hotels & B&B en check ook particulier als centrum al vol zit.",
-    "de": "",
-    "en": ""
+    "de": "Hier findest du vor allem Hotels, Ferienwohnungen und B&Bs. Campingplätze liegen außerhalb des Zentrums. Zimmer bei Privatpersonen gibt es vereinzelt, aber die Konkurrenz ist groß. Beginne mit Hotels und B&Bs und schau auch bei Privatpersonen nach, falls das Zentrum bereits ausgebucht ist.",
+    "en": "Here you'll mainly find hotels, apartments, and B&Bs. Campgrounds are located outside the city center. Private rooms are available on occasion, but competition is fierce. Start with hotels and B&Bs, and also check private accommodations if the city center is already fully booked.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "praktisch": {
     "nl": "Station Nijmegen Centraal ligt centraal; veel accommodaties zijn lopend of met een korte busrit bereikbaar. Parkeren is duur en schaars tijdens de Vierdaagse-week, OV of fiets is vaak makkelijker. Plan aankomst ruim in op de drukste dagen.",
-    "de": "",
-    "en": ""
+    "de": "Der Bahnhof Nijmegen Centraal liegt zentral; viele Unterkünfte sind zu Fuß oder mit einer kurzen Busfahrt erreichbar. Parken ist während der Vierdaagse-Woche teuer und schwierig, daher ist es oft einfacher, öffentliche Verkehrsmittel oder das Fahrrad zu nutzen. Planen Sie an den Tagen mit dem größten Andrang ausreichend Zeit für die Anreise ein.",
+    "en": "Nijmegen Centraal Station is centrally located; many accommodations are within walking distance or a short bus ride away. Parking is expensive and scarce during the Four Days Marches week, so public transportation or a bicycle is often easier. Plan to arrive well in advance on the busiest days.",
+    "vertaalstatus": {
+      "de": "concept",
+      "en": "concept"
+    }
   },
   "vertaalstatus": {
     "de": "leeg",
