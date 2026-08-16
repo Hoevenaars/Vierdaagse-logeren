@@ -1,51 +1,104 @@
 ---
+import type { Locale } from '../i18n/ui';
+
 interface Props {
   categorie: 'particulier' | 'camping' | 'hotel' | 'blarenzorg';
   typeOpties: string[];
   titel: string;
   introtekst: string;
+  locale?: Locale;
 }
-const { categorie, typeOpties, titel, introtekst } = Astro.props;
+
+const { categorie, typeOpties, titel, introtekst, locale = 'nl' } = Astro.props;
 const formId = `location-form-${categorie}`;
 const statusId = `form-status-${categorie}`;
+
+const copy = {
+  nl: {
+    naam: 'Naam *',
+    plaats: 'Plaats *',
+    type: 'Type',
+    beschrijving: 'Beschrijving',
+    contact: 'E-mailadres *',
+    honeypot: 'Laat dit veld leeg',
+    verstuur: 'Aanmelden',
+    versturen: 'Versturen...',
+    gelukt: 'Bedankt! Je aanmelding is verstuurd en wordt binnenkort gecontroleerd.',
+    serverfout: 'Er ging iets mis. Probeer het later opnieuw.',
+    netwerkfout: 'Er ging iets mis. Controleer je internetverbinding en probeer het opnieuw.',
+  },
+  en: {
+    naam: 'Name *',
+    plaats: 'Town *',
+    type: 'Type',
+    beschrijving: 'Description',
+    contact: 'Email address *',
+    honeypot: 'Leave this field empty',
+    verstuur: 'Sign up',
+    versturen: 'Sending...',
+    gelukt: 'Thanks! Your signup was sent and will be reviewed soon.',
+    serverfout: 'Something went wrong. Please try again later.',
+    netwerkfout: 'Something went wrong. Check your internet connection and try again.',
+  },
+  de: {
+    naam: 'Name *',
+    plaats: 'Ort *',
+    type: 'Typ',
+    beschrijving: 'Beschreibung',
+    contact: 'E-Mail-Adresse *',
+    honeypot: 'Dieses Feld leer lassen',
+    verstuur: 'Anmelden',
+    versturen: 'Wird gesendet...',
+    gelukt: 'Danke! Deine Anmeldung wurde gesendet und wird bald geprüft.',
+    serverfout: 'Etwas ist schiefgelaufen. Bitte versuche es später erneut.',
+    netwerkfout: 'Etwas ist schiefgelaufen. Überprüfe deine Internetverbindung und versuche es erneut.',
+  },
+}[locale];
 ---
 
 <h2>{titel}</h2>
 <p>{introtekst}</p>
 
-<form id={formId} class="location-form" data-status-id={statusId}>
+<form
+  id={formId}
+  class="location-form"
+  data-status-id={statusId}
+  data-msg-versturen={copy.versturen}
+  data-msg-gelukt={copy.gelukt}
+  data-msg-serverfout={copy.serverfout}
+  data-msg-netwerkfout={copy.netwerkfout}
+>
   <input type="hidden" name="categorie" value={categorie} />
 
   <div class="form-field">
-    <label for={`naam-${categorie}`}>Naam *</label>
+    <label for={`naam-${categorie}`}>{copy.naam}</label>
     <input type="text" id={`naam-${categorie}`} name="naam" required />
   </div>
   <div class="form-field">
-    <label for={`plaats-${categorie}`}>Plaats *</label>
+    <label for={`plaats-${categorie}`}>{copy.plaats}</label>
     <input type="text" id={`plaats-${categorie}`} name="plaats" required />
   </div>
   <div class="form-field">
-    <label for={`type-${categorie}`}>Type</label>
+    <label for={`type-${categorie}`}>{copy.type}</label>
     <select id={`type-${categorie}`} name="type">
       {typeOpties.map((optie) => <option value={optie}>{optie}</option>)}
     </select>
   </div>
   <div class="form-field">
-    <label for={`beschrijving-${categorie}`}>Beschrijving</label>
+    <label for={`beschrijving-${categorie}`}>{copy.beschrijving}</label>
     <textarea id={`beschrijving-${categorie}`} name="beschrijving" rows="4"></textarea>
   </div>
   <div class="form-field">
-    <label for={`contact-${categorie}`}>E-mailadres *</label>
+    <label for={`contact-${categorie}`}>{copy.contact}</label>
     <input type="email" id={`contact-${categorie}`} name="contact" required />
   </div>
 
-  {/* Honeypot-veld tegen spam */}
   <div class="honeypot" aria-hidden="true">
-    <label for={`website_hp-${categorie}`}>Laat dit veld leeg</label>
+    <label for={`website_hp-${categorie}`}>{copy.honeypot}</label>
     <input type="text" id={`website_hp-${categorie}`} name="website_hp" tabindex="-1" autocomplete="off" />
   </div>
 
-  <button type="submit">Aanmelden</button>
+  <button type="submit">{copy.verstuur}</button>
   <p id={statusId} role="status" aria-live="polite"></p>
 </form>
 
@@ -115,15 +168,17 @@ const statusId = `form-status-${categorie}`;
 </style>
 
 <script>
-  // Eén generieke handler voor alle aanmeldformulieren op de pagina
   document.querySelectorAll('form.location-form').forEach((form) => {
     const htmlForm = form as HTMLFormElement;
+    if (htmlForm.dataset.bound === '1') return;
+    htmlForm.dataset.bound = '1';
+
     const statusId = htmlForm.dataset.statusId;
     const status = statusId ? document.getElementById(statusId) : null;
 
     htmlForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      if (status) status.textContent = 'Versturen...';
+      if (status) status.textContent = htmlForm.dataset.msgVersturen || 'Sending...';
 
       const formData = new FormData(htmlForm);
       const payload = Object.fromEntries(formData.entries());
@@ -138,18 +193,14 @@ const statusId = `form-status-${categorie}`;
         const result = await response.json();
 
         if (!response.ok) {
-          if (status) status.textContent = result.error || 'Er ging iets mis. Probeer het later opnieuw.';
+          if (status) status.textContent = result.error || htmlForm.dataset.msgServerfout || '';
           return;
         }
 
-        if (status) {
-          status.textContent = 'Bedankt! Je aanmelding is verstuurd en wordt binnenkort gecontroleerd.';
-        }
+        if (status) status.textContent = htmlForm.dataset.msgGelukt || '';
         htmlForm.reset();
       } catch {
-        if (status) {
-          status.textContent = 'Er ging iets mis. Controleer je internetverbinding en probeer het opnieuw.';
-        }
+        if (status) status.textContent = htmlForm.dataset.msgNetwerkfout || '';
       }
     });
   });

@@ -14,6 +14,9 @@
 - [Internationale lopers](https://vierdaagselogeren.nl/gids/internationale-lopers): gids voor buitenlandse bezoekers
 - [FAQ](https://vierdaagselogeren.nl/faq): veelgestelde vragen
 - [Over ons](https://vierdaagselogeren.nl/over-ons): onafhankelijkheidsverklaring
+- [Gebieden](https://vierdaagselogeren.nl/gebied): plaatsen rond Nijmegen met reistijden
+- [Privacy](https://vierdaagselogeren.nl/privacy): privacyverklaring
+- [Contact](https://vierdaagselogeren.nl/contact): contactformulier
 
 ## Talen
 

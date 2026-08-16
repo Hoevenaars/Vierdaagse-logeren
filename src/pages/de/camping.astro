@@ -5,7 +5,7 @@ import campingsData from '../../data/campings.json';
 import data from '../../data/pages/camping.json';
 import { linkify } from '../../i18n/utils';
 
-const campings = campingsData.campings;
+const campings = campingsData.campings.filter((c: any) => c.status === 'gepubliceerd');
 const locale = 'de' as const;
 function v(field: Record<string, string>) { return field[locale]?.trim() ? field[locale] : field.nl; }
 const links = { gebiedPath: '/de/gebied', particulierPath: '/de/particuliere-verhuur', hotelsPath: '/de/hotels-bb' };
@@ -42,6 +42,7 @@ const links = { gebiedPath: '/de/gebied', particulierPath: '/de/particuliere-ver
   )}
 
   <AanmeldFormulier
+    locale={locale}
     categorie="camping"
     typeOpties={['Camping', 'Kampeerboerderij', 'Anders']}
     titel={v(data.aanmeldTitel)}

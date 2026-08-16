@@ -5,7 +5,7 @@ import blarenzorgData from '../data/blarenzorg.json';
 import data from '../data/pages/blarenzorg.json';
 import { linkify } from '../i18n/utils';
 
-const aanbieders = blarenzorgData.blarenzorg;
+const aanbieders = blarenzorgData.blarenzorg.filter((a: any) => a.status === 'gepubliceerd');
 const locale = 'nl' as const;
 function v(field: Record<string, string>) { return field[locale]?.trim() ? field[locale] : field.nl; }
 const links = { gidsPath: '/gids/wanneer-boeken' };
@@ -36,6 +36,7 @@ const links = { gidsPath: '/gids/wanneer-boeken' };
   )}
 
   <AanmeldFormulier
+    locale={locale}
     categorie="blarenzorg"
     typeOpties={['Blarenprikker', '(Sport)masseur', 'Pedicure', 'Podotherapeut', 'Anders']}
     titel={v(data.aanmeldTitel)}

@@ -159,6 +159,86 @@
         "de": "vastgelegd-niet-vertalen",
         "en": "vastgelegd-niet-vertalen"
       }
+    },
+    {
+      "key": "nav.blarenzorg",
+      "nl": "Blarenzorg",
+      "de": "Blasenpflege",
+      "en": "Blister care",
+      "vertaalstatus": {
+        "de": "gecontroleerd",
+        "en": "gecontroleerd"
+      }
+    },
+    {
+      "key": "nav.contact",
+      "nl": "Contact",
+      "de": "Kontakt",
+      "en": "Contact",
+      "vertaalstatus": {
+        "de": "gecontroleerd",
+        "en": "gecontroleerd"
+      }
+    },
+    {
+      "key": "nav.privacy",
+      "nl": "Privacy",
+      "de": "Datenschutz",
+      "en": "Privacy",
+      "vertaalstatus": {
+        "de": "gecontroleerd",
+        "en": "gecontroleerd"
+      }
+    },
+    {
+      "key": "home.gebied.title",
+      "nl": "Waar wil je slapen?",
+      "de": "Wo möchtest du schlafen?",
+      "en": "Where do you want to stay?",
+      "vertaalstatus": {
+        "de": "gecontroleerd",
+        "en": "gecontroleerd"
+      }
+    },
+    {
+      "key": "home.gebied.text",
+      "nl": "Vergelijk plaatsen rond Nijmegen op afstand en reistijd — van Malden tot Arnhem.",
+      "de": "Vergleiche Orte rund um Nijmegen nach Entfernung und Fahrzeit — von Malden bis Arnhem.",
+      "en": "Compare towns around Nijmegen by distance and travel time — from Malden to Arnhem.",
+      "vertaalstatus": {
+        "de": "gecontroleerd",
+        "en": "gecontroleerd"
+      }
+    },
+    {
+      "key": "home.gebied.cta",
+      "nl": "Bekijk alle gebieden →",
+      "de": "Alle Gebiete ansehen →",
+      "en": "Browse all areas →",
+      "vertaalstatus": {
+        "de": "gecontroleerd",
+        "en": "gecontroleerd"
+      }
+    },
+    {
+      "key": "home.intl.cta",
+      "nl": "Kom je uit het buitenland? Lees de gids voor internationale lopers →",
+      "de": "Kommst du aus dem Ausland? Lies den Ratgeber für internationale Läufer →",
+      "en": "Coming from abroad? Read the guide for international walkers →",
+      "vertaalstatus": {
+        "de": "gecontroleerd",
+        "en": "gecontroleerd"
+      }
+    },
+    {
+      "key": "nav.intlGids",
+      "nl": "Internationale lopers",
+      "de": "Internationale Läufer",
+      "en": "International walkers",
+      "vertaalstatus": {
+        "de": "gecontroleerd",
+        "en": "gecontroleerd"
+      }
     }
   ]
 }

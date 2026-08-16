@@ -1,43 +1,59 @@
-# Astro Starter Kit: Minimal
+# Vierdaagse Logeren
+
+Astro-site (NL/EN/DE) die wandelaars helpt een slaapplek te vinden tijdens de Vierdaagse Nijmegen.
+
+## Lokaal draaien
 
 ```sh
-npm create astro@latest -- --template minimal
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Dev-server: `http://localhost:4321`
 
-## 🚀 Project Structure
+Achtergrondmodus (zoals in deze omgeving):
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```sh
+astro dev --background
+astro dev status
+astro dev logs
+astro dev stop
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Build
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```sh
+npm run build
+npm run preview
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Content & CMS
 
-## 🧞 Commands
+- Pagina-teksten en listings: `src/data/`
+- Decap CMS: `/admin` (GitHub OAuth via `api/auth.ts` + `api/callback.ts`)
+- Config: `public/admin/config.yml` (spiegel van root `config.yml`)
+- Media-uploads: `public/uploads/`
 
-All commands are run from the root of the project, from a terminal:
+Listings (camping, hotels, particulier, blarenzorg) zijn alleen zichtbaar met status **gepubliceerd**.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Environment variables
 
-## 👀 Want to learn more?
+Zie `.env.example`:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Variable | Gebruik |
+| --- | --- |
+| `RESEND_API_KEY` | Mail via contact- en aanmeldformulieren |
+| `OWNER_EMAIL` | Ontvanger van die mails |
+| `OAUTH_GITHUB_CLIENT_ID` / `OAUTH_GITHUB_CLIENT_SECRET` | Inloggen in `/admin` |
+| `DEEPL_API_KEY` | Vertaal-Action (`npm run translate`) |
+
+## Scripts
+
+```sh
+npm run translate   # DeepL-concepten voor lege DE/EN-velden
+```
+
+## Documentatie
+
+- Astro: https://docs.astro.build
+- Live site: https://vierdaagselogeren.nl

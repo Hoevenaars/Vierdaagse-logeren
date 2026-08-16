@@ -5,7 +5,7 @@ import hotelsData from '../data/hotels.json';
 import data from '../data/pages/hotels-bb.json';
 import { linkify } from '../i18n/utils';
 
-const hotels = hotelsData.hotels;
+const hotels = hotelsData.hotels.filter((h: any) => h.status === 'gepubliceerd');
 const locale = 'nl' as const;
 function v(field: Record<string, string>) { return field[locale]?.trim() ? field[locale] : field.nl; }
 function vArr(field: Record<string, string[]>) { return field[locale]?.length ? field[locale] : field.nl; }
@@ -45,6 +45,7 @@ const links = { campingPath: '/camping', particulierPath: '/particuliere-verhuur
   )}
 
   <AanmeldFormulier
+    locale={locale}
     categorie="hotel"
     typeOpties={['Hotel', 'B&B', 'Anders']}
     titel={v(data.aanmeldTitel)}

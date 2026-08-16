@@ -756,6 +756,13 @@ collections:
                         - { label: "Nederlands", name: "nl", widget: "string" }
                         - { label: "Duits — AI-concept, controleren", name: "de", widget: "string", required: false }
                         - { label: "Engels — AI-concept, controleren", name: "en", widget: "string", required: false }
+                    - label: "Telefoon-label"
+                      name: "telefoon"
+                      widget: "object"
+                      fields:
+                        - { label: "Nederlands", name: "nl", widget: "string" }
+                        - { label: "Duits — AI-concept, controleren", name: "de", widget: "string", required: false }
+                        - { label: "Engels — AI-concept, controleren", name: "en", widget: "string", required: false }
                     - label: "Bericht-label"
                       name: "bericht"
                       widget: "object"
@@ -835,6 +842,7 @@ collections:
               - { label: "Type", name: "type", widget: "select", options: ["Tuin/kampeerplek", "Kamer", "Oprit", "Anders"] }
               - { label: "Beschrijving", name: "beschrijving", widget: "text" }
               - { label: "Contact (e-mail)", name: "contact", widget: "string" }
+              - { label: "Status", name: "status", widget: "select", options: ["nieuw", "gecontroleerd", "gepubliceerd", "afgewezen"], default: "nieuw" }
 
   - name: "camping"
     label: "Camping"
@@ -854,6 +862,7 @@ collections:
               - { label: "Type", name: "type", widget: "select", options: ["Camping", "Kampeerboerderij", "Anders"] }
               - { label: "Beschrijving", name: "beschrijving", widget: "text" }
               - { label: "Contact (e-mail)", name: "contact", widget: "string" }
+              - { label: "Status", name: "status", widget: "select", options: ["nieuw", "gecontroleerd", "gepubliceerd", "afgewezen"], default: "nieuw" }
 
   - name: "hotels"
     label: "Hotels & B&B"
@@ -873,6 +882,7 @@ collections:
               - { label: "Type", name: "type", widget: "select", options: ["Hotel", "B&B", "Anders"] }
               - { label: "Beschrijving", name: "beschrijving", widget: "text" }
               - { label: "Contact (e-mail)", name: "contact", widget: "string" }
+              - { label: "Status", name: "status", widget: "select", options: ["nieuw", "gecontroleerd", "gepubliceerd", "afgewezen"], default: "nieuw" }
 
   - name: "blarenzorg"
     label: "Blarenzorg & massage"
@@ -892,3 +902,4 @@ collections:
               - { label: "Type", name: "type", widget: "select", options: ["Blarenprikker", "(Sport)masseur", "Pedicure", "Podotherapeut", "Anders"] }
               - { label: "Beschrijving", name: "beschrijving", widget: "text" }
               - { label: "Contact (e-mail)", name: "contact", widget: "string" }
+              - { label: "Status", name: "status", widget: "select", options: ["nieuw", "gecontroleerd", "gepubliceerd", "afgewezen"], default: "nieuw" }

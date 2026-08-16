@@ -5,7 +5,7 @@ import locationsData from '../../data/locations.json';
 import data from '../../data/pages/particuliere-verhuur.json';
 import { linkify } from '../../i18n/utils';
 
-const locations = locationsData.locations;
+const locations = locationsData.locations.filter((l: any) => l.status === 'gepubliceerd');
 const locale = 'en' as const;
 function v(field: Record<string, string>) { return field[locale]?.trim() ? field[locale] : field.nl; }
 function vArr(field: Record<string, string[]>) { return field[locale]?.length ? field[locale] : field.nl; }
@@ -26,7 +26,7 @@ const links = { campingPath: '/en/camping', hotelsPath: '/en/hotels-bb' };
     {vArr(data.letOpItems).map((item: string) => <li>{item}</li>)}
   </ul>
 
-  {locations.length > 0 && (
+  {locations.length > 0 ? (
     <>
       <h2>{v(data.lijstTitel)}</h2>
       <div class="location-list">
@@ -40,9 +40,15 @@ const links = { campingPath: '/en/camping', hotelsPath: '/en/hotels-bb' };
         ))}
       </div>
     </>
+  ) : (
+    <>
+      <h2>{v(data.leegTitel)}</h2>
+      <p class="callout callout--open" set:html={linkify(v(data.leegTekst), links)} />
+    </>
   )}
 
   <AanmeldFormulier
+    locale={locale}
     categorie="particulier"
     typeOpties={['Tuin/kampeerplek', 'Kamer', 'Oprit', 'Anders']}
     titel={v(data.aanmeldTitel)}

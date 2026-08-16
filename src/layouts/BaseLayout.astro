@@ -84,7 +84,7 @@ const hreflangMap = {
             <li><a href={getLocalizedPath('/camping', locale)}>{t('nav.camping')}</a></li>
             <li><a href={getLocalizedPath('/particuliere-verhuur', locale)}>{t('nav.particulier')}</a></li>
             <li><a href={getLocalizedPath('/hotels-bb', locale)}>{t('nav.hotels')}</a></li>
-            <li><a href={getLocalizedPath('/blarenzorg', locale)}>Blarenzorg</a></li>
+            <li><a href={getLocalizedPath('/blarenzorg', locale)}>{t('nav.blarenzorg')}</a></li>
             <li><a href={getLocalizedPath('/gebied', locale)}>{t('nav.gebieden')}</a></li>
             <li><a href={getLocalizedPath('/gids/wanneer-boeken', locale)}>{t('nav.gids')}</a></li>
           </ul>
@@ -111,7 +111,9 @@ const hreflangMap = {
         <nav aria-label="Footer-navigatie">
           <a href={getLocalizedPath('/over-ons', locale)}>{t('nav.overons')}</a>
           <a href={getLocalizedPath('/faq', locale)}>{t('nav.faq')}</a>
-          <a href={getLocalizedPath('/contact', locale)}>Contact</a>
+          <a href={getLocalizedPath('/contact', locale)}>{t('nav.contact')}</a>
+          <a href={getLocalizedPath('/privacy', locale)}>{t('nav.privacy')}</a>
+          <a href={getLocalizedPath('/gids/internationale-lopers', locale)}>{t('nav.intlGids')}</a>
         </nav>
         <p class="disclosure">{t('footer.disclosure')}</p>
       </div>
@@ -217,6 +219,7 @@ const hreflangMap = {
       }
       .footer-inner nav {
         display: flex;
+        flex-wrap: wrap;
         gap: var(--space-4);
         margin-bottom: var(--space-3);
       }

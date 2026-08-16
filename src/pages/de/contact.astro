@@ -5,7 +5,12 @@ import data from '../../data/pages/contact.json';
 const locale = 'de' as const;
 function v(field: Record<string, string>) { return field[locale]?.trim() ? field[locale] : field.nl; }
 const labels = data.labels;
-const status = data.statusberichten;
+const status = {
+  versturen: v(data.statusberichten.versturen),
+  gelukt: v(data.statusberichten.gelukt),
+  serverfout: v(data.statusberichten.serverfout),
+  netwerkfout: v(data.statusberichten.netwerkfout),
+};
 ---
 
 <ContentPage title={`${v(data.titel)} — Vierdaagse Logeren`} description={v(data.seoBeschrijving)} locale={locale} h1={v(data.titel)}>

@@ -10,14 +10,14 @@
     "en": "Staying with a local during the Four Days Marches — Vierdaagse Logeren"
   },
   "seoBeschrijving": {
-    "nl": "Een kamer, tuin of oprit bij een particulier tijdens de Vierdaagse — goedkoper dan een hotel, persoonlijker dan een camping.",
-    "de": "Ein Zimmer, Garten oder Stellplatz bei Privatpersonen während des Vierdaagse — günstiger als ein Hotel, persönlicher als ein Campingplatz.",
-    "en": "A room, garden, or driveway at someone's home during the Four Days Marches — more affordable than a hotel, more personal than a campsite."
+    "nl": "Kamer, tuin of oprit bij een particulier tijdens de Vierdaagse — wat het kost, waar je op let en hoe je een plek vindt rond Nijmegen.",
+    "de": "Zimmer, Garten oder Stellplatz bei Privatpersonen während des Vierdaagse — Kosten, worauf du achtest und wie du eine Unterkunft rund um Nijmegen findest.",
+    "en": "A room, garden or driveway with a local during the Four Days Marches — costs, what to check, and how to find a place around Nijmegen."
   },
   "intro": {
-    "nl": "Een kamer, tuin of oprit bij iemand thuis — vaak goedkoper dan een hotel, persoonlijker dan een camping, en een goed alternatief als de reguliere opties vol zitten.",
-    "de": "Ein Zimmer, Garten oder Stellplatz bei jemandem zu Hause — oft günstiger als ein Hotel, persönlicher als ein Campingplatz und eine gute Alternative, wenn die regulären Optionen ausgebucht sind.",
-    "en": "A room, garden, or driveway at someone's home — often more affordable than a hotel, more personal than a campsite, and a good alternative when the regular options are full."
+    "nl": "Een kamer, tuin of oprit bij iemand thuis is vaak goedkoper dan een hotel en persoonlijker dan een volle camping. Het is ook een sterke plan B als campings en hotels vol zitten. Op deze pagina leggen we uit wat je kunt verwachten en waar je scherp op let.",
+    "de": "Ein Zimmer, Garten oder Stellplatz bei jemandem zu Hause ist oft günstiger als ein Hotel und persönlicher als ein voller Campingplatz. Es ist auch ein starker Plan B, wenn Camping und Hotels ausgebucht sind. Auf dieser Seite erklären wir, was dich erwartet und worauf du achten solltest.",
+    "en": "A room, garden or driveway at someone's home is often cheaper than a hotel and more personal than a busy campsite. It's also a strong plan B when campsites and hotels are full. This page explains what to expect and what to check carefully."
   },
   "verwachtTitel": {
     "nl": "Wat kun je verwachten",
@@ -25,9 +25,9 @@
     "en": "What to expect"
   },
   "verwachtTekst": {
-    "nl": "Variërend van een simpele kampeerplek in een achtertuin tot een volwaardige logeerkamer. Voorzieningen verschillen per aanbieder — vraag vooraf na wat er wel en niet inbegrepen is (sanitair, ontbijt, parkeren).",
-    "de": "Von einem einfachen Stellplatz im Garten bis zu einem vollwertigen Gästezimmer. Die Ausstattung unterscheidet sich je nach Gastgeber — frage vorher nach, was enthalten ist (Sanitäranlagen, Frühstück, Parkplatz).",
-    "en": "Ranges from a simple camping spot in a backyard to a full guest room. Facilities vary per host — ask in advance what is and isn't included (sanitary facilities, breakfast, parking)."
+    "nl": "Het aanbod loopt uiteen: van een tentplek in de tuin tot een logeerkamer met eigen sleutel. Sanitair, stilte, ontbijt en parkeren verschillen per gastheer. Stem vooraf toe: aankomsttijd, wat erbij zit, of er huisdieren zijn, en hoe je 's ochtends naar de start komt.",
+    "de": "Das Angebot reicht vom Zeltplatz im Garten bis zum Gästezimmer mit eigenem Schlüssel. Sanitär, Ruhe, Frühstück und Parkplatz unterscheiden sich je nach Gastgeber. Kläre vorher: Ankunftszeit, was enthalten ist, ob Haustiere da sind und wie du morgens zum Start kommst.",
+    "en": "Offers range from a tent pitch in the garden to a guest room with your own key. Facilities, quiet, breakfast and parking vary by host. Agree in advance: arrival time, what's included, pets in the house, and how you'll get to the start in the morning."
   },
   "kostTitel": {
     "nl": "Wat het kost",
@@ -35,9 +35,9 @@
     "en": "What it costs"
   },
   "kostTekst": {
-    "nl": "Doorgaans lager dan een hotel, vergelijkbaar met of goedkoper dan een camping, afhankelijk van voorzieningen.",
-    "de": "In der Regel günstiger als ein Hotel, vergleichbar mit oder günstiger als Camping, je nach Ausstattung.",
-    "en": "Usually lower than a hotel, comparable to or cheaper than camping, depending on facilities."
+    "nl": "Meestal lager dan een hotel, en vaak vergelijkbaar met of goedkoper dan een camping — afhankelijk van voorzieningen en afstand tot Nijmegen. Vraag een all-in prijs per nacht (inclusief eventuele toeslagen) en hoe betalen werkt (contant, tikkie, vooraf).",
+    "de": "Meist günstiger als ein Hotel und oft vergleichbar mit oder günstiger als Camping — je nach Ausstattung und Entfernung zu Nijmegen. Frage einen All-inklusive-Preis pro Nacht (inkl. Zuschläge) und wie die Zahlung läuft (bar, Überweisung, im Voraus).",
+    "en": "Usually cheaper than a hotel, and often similar to or cheaper than camping — depending on facilities and distance to Nijmegen. Ask for an all-in price per night (including any extras) and how payment works (cash, transfer, in advance)."
   },
   "letOpTitel": {
     "nl": "Waar je op let",
@@ -46,25 +46,41 @@
   },
   "letOpItems": {
     "nl": [
-      "Afstand tot startpunt/route",
-      "Wat er precies inbegrepen is",
-      "Duidelijke afspraken over aankomst- en vertrektijden"
+      "Afstand tot startpunt of route — en hoe je die 's ochtends aflegt",
+      "Wat er precies inbegrepen is (sanitair, handdoeken, keuken, parkeren)",
+      "Duidelijke aankomst- en vertrektijden, ook na een late finish",
+      "Bereikbaarheid zonder auto (OV, fiets) als je die niet hebt",
+      "Alleen boeken via duidelijke afspraken; twijfel je, kies een ander aanbod"
     ],
     "de": [
-      "Entfernung zum Start/zur Strecke",
-      "Was genau enthalten ist",
-      "Klare Absprachen zu An- und Abreisezeiten"
+      "Entfernung zu Start oder Strecke — und wie du morgens dorthin kommst",
+      "Was genau enthalten ist (Sanitär, Handtücher, Küche, Parkplatz)",
+      "Klare An- und Abreisezeiten, auch nach einem späten Finish",
+      "Erreichbarkeit ohne Auto (ÖPNV, Fahrrad), falls du keines hast",
+      "Nur mit klaren Absprachen buchen; bei Zweifel anderes Angebot wählen"
     ],
     "en": [
-      "Distance to the start/route",
-      "Exactly what's included",
-      "Clear agreements on arrival and departure times"
+      "Distance to the start or route — and how you'll cover it in the morning",
+      "Exactly what's included (bathroom, towels, kitchen, parking)",
+      "Clear arrival and departure times, including after a late finish",
+      "Access without a car (public transport, bike) if you don't have one",
+      "Only book with clear agreements; if anything feels off, choose another offer"
     ]
   },
   "lijstTitel": {
     "nl": "Beschikbare locaties",
     "de": "Verfügbare Standorte",
     "en": "Available locations"
+  },
+  "leegTitel": {
+    "nl": "Nog geen particuliere plekken online",
+    "de": "Noch keine privaten Unterkünfte online",
+    "en": "No private stays listed yet"
+  },
+  "leegTekst": {
+    "nl": "Zodra een plek is gecontroleerd en op status “gepubliceerd” staat, verschijnt die hier. Heb je zelf een kamer, tuin of oprit? Meld je hieronder aan — we kijken elke aanmelding handmatig na. Zoek intussen ook via [camping]({{campingPath}}) of [hotels & B&B]({{hotelsPath}}), en vergelijk reistijden op de gebiedpagina's.",
+    "de": "Sobald eine Unterkunft geprüft und auf Status „veröffentlicht“ steht, erscheint sie hier. Hast du selbst ein Zimmer, Garten oder Stellplatz? Melde dich unten an — wir prüfen jede Anmeldung manuell. Suche inzwischen auch über [Camping]({{campingPath}}) oder [Hotels & B&Bs]({{hotelsPath}}) und vergleiche Fahrzeiten auf den Gebietsseiten.",
+    "en": "Once a place is reviewed and set to status “published”, it appears here. Have a room, garden or driveway yourself? Sign up below — we review every submission manually. Meanwhile also search via [camping]({{campingPath}}) or [hotels & B&Bs]({{hotelsPath}}), and compare travel times on the area pages."
   },
   "aanmeldTitel": {
     "nl": "Zelf een plek aanbieden?",

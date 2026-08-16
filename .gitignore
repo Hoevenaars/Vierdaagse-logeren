@@ -1,0 +1,20 @@
+# dependencies
+node_modules/
+
+# build
+dist/
+.astro/
+
+# env
+.env
+.env.*
+!.env.example
+
+# logs & OS
+npm-debug.log*
+.DS_Store
+*.local
+
+# editor
+.vscode/
+.idea/

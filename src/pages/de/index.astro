@@ -23,13 +23,22 @@ const t = useTranslations(locale);
     <InfoCard title={t('card.hotels.title')} text={t('card.hotels.text')} href="/de/hotels-bb" />
   </section>
 
+  <section class="areas">
+    <h2>{t('home.gebied.title')}</h2>
+    <p>{t('home.gebied.text')}</p>
+    <a href="/de/gebied">{t('home.gebied.cta')}</a>
+  </section>
+
   <section class="urgency">
     <h2>Wann solltest du buchen?</h2>
     <p>
       Campingplätze und zentral gelegene Unterkünfte sind meist als Erstes ausgebucht, oft
       schon Monate vor der Veranstaltung. Fang früh an — das spart Geld und Stress.
     </p>
-    <a href="/de/gids/wanneer-boeken">Zum vollständigen Ratgeber &rarr;</a>
+    <p class="cta-row">
+      <a href="/de/gids/wanneer-boeken">Zum vollständigen Ratgeber &rarr;</a>
+      <a href="/de/gids/internationale-lopers">{t('home.intl.cta')}</a>
+    </p>
   </section>
 </BaseLayout>
 
@@ -52,13 +61,21 @@ const t = useTranslations(locale);
     gap: var(--space-4);
     margin-bottom: var(--space-6);
   }
+  .areas,
   .urgency {
     background: var(--color-secondary);
     padding: var(--space-5);
     border-radius: var(--radius-base);
+    margin-bottom: var(--space-5);
   }
+  .areas h2,
   .urgency h2 {
     color: var(--color-accent-1);
     margin-top: 0;
+  }
+  .cta-row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
   }
 </style>
