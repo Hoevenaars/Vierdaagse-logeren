@@ -4,17 +4,27 @@ import gebiedenData from '../../../data/gebieden.json';
 
 const locale = 'de' as const;
 function o(field: Record<string, string>) { return field[locale]?.trim() ? field[locale] : field.nl; }
-const gebieden = [...gebiedenData.gebieden].sort((a: any, b: any) => a.naam.localeCompare(b.naam));
+const gebieden = [...gebiedenData.gebieden].sort((a: any, b: any) => {
+  const dist = (x: string) => parseFloat(String(x).replace(/[^\d.]/g, '')) || 999;
+  return dist(a.afstandKm) - dist(b.afstandKm) || a.naam.localeCompare(b.naam);
+});
 ---
 
-<ContentPage title="Umgebung von Nijmegen — Vierdaagse Logeren" description="Übersicht aller Orte rund um Nijmegen zum Übernachten während des Vierdaagse, mit Entfernung und Fahrzeit." locale={locale} h1="Übernachten bei Nijmegen">
-  <p>Nijmegen selbst ist früh ausgebucht. Diese Orte in der Umgebung bieten oft noch Platz — von ganz nah bis etwas weiter weg.</p>
+<ContentPage title="Gebiete rund um Nijmegen — Vierdaagse Logeren" description="Vergleiche Orte rund um Nijmegen für Übernachtungen während des Vierdaagse: Entfernung, Fahrzeit und Tipp pro Gebiet." locale={locale} h1="Übernachten rund um Nijmegen">
+  <p>
+    Nijmegen selbst ist früh ausgebucht. Wähle unten einen Ort, um zu sehen, wie weit du vom Wedren bist,
+    wie lange die Anreise dauert (Auto, Fahrrad, ÖPNV) und welche Unterkunftsart dort sinnvoll ist.
+  </p>
+  <p class="callout callout--tip">
+    Tipp: Nah ist praktisch, aber weiter draußen (Elst, Wijchen, Cuijk, Arnhem) gibt es oft noch Zimmer — und einen schnellen Zug.
+  </p>
 
   <div class="gebied-grid">
     {gebieden.map((g: any) => (
       <a href={`/de/gebied/${g.slug}`} class="gebied-card">
         <h2>{g.naam}</h2>
-        <p class="gebied-afstand">{g.afstandKm} — {o(g.opmerking)}</p>
+        <p class="gebied-afstand">{g.afstandKm} · Auto {g.auto} · ÖPNV {g.ov}</p>
+        <p class="gebied-tip">{o(g.opmerking)}</p>
       </a>
     ))}
   </div>
@@ -25,5 +35,6 @@ const gebieden = [...gebiedenData.gebieden].sort((a: any, b: any) => a.naam.loca
   .gebied-card { display: block; padding: var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-base); text-decoration: none; color: inherit; transition: box-shadow 0.15s ease; }
   .gebied-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
   .gebied-card h2 { color: var(--color-primary); margin: 0 0 var(--space-1); font-size: var(--font-size-base); }
-  .gebied-afstand { margin: 0; font-size: var(--font-size-sm); opacity: 0.8; }
+  .gebied-afstand { margin: 0 0 var(--space-1); font-size: var(--font-size-sm); opacity: 0.85; }
+  .gebied-tip { margin: 0; font-size: var(--font-size-sm); color: var(--color-accent-1); font-weight: 600; }
 </style>

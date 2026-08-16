@@ -26,7 +26,7 @@ const links = { campingPath: '/de/camping', hotelsPath: '/de/hotels-bb' };
     {vArr(data.letOpItems).map((item: string) => <li>{item}</li>)}
   </ul>
 
-  {locations.length > 0 && (
+  {locations.length > 0 ? (
     <>
       <h2>{v(data.lijstTitel)}</h2>
       <div class="location-list">
@@ -39,6 +39,11 @@ const links = { campingPath: '/de/camping', hotelsPath: '/de/hotels-bb' };
           </div>
         ))}
       </div>
+    </>
+  ) : (
+    <>
+      <h2>{v(data.leegTitel)}</h2>
+      <p class="callout callout--open" set:html={linkify(v(data.leegTekst), links)} />
     </>
   )}
 

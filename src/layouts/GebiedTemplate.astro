@@ -43,7 +43,11 @@ const labels = {
   afstand: { nl: 'Afstand tot Nijmegen/de route', de: 'Entfernung nach Nijmegen/zur Route', en: 'Distance to Nijmegen/the route' },
   type: { nl: 'Type verblijf in dit gebied', de: 'Unterkunftsarten in dieser Region', en: 'Type of stay in this area' },
   praktisch: { nl: 'Praktisch', de: 'Praktisches', en: 'Practical info' },
-  gidsLink: { nl: 'Bekijk ook: wanneer moet je boeken?', de: 'Siehe auch: Wann solltest du buchen?', en: 'Also see: when should you book?' },
+  verder: { nl: 'Verder zoeken', de: 'Weiter suchen', en: 'Keep looking' },
+  camping: { nl: 'Campings bekijken', de: 'Campingplätze ansehen', en: 'Browse campsites' },
+  hotels: { nl: "Hotels & B&B's bekijken", de: 'Hotels & B&Bs ansehen', en: 'Browse hotels & B&Bs' },
+  particulier: { nl: 'Particuliere verhuur bekijken', de: 'Privatunterkünfte ansehen', en: 'Browse private stays' },
+  gidsLink: { nl: 'Gids: wanneer moet je boeken?', de: 'Ratgeber: Wann solltest du buchen?', en: 'Guide: when should you book?' },
 } as const;
 
 const afstandText = veld(data.afstand);
@@ -74,5 +78,11 @@ const praktischText = veld(data.praktisch);
     {praktischText}
   </p>
 
-  <p><a href={`/${locale === 'nl' ? '' : locale + '/'}gids/wanneer-boeken`}>{labels.gidsLink[locale]} &rarr;</a></p>
+  <h2>{labels.verder[locale]}</h2>
+  <ul>
+    <li><a href={`/${locale === 'nl' ? '' : locale + '/'}camping`}>{labels.camping[locale]}</a></li>
+    <li><a href={`/${locale === 'nl' ? '' : locale + '/'}hotels-bb`}>{labels.hotels[locale]}</a></li>
+    <li><a href={`/${locale === 'nl' ? '' : locale + '/'}particuliere-verhuur`}>{labels.particulier[locale]}</a></li>
+    <li><a href={`/${locale === 'nl' ? '' : locale + '/'}gids/wanneer-boeken`}>{labels.gidsLink[locale]}</a></li>
+  </ul>
 </ContentPage>

@@ -10,14 +10,14 @@
     "en": "Camping during the Four Days Marches — Vierdaagse Logeren"
   },
   "seoBeschrijving": {
-    "nl": "Kamperen tijdens de Vierdaagse Nijmegen — praktische info over prijs, voorzieningen en wanneer je moet boeken.",
-    "de": "Camping während des Vierdaagse Nijmegen — praktische Infos zu Preis, Ausstattung und Buchungszeitpunkt.",
-    "en": "Camping during the Nijmegen Four Days Marches — practical info on pricing, facilities, and when to book."
+    "nl": "Kamperen tijdens de Vierdaagse Nijmegen — prijsindicatie, voorzieningen, wanneer boeken en waar te zoeken rond Nijmegen.",
+    "de": "Camping während des Vierdaagse Nijmegen — Preisindikation, Ausstattung, Buchungszeitpunkt und wo du rund um Nijmegen suchen solltest.",
+    "en": "Camping during the Nijmegen Four Days Marches — price guidance, facilities, when to book, and where to look around Nijmegen."
   },
   "intro": {
-    "nl": "Rond Nijmegen liggen verschillende campings die tijdens de Vierdaagse-week extra druk zijn. Reken op volle capaciteit ruim voor het evenement zelf — kamperen is een van de eerste opties die uitverkocht raakt.",
-    "de": "Rund um Nijmegen gibt es mehrere Campingplätze, die während der Vierdaagse-Woche besonders stark ausgelastet sind. Rechne mit voller Belegung schon Wochen vor der Veranstaltung — Camping ist eine der ersten Optionen, die ausgebucht ist.",
-    "en": "Several campsites around Nijmegen get especially busy during Four Days Marches week. Expect full capacity well ahead of the event itself — camping is one of the first options to sell out."
+    "nl": "Kamperen is een van de meest gekozen (en snelst volgeboekte) manieren om de Vierdaagse te overnachten. Rond Nijmegen liggen vaste campings én tijdelijke Vierdaagse-terreinen. Wie vroeg boekt, heeft meer keuze in ligging, sanitair en prijs.",
+    "de": "Camping ist eine der beliebtesten (und am schnellsten ausgebuchten) Übernachtungsarten beim Vierdaagse. Rund um Nijmegen gibt es feste Campingplätze und temporäre Vierdaagse-Gelände. Wer früh bucht, hat mehr Auswahl bei Lage, Sanitär und Preis.",
+    "en": "Camping is one of the most popular (and fastest-selling) ways to stay for the Four Days Marches. Around Nijmegen you'll find regular campsites and temporary event grounds. Booking early means more choice in location, facilities and price."
   },
   "prijsTitel": {
     "nl": "Wat kost een kampeerplek",
@@ -25,9 +25,9 @@
     "en": "What a camping spot costs"
   },
   "prijsTekst": {
-    "nl": "Reken tijdens de Vierdaagse op hogere tarieven dan een normale zomerweek. Zodra we concrete aanbieders hebben aangesloten, vind je hier een actuele prijsindicatie.",
-    "de": "Die Preise während des Vierdaagse liegen meist über einer normalen Sommerwoche. Sobald wir mit konkreten Anbietern zusammenarbeiten, findest du hier eine aktuelle Preisindikation.",
-    "en": "Prices during the Four Days Marches are typically higher than a regular summer week. Once we've partnered with specific providers, you'll find an up-to-date price indication here."
+    "nl": "Reken tijdens de Vierdaagse op hogere tarieven dan een normale zomerweek. Voor een eenvoudige plek betaal je vaak een meerprijs door de vraag; plekken dichter bij de route of met beter sanitair liggen hoger. Vraag altijd na wat erbij zit: tentplek of camper, stroom, douches, parkeerplaats en toeristenbelasting.",
+    "de": "Während des Vierdaagse liegen die Preise meist über einer normalen Sommerwoche. Für einen einfachen Platz zahlst du oft einen Aufpreis wegen der Nachfrage; Plätze näher an der Strecke oder mit besserer Sanitäranlage sind teurer. Frage immer, was enthalten ist: Zelt- oder Wohnmobilplatz, Strom, Duschen, Parkplatz und Kurtaxe.",
+    "en": "Expect higher rates than a normal summer week. A simple pitch often costs more because of demand; spots closer to the route or with better facilities cost more. Always ask what's included: tent or camper pitch, power, showers, parking and tourist tax."
   },
   "verwachtTitel": {
     "nl": "Wat te verwachten",
@@ -35,19 +35,19 @@
     "en": "What to expect"
   },
   "verwachtTekst": {
-    "nl": "Sanitair en voorzieningen zijn vaak beperkter dan je gewend bent op een reguliere camping, gezien de tijdelijke drukte. Vroeg boeken geeft meer keuze in ligging en voorzieningen.",
-    "de": "Sanitäranlagen und Ausstattung sind angesichts des vorübergehenden Andrangs oft eingeschränkter als du es von einem regulären Campingplatz gewohnt bist. Frühes Buchen gibt dir mehr Auswahl bei Lage und Ausstattung.",
-    "en": "Facilities and sanitary provisions are often more limited than on a regular campsite, given the temporary crowds. Booking early gives you more choice in location and amenities."
+    "nl": "In de Vierdaagse-week is het druk: langer wachten bij sanitair, vollere terreinen en meer verkeer 's ochtends. Voorzieningen zijn soms tijdelijk of sober. Neem goede schoenen, blarenpleisters en een plan B voor nat weer mee. Vroeg boeken geeft meer keuze in ligging (schaduw, afstand tot poort, rust).",
+    "de": "In der Vierdaagse-Woche ist es voll: längere Wartezeiten an den Sanitäranlagen, vollere Plätze und mehr Verkehr morgens. Die Ausstattung ist manchmal temporär oder schlicht. Nimm gute Schuhe, Blasenpflaster und einen Plan B für Regen mit. Frühes Buchen gibt mehr Auswahl bei der Lage (Schatten, Entfernung zum Tor, Ruhe).",
+    "en": "Four Days Marches week is busy: longer queues at facilities, fuller grounds and more morning traffic. Amenities can be temporary or basic. Bring good shoes, blister care and a wet-weather plan B. Booking early gives more choice in pitch location (shade, distance to the gate, quiet)."
   },
   "lijstTitel": {
-    "nl": "Campings in dit gebied",
-    "de": "Campingplätze in dieser Region",
-    "en": "Campsites in this area"
+    "nl": "Campings op deze site",
+    "de": "Campingplätze auf dieser Website",
+    "en": "Campsites on this site"
   },
   "leegTekst": {
-    "nl": "We werken aan een overzicht van concrete campings met boekingslinks. Bekijk ondertussen [de gebieden rond Nijmegen]({{gebiedPath}}) voor algemene informatie.",
-    "de": "Wir arbeiten an einer Übersicht konkreter Campingplätze mit Buchungslinks. Schau dir in der Zwischenzeit [die Regionen rund um Nijmegen]({{gebiedPath}}) für allgemeine Informationen an.",
-    "en": "We're working on an overview of specific campsites with booking links. In the meantime, check [the areas around Nijmegen]({{gebiedPath}}) for general information."
+    "nl": "We zetten hier gecontroleerde campings met duidelijke info en contact. Zoek ondertussen vooral in Groesbeek, Mook, Berg en Dal, Wijchen en Cuijk — plekken die wandelaars vaak kiezen. Vergelijk reistijd via de [gebiedpagina's]({{gebiedPath}}) en check ook [particulier]({{particulierPath}}) of [hotels]({{hotelsPath}}) als campings vol zijn.",
+    "de": "Hier listen wir geprüfte Campingplätze mit klaren Infos und Kontakt. Suche inzwischen vor allem in Groesbeek, Mook, Berg en Dal, Wijchen und Cuijk — Orte, die Wanderer oft wählen. Vergleiche die Fahrzeit über die [Gebietsseiten]({{gebiedPath}}) und prüfe auch [Privat]({{particulierPath}}) oder [Hotels]({{hotelsPath}}), wenn Camping ausgebucht ist.",
+    "en": "We'll list verified campsites here with clear info and contact details. Meanwhile, look especially in Groesbeek, Mook, Berg en Dal, Wijchen and Cuijk — places walkers often choose. Compare travel time via the [area pages]({{gebiedPath}}) and also check [private stays]({{particulierPath}}) or [hotels]({{hotelsPath}}) if campsites are full."
   },
   "aanmeldTitel": {
     "nl": "Camping-eigenaar? Meld je aan",
@@ -55,9 +55,9 @@
     "en": "Campsite owner? Sign up"
   },
   "aanmeldIntro": {
-    "nl": "Heb je een camping in de omgeving van Nijmegen en wil je zichtbaar zijn tijdens de Vierdaagse? Meld je hieronder aan. We nemen contact op om de plaatsing en eventuele boekingslink te bespreken.",
-    "de": "Hast du einen Campingplatz in der Umgebung von Nijmegen und möchtest du während des Vierdaagse sichtbar sein? Melde dich unten an. Wir nehmen Kontakt auf, um die Platzierung und einen möglichen Buchungslink zu besprechen.",
-    "en": "Do you have a campsite near Nijmegen and want to be visible during the Four Days Marches? Sign up below. We'll get in touch to discuss the listing and a possible booking link."
+    "nl": "Heb je een camping rond Nijmegen en wil je zichtbaar zijn tijdens de Vierdaagse? Meld je hieronder aan. Elke aanmelding controleren we handmatig voordat die live gaat.",
+    "de": "Hast du einen Campingplatz rund um Nijmegen und möchtest während des Vierdaagse sichtbar sein? Melde dich unten an. Jede Anmeldung prüfen wir manuell, bevor sie live geht.",
+    "en": "Do you have a campsite near Nijmegen and want to be visible during the Four Days Marches? Sign up below. We review every submission manually before it goes live."
   },
   "slotTitel": {
     "nl": "Nog geen plek gevonden?",
