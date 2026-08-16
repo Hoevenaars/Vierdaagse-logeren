@@ -1,3 +1,44 @@
 {
-  "hotels": []
+  "hotels": [
+    {
+      "naam": "Hotel Waalkade View",
+      "plaats": "Nijmegen",
+      "type": "Hotel",
+      "beschrijving": "Middelgroot hotel aan de rand van het centrum. Lopend naar de Wedren in ongeveer 20 minuten. Ontbijt mogelijk, parkeren op aanvraag. Minimumverblijf tijdens de Vierdaagse-week vaak 3 nachten.",
+      "contact": "waalkade@voorbeeld-vierdaagse.nl",
+      "status": "gepubliceerd"
+    },
+    {
+      "naam": "B&B Stationshof",
+      "plaats": "Elst",
+      "type": "B&B",
+      "beschrijving": "Vier kamers boven een woonhuis, 5 minuten lopen van station Elst. Trein naar Nijmegen in ongeveer 12 minuten. Inclusief eenvoudig ontbijt. Rustiger en vaak voordeliger dan slapen in het centrum.",
+      "contact": "stationshof@voorbeeld-vierdaagse.nl",
+      "status": "gepubliceerd"
+    },
+    {
+      "naam": "Hotel De Klaverdries",
+      "plaats": "Wijchen",
+      "type": "Hotel",
+      "beschrijving": "Hotel met 28 kamers vlak bij het centrum van Wijchen. Trein naar Nijmegen in ongeveer 15 minuten. Geschikt voor lopers die comfort willen zonder centrumprijzen.",
+      "contact": "klaverdries@voorbeeld-vierdaagse.nl",
+      "status": "gepubliceerd"
+    },
+    {
+      "naam": "B&B Heuvelzicht",
+      "plaats": "Berg en Dal",
+      "type": "B&B",
+      "beschrijving": "Twee gastenkamers met eigen sanitair in een rustige woonwijk. Auto of bus naar Nijmegen. Ideaal als je groen en stilte wilt na een lange dagmars.",
+      "contact": "heuvelzicht@voorbeeld-vierdaagse.nl",
+      "status": "gepubliceerd"
+    },
+    {
+      "naam": "City Hotel Arnhem Centraal",
+      "plaats": "Arnhem",
+      "type": "Hotel",
+      "beschrijving": "Groot hotel tegenover Arnhem Centraal. Trein naar Nijmegen in ongeveer 15 minuten. Veel capaciteit wanneer Nijmegen vol zit. Vraag naar Vierdaagse-arrangementen.",
+      "contact": "arnhemcentraal@voorbeeld-vierdaagse.nl",
+      "status": "gepubliceerd"
+    }
+  ]
 }

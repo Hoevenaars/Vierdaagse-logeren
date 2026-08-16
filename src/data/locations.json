@@ -1,3 +1,44 @@
 {
-  "locations": []
+  "locations": [
+    {
+      "naam": "Tuinplek familie Jansen",
+      "plaats": "Malden",
+      "type": "Tuin/kampeerplek",
+      "beschrijving": "Achtertuin voor maximaal 2 tenten, douche en toilet in huis beschikbaar tussen 06:00 en 22:00. Fietsen naar de start in ongeveer 20 minuten. Parkeren op oprit voor 1 auto.",
+      "contact": "jansen-tuin@voorbeeld-vierdaagse.nl",
+      "status": "gepubliceerd"
+    },
+    {
+      "naam": "Logeerkamer aan de Brink",
+      "plaats": "Groesbeek",
+      "type": "Kamer",
+      "beschrijving": "Eén eenpersoonskamer met gedeeld sanitair. Ontbijt optioneel. Bus naar Nijmegen ongeveer 25 minuten. Rustige straat, huisdiervrij.",
+      "contact": "brinkkamer@voorbeeld-vierdaagse.nl",
+      "status": "gepubliceerd"
+    },
+    {
+      "naam": "Camperplek De Notelaar",
+      "plaats": "Beuningen",
+      "type": "Oprit",
+      "beschrijving": "Oprit voor 1 camper of bestelbus, stroom via buitenstopcontact. Toilet in huis op afspraak. Auto naar Nijmegen ongeveer 18 minuten.",
+      "contact": "notelaar@voorbeeld-vierdaagse.nl",
+      "status": "gepubliceerd"
+    },
+    {
+      "naam": "Gastenkamer Lentse Plas",
+      "plaats": "Lent",
+      "type": "Kamer",
+      "beschrijving": "Tweepersoonskamer met eigen wastafel, toilet en douche op de gang. Station Lent dichtbij. Snel in Nijmegen zonder in het centrum te slapen.",
+      "contact": "lentseplas@voorbeeld-vierdaagse.nl",
+      "status": "gepubliceerd"
+    },
+    {
+      "naam": "Weideplek De Kromme Akkers",
+      "plaats": "Wijchen",
+      "type": "Tuin/kampeerplek",
+      "beschrijving": "Ruime weide achter de woning voor 3 tot 4 tenten. Buitenkranen, toiletunit en afvalcontainers. Trein via station Wijchen. Prijs per tent per nacht, all-in.",
+      "contact": "krommeakkers@voorbeeld-vierdaagse.nl",
+      "status": "gepubliceerd"
+    }
+  ]
 }

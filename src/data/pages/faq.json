@@ -22,9 +22,9 @@
         "en": "When should I book for the Four Days Marches?"
       },
       "antwoord": {
-        "nl": "Zo vroeg mogelijk — zodra de data bekend zijn. Campings en centrale hotels raken vaak al maanden van tevoren vol. Lees de [volledige gids]({{gidsPath}}) voor een concrete planning.",
-        "de": "So früh wie möglich — sobald die Termine bekannt gegeben werden. Campingplätze und zentrale Hotels sind oft schon Monate im Voraus ausgebucht. Sieh dir den [vollständigen Ratgeber]({{gidsPath}}) für einen konkreten Zeitplan an.",
-        "en": "As early as possible — as soon as the dates are announced. Campsites and central hotels often fill up months in advance. See the [full guide]({{gidsPath}}) for a concrete timeline."
+        "nl": "Zo vroeg mogelijk, zodra de data bekend zijn. Campings en centrale hotels raken vaak al maanden van tevoren vol. Lees de [volledige gids]({{gidsPath}}) voor een concrete planning.",
+        "de": "So früh wie möglich, sobald die Termine bekannt gegeben werden. Campingplätze und zentrale Hotels sind oft schon Monate im Voraus ausgebucht. Sieh dir den [vollständigen Ratgeber]({{gidsPath}}) für einen konkreten Zeitplan an.",
+        "en": "As early as possible, as soon as the dates are announced. Campsites and central hotels often fill up months in advance. See the [full guide]({{gidsPath}}) for a concrete timeline."
       }
     },
     {
@@ -46,9 +46,9 @@
         "en": "What does an overnight stay cost during the Four Days Marches?"
       },
       "antwoord": {
-        "nl": "Dat verschilt per type verblijf: [kamperen]({{campingPath}}) is doorgaans het goedkoopst, [particuliere verhuur]({{particulierPath}}) zit er vaak tussenin, en [hotels]({{hotelsPath}}) zijn het duurst — zeker centraal gelegen.",
-        "de": "Das hängt von der Unterkunftsart ab: [Camping]({{campingPath}}) ist meist am günstigsten, [Privatunterkünfte]({{particulierPath}}) liegen dazwischen, und [Hotels]({{hotelsPath}}) sind am teuersten — besonders zentral gelegene.",
-        "en": "It depends on the type of stay: [camping]({{campingPath}}) is usually the cheapest, [private stays]({{particulierPath}}) fall in between, and [hotels]({{hotelsPath}}) are the most expensive — especially centrally located ones."
+        "nl": "Dat verschilt per type verblijf: [kamperen]({{campingPath}}) is doorgaans het goedkoopst, [particuliere verhuur]({{particulierPath}}) zit er vaak tussenin, en [hotels]({{hotelsPath}}) zijn het duurst, zeker centraal gelegen.",
+        "de": "Das hängt von der Unterkunftsart ab: [Camping]({{campingPath}}) ist meist am günstigsten, [Privatunterkünfte]({{particulierPath}}) liegen dazwischen, und [Hotels]({{hotelsPath}}) sind am teuersten, besonders zentral gelegene.",
+        "en": "It depends on the type of stay: [camping]({{campingPath}}) is usually the cheapest, [private stays]({{particulierPath}}) fall in between, and [hotels]({{hotelsPath}}) are the most expensive, especially centrally located ones."
       }
     },
     {

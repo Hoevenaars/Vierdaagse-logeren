@@ -1,3 +1,36 @@
 {
-  "blarenzorg": []
+  "blarenzorg": [
+    {
+      "naam": "Podotherapie Voetbalans",
+      "plaats": "Nijmegen",
+      "type": "Podotherapeut",
+      "beschrijving": "Praktijk dicht bij het centrum. Tijdens de Vierdaagse-week extra avondspreekuren voor blaren en drukplekken. Werkt op afspraak; bel of mail voor spoedplekken.",
+      "contact": "voetbalans@voorbeeld-vierdaagse.nl",
+      "status": "gepubliceerd"
+    },
+    {
+      "naam": "Sportmassage De Mars",
+      "plaats": "Nijmegen",
+      "type": "(Sport)masseur",
+      "beschrijving": "Sportmassage voor benen en voeten, gericht op herstel na lange afstanden. Korte behandelingen van 20 of 40 minuten. Inloop op piekmomenten beperkt; reserveren aanbevolen.",
+      "contact": "demars@voorbeeld-vierdaagse.nl",
+      "status": "gepubliceerd"
+    },
+    {
+      "naam": "Pedicure Praktijk Heuvel",
+      "plaats": "Groesbeek",
+      "type": "Pedicure",
+      "beschrijving": "Medische pedicure met ervaring met wandelaars. Preventieve voetverzorging vóór de Vierdaagse en nabehandeling van drukplekken. Alleen op afspraak.",
+      "contact": "praktijkheuvel@voorbeeld-vierdaagse.nl",
+      "status": "gepubliceerd"
+    },
+    {
+      "naam": "Blarenhulp Onderweg",
+      "plaats": "Wijchen",
+      "type": "Blarenprikker",
+      "beschrijving": "Mobiele blarenhulp tijdens de Vierdaagse-week, vaste standplaats nabij het station. Snelle behandeling en advies over tape en sokken. Contante betaling en pin.",
+      "contact": "blarenhulp@voorbeeld-vierdaagse.nl",
+      "status": "gepubliceerd"
+    }
+  ]
 }

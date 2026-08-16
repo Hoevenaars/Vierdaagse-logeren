@@ -20,7 +20,7 @@ const detail = detailsBySlug[gebied.slug];
 const locale = 'nl' as const;
 function o(field: Record<string, string>) { return field[locale]?.trim() ? field[locale] : field.nl; }
 
-const titel = `${gebied.naam} — overnachten tijdens de Vierdaagse`;
+const titel = `${gebied.naam}: overnachten tijdens de Vierdaagse`;
 const seoBeschrijving = `${gebied.naam} ligt op ${gebied.afstandKm} van Nijmegen. Reistijd auto ${gebied.auto}, fiets ${gebied.fiets}, OV ${gebied.ov}. ${o(gebied.opmerking)}.`;
 ---
 
