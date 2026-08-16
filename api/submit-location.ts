@@ -70,8 +70,8 @@ export default async function handler(request: Request): Promise<Response> {
           `Beschrijving: ${beschrijving || '(niet opgegeven)'}`,
           `Contact: ${contact}`,
           ``,
-          `Goedkeuren? Voeg dit toe aan het juiste databestand (src/data/locations.json voor`,
-          `particulier, src/data/campings.json of src/data/hotels.json) en redeploy.`,
+          `Goedkeuren? Voeg dit toe via /admin (of handmatig in het juiste databestand)`,
+          `met status "gepubliceerd". Zonder die status verschijnt het niet op de site.`,
         ].join('\n'),
       }),
     });
