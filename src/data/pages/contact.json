@@ -6,9 +6,9 @@
     "en": "Questions or feedback about Vierdaagse Logeren? Get in touch via this form."
   },
   "intro": {
-    "nl": "Vraag, feedback, of iets anders? Stuur ons een bericht via onderstaand formulier — we reageren zo snel mogelijk.",
-    "de": "Frage, Feedback oder etwas anderes? Schick uns eine Nachricht über das folgende Formular — wir melden uns so schnell wie möglich zurück.",
-    "en": "Question, feedback, or something else? Send us a message using the form below — we'll get back to you as soon as possible."
+    "nl": "Vraag, feedback, of iets anders? Stuur ons een bericht via onderstaand formulier, we reageren zo snel mogelijk.",
+    "de": "Frage, Feedback oder etwas anderes? Schick uns eine Nachricht über das folgende Formular, wir melden uns so schnell wie möglich zurück.",
+    "en": "Question, feedback, or something else? Send us a message using the form below, we'll get back to you as soon as possible."
   },
   "labels": {
     "naam": { "nl": "Naam *", "de": "Name *", "en": "Name *" },

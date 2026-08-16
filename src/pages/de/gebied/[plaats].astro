@@ -20,7 +20,7 @@ const detail = detailsBySlug[gebied.slug];
 const locale = 'de' as const;
 function o(field: Record<string, string>) { return field[locale]?.trim() ? field[locale] : field.nl; }
 
-const titel = `${gebied.naam} — Übernachten während des Vierdaagse`;
+const titel = `${gebied.naam}: Übernachten während des Vierdaagse`;
 const seoBeschrijving = `${gebied.naam} liegt ${gebied.afstandKm} von Nijmegen entfernt. Fahrzeit Auto ${gebied.auto}, Fahrrad ${gebied.fiets}, ÖPNV ${gebied.ov}. ${o(gebied.opmerking)}.`;
 ---
 

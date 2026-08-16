@@ -23,7 +23,7 @@ const links = { gidsPath: '/de/gids/wanneer-boeken' };
       <div class="location-list">
         {aanbieders.map((a: any) => (
           <div class="location-card">
-            <h3>{a.naam} — {a.plaats}</h3>
+            <h3>{a.naam}, {a.plaats}</h3>
             <p class="location-type">{a.type}</p>
             <p>{a.beschrijving}</p>
             <p class="location-contact">Contact: {a.contact}</p>

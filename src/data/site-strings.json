@@ -82,9 +82,9 @@
     },
     {
       "key": "home.intro",
-      "nl": "Elk jaar weer hetzelfde: de Vierdaagse trekt duizenden wandelaars en bezoekers naar Nijmegen, en het aantal overnachtingsplekken groeit niet mee. Wie op tijd is, heeft ruime keuze. Wie wacht, betaalt meer voor minder. Vierdaagse Logeren helpt je op tijd de juiste plek te vinden — camping, particulier of hotel.",
-      "de": "Jedes Jahr dasselbe: Der Vierdaagse bringt Tausende Wanderer und Besucher nach Nijmegen, doch das Unterkunftsangebot wächst nicht mit. Wer früh bucht, hat die Wahl. Wer wartet, zahlt mehr für weniger. Vierdaagse Logeren hilft dir, rechtzeitig die richtige Unterkunft zu finden — Camping, privat oder Hotel.",
-      "en": "Every year the same story: the Four Days Marches brings thousands of walkers and visitors to Nijmegen, and the number of places to stay does not grow with it. Book early and you have plenty of choice. Wait, and you pay more for less. Vierdaagse Logeren helps you find the right place in time — camping, a private stay, or a hotel.",
+      "nl": "Elk jaar weer hetzelfde: de Vierdaagse trekt duizenden wandelaars en bezoekers naar Nijmegen, en het aantal overnachtingsplekken groeit niet mee. Wie op tijd is, heeft ruime keuze. Wie wacht, betaalt meer voor minder. Vierdaagse Logeren helpt je op tijd de juiste plek te vinden, camping, particulier of hotel.",
+      "de": "Jedes Jahr dasselbe: Der Vierdaagse bringt Tausende Wanderer und Besucher nach Nijmegen, doch das Unterkunftsangebot wächst nicht mit. Wer früh bucht, hat die Wahl. Wer wartet, zahlt mehr für weniger. Vierdaagse Logeren hilft dir, rechtzeitig die richtige Unterkunft zu finden, Camping, privat oder Hotel.",
+      "en": "Every year the same story: the Four Days Marches brings thousands of walkers and visitors to Nijmegen, and the number of places to stay does not grow with it. Book early and you have plenty of choice. Wait, and you pay more for less. Vierdaagse Logeren helps you find the right place in time, camping, a private stay, or a hotel.",
       "vertaalstatus": {
         "de": "gecontroleerd",
         "en": "gecontroleerd"
@@ -202,9 +202,9 @@
     },
     {
       "key": "home.gebied.text",
-      "nl": "Vergelijk plaatsen rond Nijmegen op afstand en reistijd — van Malden tot Arnhem.",
-      "de": "Vergleiche Orte rund um Nijmegen nach Entfernung und Fahrzeit — von Malden bis Arnhem.",
-      "en": "Compare towns around Nijmegen by distance and travel time — from Malden to Arnhem.",
+      "nl": "Vergelijk plaatsen rond Nijmegen op afstand en reistijd, van Malden tot Arnhem.",
+      "de": "Vergleiche Orte rund um Nijmegen nach Entfernung und Fahrzeit, von Malden bis Arnhem.",
+      "en": "Compare towns around Nijmegen by distance and travel time, from Malden to Arnhem.",
       "vertaalstatus": {
         "de": "gecontroleerd",
         "en": "gecontroleerd"

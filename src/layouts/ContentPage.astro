@@ -48,11 +48,11 @@ const { title, description, locale, h1 } = Astro.props;
     border-radius: var(--radius-base);
     margin: var(--space-5) 0;
   }
-  /* Alias van .callout — expliciet voor afgeronde, gecontroleerde tips. */
+  /* Alias van .callout, expliciet voor afgeronde, gecontroleerde tips. */
   .content-page :global(.callout--tip) {
     background: var(--color-secondary);
   }
-  /* Nog in te vullen door de redactie — bewust anders zodat dit nooit
+  /* Nog in te vullen door de redactie, bewust anders zodat dit nooit
      verward wordt met afgewerkte content. Zie brandbook §16/restyle-notitie. */
   .content-page :global(.callout--open) {
     background: var(--color-white);
@@ -61,7 +61,7 @@ const { title, description, locale, h1 } = Astro.props;
     font-style: italic;
   }
   .content-page :global(.callout--open)::before {
-    content: '\270E  Nog aan te vullen — ';
+    content: '\270E  Nog aan te vullen, ';
     font-style: normal;
     font-weight: 600;
     color: var(--color-accent-2);

@@ -29,7 +29,7 @@ const links = { campingPath: '/camping', particulierPath: '/particuliere-verhuur
       <div class="location-list">
         {hotels.map((h: any) => (
           <div class="location-card">
-            <h3>{h.naam} — {h.plaats}</h3>
+            <h3>{h.naam}, {h.plaats}</h3>
             <p class="location-type">{h.type}</p>
             <p>{h.beschrijving}</p>
             <p class="location-contact">Contact: {h.contact}</p>

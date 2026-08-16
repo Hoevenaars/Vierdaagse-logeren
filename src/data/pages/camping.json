@@ -5,14 +5,14 @@
     "en": "Camping during the Four Days Marches"
   },
   "paginaTitel": {
-    "nl": "Kamperen tijdens de Vierdaagse — Vierdaagse Logeren",
-    "de": "Camping während des Vierdaagse — Vierdaagse Logeren",
-    "en": "Camping during the Four Days Marches — Vierdaagse Logeren"
+    "nl": "Kamperen tijdens de Vierdaagse | Vierdaagse Logeren",
+    "de": "Camping während des Vierdaagse | Vierdaagse Logeren",
+    "en": "Camping during the Four Days Marches | Vierdaagse Logeren"
   },
   "seoBeschrijving": {
-    "nl": "Kamperen tijdens de Vierdaagse Nijmegen — prijsindicatie, voorzieningen, wanneer boeken en waar te zoeken rond Nijmegen.",
-    "de": "Camping während des Vierdaagse Nijmegen — Preisindikation, Ausstattung, Buchungszeitpunkt und wo du rund um Nijmegen suchen solltest.",
-    "en": "Camping during the Nijmegen Four Days Marches — price guidance, facilities, when to book, and where to look around Nijmegen."
+    "nl": "Kamperen tijdens de Vierdaagse Nijmegen, prijsindicatie, voorzieningen, wanneer boeken en waar te zoeken rond Nijmegen.",
+    "de": "Camping während des Vierdaagse Nijmegen, Preisindikation, Ausstattung, Buchungszeitpunkt und wo du rund um Nijmegen suchen solltest.",
+    "en": "Camping during the Nijmegen Four Days Marches, price guidance, facilities, when to book, and where to look around Nijmegen."
   },
   "intro": {
     "nl": "Kamperen is een van de meest gekozen (en snelst volgeboekte) manieren om de Vierdaagse te overnachten. Rond Nijmegen liggen vaste campings én tijdelijke Vierdaagse-terreinen. Wie vroeg boekt, heeft meer keuze in ligging, sanitair en prijs.",
@@ -40,14 +40,14 @@
     "en": "Four Days Marches week is busy: longer queues at facilities, fuller grounds and more morning traffic. Amenities can be temporary or basic. Bring good shoes, blister care and a wet-weather plan B. Booking early gives more choice in pitch location (shade, distance to the gate, quiet)."
   },
   "lijstTitel": {
-    "nl": "Campings op deze site",
-    "de": "Campingplätze auf dieser Website",
-    "en": "Campsites on this site"
+    "nl": "Campings in de regio",
+    "de": "Campingplätze in der Region",
+    "en": "Campsites in the region"
   },
   "leegTekst": {
-    "nl": "We zetten hier gecontroleerde campings met duidelijke info en contact. Zoek ondertussen vooral in Groesbeek, Mook, Berg en Dal, Wijchen en Cuijk — plekken die wandelaars vaak kiezen. Vergelijk reistijd via de [gebiedpagina's]({{gebiedPath}}) en check ook [particulier]({{particulierPath}}) of [hotels]({{hotelsPath}}) als campings vol zijn.",
-    "de": "Hier listen wir geprüfte Campingplätze mit klaren Infos und Kontakt. Suche inzwischen vor allem in Groesbeek, Mook, Berg en Dal, Wijchen und Cuijk — Orte, die Wanderer oft wählen. Vergleiche die Fahrzeit über die [Gebietsseiten]({{gebiedPath}}) und prüfe auch [Privat]({{particulierPath}}) oder [Hotels]({{hotelsPath}}), wenn Camping ausgebucht ist.",
-    "en": "We'll list verified campsites here with clear info and contact details. Meanwhile, look especially in Groesbeek, Mook, Berg en Dal, Wijchen and Cuijk — places walkers often choose. Compare travel time via the [area pages]({{gebiedPath}}) and also check [private stays]({{particulierPath}}) or [hotels]({{hotelsPath}}) if campsites are full."
+    "nl": "Bekijk populaire plaatsen zoals Groesbeek, Mook, Berg en Dal, Wijchen en Cuijk via de [gebiedpagina's]({{gebiedPath}}). Of kijk bij [particulier]({{particulierPath}}) en [hotels]({{hotelsPath}}).",
+    "de": "Schau dir beliebte Orte wie Groesbeek, Mook, Berg en Dal, Wijchen und Cuijk über die [Gebietsseiten]({{gebiedPath}}) an. Oder prüfe [Privat]({{particulierPath}}) und [Hotels]({{hotelsPath}}).",
+    "en": "Check popular places like Groesbeek, Mook, Berg en Dal, Wijchen and Cuijk via the [area pages]({{gebiedPath}}). Or look at [private stays]({{particulierPath}}) and [hotels]({{hotelsPath}})."
   },
   "aanmeldTitel": {
     "nl": "Camping-eigenaar? Meld je aan",
@@ -60,9 +60,9 @@
     "en": "Do you have a campsite near Nijmegen and want to be visible during the Four Days Marches? Sign up below. We review every submission manually before it goes live."
   },
   "slotTitel": {
-    "nl": "Nog geen plek gevonden?",
-    "de": "Noch keine Unterkunft gefunden?",
-    "en": "Haven't found a place yet?"
+    "nl": "Andere opties",
+    "de": "Andere Optionen",
+    "en": "Other options"
   },
   "slotTekst": {
     "nl": "Bekijk ook [particuliere verhuur]({{particulierPath}}) of [hotels & B&B]({{hotelsPath}}).",

@@ -5,14 +5,14 @@
     "en": "Staying with a local during the Four Days Marches"
   },
   "paginaTitel": {
-    "nl": "Slapen bij een particulier tijdens de Vierdaagse — Vierdaagse Logeren",
-    "de": "Bei Privatpersonen übernachten während des Vierdaagse — Vierdaagse Logeren",
-    "en": "Staying with a local during the Four Days Marches — Vierdaagse Logeren"
+    "nl": "Slapen bij een particulier tijdens de Vierdaagse | Vierdaagse Logeren",
+    "de": "Bei Privatpersonen übernachten während des Vierdaagse | Vierdaagse Logeren",
+    "en": "Staying with a local during the Four Days Marches | Vierdaagse Logeren"
   },
   "seoBeschrijving": {
-    "nl": "Kamer, tuin of oprit bij een particulier tijdens de Vierdaagse — wat het kost, waar je op let en hoe je een plek vindt rond Nijmegen.",
-    "de": "Zimmer, Garten oder Stellplatz bei Privatpersonen während des Vierdaagse — Kosten, worauf du achtest und wie du eine Unterkunft rund um Nijmegen findest.",
-    "en": "A room, garden or driveway with a local during the Four Days Marches — costs, what to check, and how to find a place around Nijmegen."
+    "nl": "Kamer, tuin of oprit bij een particulier tijdens de Vierdaagse, wat het kost, waar je op let en hoe je een plek vindt rond Nijmegen.",
+    "de": "Zimmer, Garten oder Stellplatz bei Privatpersonen während des Vierdaagse, Kosten, worauf du achtest und wie du eine Unterkunft rund um Nijmegen findest.",
+    "en": "A room, garden or driveway with a local during the Four Days Marches, costs, what to check, and how to find a place around Nijmegen."
   },
   "intro": {
     "nl": "Een kamer, tuin of oprit bij iemand thuis is vaak goedkoper dan een hotel en persoonlijker dan een volle camping. Het is ook een sterke plan B als campings en hotels vol zitten. Op deze pagina leggen we uit wat je kunt verwachten en waar je scherp op let.",
@@ -35,9 +35,9 @@
     "en": "What it costs"
   },
   "kostTekst": {
-    "nl": "Meestal lager dan een hotel, en vaak vergelijkbaar met of goedkoper dan een camping — afhankelijk van voorzieningen en afstand tot Nijmegen. Vraag een all-in prijs per nacht (inclusief eventuele toeslagen) en hoe betalen werkt (contant, tikkie, vooraf).",
-    "de": "Meist günstiger als ein Hotel und oft vergleichbar mit oder günstiger als Camping — je nach Ausstattung und Entfernung zu Nijmegen. Frage einen All-inklusive-Preis pro Nacht (inkl. Zuschläge) und wie die Zahlung läuft (bar, Überweisung, im Voraus).",
-    "en": "Usually cheaper than a hotel, and often similar to or cheaper than camping — depending on facilities and distance to Nijmegen. Ask for an all-in price per night (including any extras) and how payment works (cash, transfer, in advance)."
+    "nl": "Meestal lager dan een hotel, en vaak vergelijkbaar met of goedkoper dan een camping, afhankelijk van voorzieningen en afstand tot Nijmegen. Vraag een all-in prijs per nacht (inclusief eventuele toeslagen) en hoe betalen werkt (contant, tikkie, vooraf).",
+    "de": "Meist günstiger als ein Hotel und oft vergleichbar mit oder günstiger als Camping, je nach Ausstattung und Entfernung zu Nijmegen. Frage einen All-inklusive-Preis pro Nacht (inkl. Zuschläge) und wie die Zahlung läuft (bar, Überweisung, im Voraus).",
+    "en": "Usually cheaper than a hotel, and often similar to or cheaper than camping, depending on facilities and distance to Nijmegen. Ask for an all-in price per night (including any extras) and how payment works (cash, transfer, in advance)."
   },
   "letOpTitel": {
     "nl": "Waar je op let",
@@ -46,21 +46,21 @@
   },
   "letOpItems": {
     "nl": [
-      "Afstand tot startpunt of route — en hoe je die 's ochtends aflegt",
+      "Afstand tot startpunt of route, en hoe je die 's ochtends aflegt",
       "Wat er precies inbegrepen is (sanitair, handdoeken, keuken, parkeren)",
       "Duidelijke aankomst- en vertrektijden, ook na een late finish",
       "Bereikbaarheid zonder auto (OV, fiets) als je die niet hebt",
       "Alleen boeken via duidelijke afspraken; twijfel je, kies een ander aanbod"
     ],
     "de": [
-      "Entfernung zu Start oder Strecke — und wie du morgens dorthin kommst",
+      "Entfernung zu Start oder Strecke, und wie du morgens dorthin kommst",
       "Was genau enthalten ist (Sanitär, Handtücher, Küche, Parkplatz)",
       "Klare An- und Abreisezeiten, auch nach einem späten Finish",
       "Erreichbarkeit ohne Auto (ÖPNV, Fahrrad), falls du keines hast",
       "Nur mit klaren Absprachen buchen; bei Zweifel anderes Angebot wählen"
     ],
     "en": [
-      "Distance to the start or route — and how you'll cover it in the morning",
+      "Distance to the start or route, and how you'll cover it in the morning",
       "Exactly what's included (bathroom, towels, kitchen, parking)",
       "Clear arrival and departure times, including after a late finish",
       "Access without a car (public transport, bike) if you don't have one",
@@ -73,14 +73,14 @@
     "en": "Available locations"
   },
   "leegTitel": {
-    "nl": "Nog geen particuliere plekken online",
-    "de": "Noch keine privaten Unterkünfte online",
-    "en": "No private stays listed yet"
+    "nl": "Locaties in de regio",
+    "de": "Unterkünfte in der Region",
+    "en": "Places in the region"
   },
   "leegTekst": {
-    "nl": "Zodra een plek is gecontroleerd en op status “gepubliceerd” staat, verschijnt die hier. Heb je zelf een kamer, tuin of oprit? Meld je hieronder aan — we kijken elke aanmelding handmatig na. Zoek intussen ook via [camping]({{campingPath}}) of [hotels & B&B]({{hotelsPath}}), en vergelijk reistijden op de gebiedpagina's.",
-    "de": "Sobald eine Unterkunft geprüft und auf Status „veröffentlicht“ steht, erscheint sie hier. Hast du selbst ein Zimmer, Garten oder Stellplatz? Melde dich unten an — wir prüfen jede Anmeldung manuell. Suche inzwischen auch über [Camping]({{campingPath}}) oder [Hotels & B&Bs]({{hotelsPath}}) und vergleiche Fahrzeiten auf den Gebietsseiten.",
-    "en": "Once a place is reviewed and set to status “published”, it appears here. Have a room, garden or driveway yourself? Sign up below — we review every submission manually. Meanwhile also search via [camping]({{campingPath}}) or [hotels & B&Bs]({{hotelsPath}}), and compare travel times on the area pages."
+    "nl": "Heb je zelf een kamer, tuin of oprit? Meld je hieronder aan. We controleren elke aanmelding handmatig. Kijk ook bij [camping]({{campingPath}}) of [hotels & B&B]({{hotelsPath}}).",
+    "de": "Hast du selbst ein Zimmer, Garten oder Stellplatz? Melde dich unten an. Wir prüfen jede Anmeldung manuell. Schau auch bei [Camping]({{campingPath}}) oder [Hotels & B&Bs]({{hotelsPath}}).",
+    "en": "Have a room, garden or driveway yourself? Sign up below. We review every submission manually. Also check [camping]({{campingPath}}) or [hotels & B&Bs]({{hotelsPath}})."
   },
   "aanmeldTitel": {
     "nl": "Zelf een plek aanbieden?",
@@ -88,14 +88,14 @@
     "en": "Offer a place yourself?"
   },
   "aanmeldIntro": {
-    "nl": "Heb je een tuin, kamer of oprit die je tijdens de Vierdaagse wilt aanbieden? Meld je hieronder aan. Elke aanmelding wordt handmatig gecontroleerd voordat deze zichtbaar wordt — dit duurt meestal een paar dagen.",
-    "de": "Hast du einen Garten, ein Zimmer oder einen Stellplatz, den du während des Vierdaagse anbieten möchtest? Melde dich unten an. Jede Anmeldung wird manuell geprüft, bevor sie sichtbar wird — das dauert in der Regel ein paar Tage.",
-    "en": "Do you have a garden, room, or driveway you'd like to offer during the Four Days Marches? Sign up below. Every submission is manually reviewed before it becomes visible — this usually takes a few days."
+    "nl": "Heb je een tuin, kamer of oprit die je tijdens de Vierdaagse wilt aanbieden? Meld je hieronder aan. Elke aanmelding controleren we handmatig voordat die zichtbaar wordt (meestal binnen een paar dagen).",
+    "de": "Hast du einen Garten, ein Zimmer oder einen Stellplatz für den Vierdaagse? Melde dich unten an. Jede Anmeldung prüfen wir manuell, bevor sie sichtbar wird (meist innerhalb weniger Tage).",
+    "en": "Do you have a garden, room or driveway to offer during the Four Days Marches? Sign up below. We review every submission manually before it becomes visible (usually within a few days)."
   },
   "slotTitel": {
-    "nl": "Nog geen plek gevonden?",
-    "de": "Noch keine Unterkunft gefunden?",
-    "en": "Haven't found a place yet?"
+    "nl": "Andere opties",
+    "de": "Andere Optionen",
+    "en": "Other options"
   },
   "slotTekst": {
     "nl": "Bekijk ook [camping]({{campingPath}}) of [hotels & B&B]({{hotelsPath}}).",

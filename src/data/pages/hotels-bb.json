@@ -5,19 +5,19 @@
     "en": "Hotels and B&Bs during the Four Days Marches"
   },
   "paginaTitel": {
-    "nl": "Hotels en B&B's tijdens de Vierdaagse — Vierdaagse Logeren",
-    "de": "Hotels und B&Bs während des Vierdaagse — Vierdaagse Logeren",
-    "en": "Hotels and B&Bs during the Four Days Marches — Vierdaagse Logeren"
+    "nl": "Hotels en B&B's tijdens de Vierdaagse | Vierdaagse Logeren",
+    "de": "Hotels und B&Bs während des Vierdaagse | Vierdaagse Logeren",
+    "en": "Hotels and B&Bs during the Four Days Marches | Vierdaagse Logeren"
   },
   "seoBeschrijving": {
-    "nl": "Hotels en B&B's in en rond Nijmegen tijdens de Vierdaagse — waar te kijken, wat het kost en wanneer je moet boeken.",
-    "de": "Hotels und B&Bs in und um Nijmegen während des Vierdaagse — wo du suchen solltest, was es kostet und wann du buchen musst.",
-    "en": "Hotels and B&Bs in and around Nijmegen during the Four Days Marches — where to look, what it costs, and when to book."
+    "nl": "Hotels en B&B's in en rond Nijmegen tijdens de Vierdaagse, waar te kijken, wat het kost en wanneer je moet boeken.",
+    "de": "Hotels und B&Bs in und um Nijmegen während des Vierdaagse, wo du suchen solltest, was es kostet und wann du buchen musst.",
+    "en": "Hotels and B&Bs in and around Nijmegen during the Four Days Marches, where to look, what it costs, and when to book."
   },
   "intro": {
-    "nl": "Een hotel of B&B geeft meer comfort en privacy dan kamperen. Je vindt opties in Nijmegen zelf én in omliggende plaatsen met een snelle trein- of busverbinding. Centraal gelegen kamers raken het eerst vol — soms al maanden van tevoren.",
-    "de": "Ein Hotel oder eine B&B bietet mehr Komfort und Privatsphäre als Camping. Du findest Optionen in Nijmegen selbst und in umliegenden Orten mit schneller Zug- oder Busanbindung. Zentral gelegene Zimmer sind zuerst ausgebucht — manchmal schon Monate im Voraus.",
-    "en": "A hotel or B&B gives more comfort and privacy than camping. You'll find options in Nijmegen itself and in nearby towns with a quick train or bus link. Centrally located rooms fill first — sometimes months ahead."
+    "nl": "Een hotel of B&B geeft meer comfort en privacy dan kamperen. Je vindt opties in Nijmegen zelf én in omliggende plaatsen met een snelle trein- of busverbinding. Centraal gelegen kamers raken het eerst vol, soms al maanden van tevoren.",
+    "de": "Ein Hotel oder eine B&B bietet mehr Komfort und Privatsphäre als Camping. Du findest Optionen in Nijmegen selbst und in umliegenden Orten mit schneller Zug- oder Busanbindung. Zentral gelegene Zimmer sind zuerst ausgebucht, manchmal schon Monate im Voraus.",
+    "en": "A hotel or B&B gives more comfort and privacy than camping. You'll find options in Nijmegen itself and in nearby towns with a quick train or bus link. Centrally located rooms fill first, sometimes months ahead."
   },
   "verwachtTitel": {
     "nl": "Wat kun je verwachten",
@@ -25,9 +25,9 @@
     "en": "What to expect"
   },
   "verwachtTekst": {
-    "nl": "Prijzen liggen in de Vierdaagse-week duidelijk hoger dan in een normale zomerweek. Hoe dichter bij start en finish, hoe eerder vol en hoe hoger de prijs. Reken op minimumverblijf van meerdere nachten bij veel hotels. Ontbijt, parkeren en late check-in zijn geen standaard — vraag dit expliciet na.",
-    "de": "Die Preise in der Vierdaagse-Woche liegen klar über einer normalen Sommerwoche. Je näher an Start und Ziel, desto früher ausgebucht und desto höher der Preis. Viele Hotels verlangen einen Mindestaufenthalt von mehreren Nächten. Frühstück, Parkplatz und später Check-in sind nicht selbstverständlich — frage ausdrücklich nach.",
-    "en": "Prices in Four Days Marches week are clearly higher than a normal summer week. The closer to start and finish, the sooner it sells out and the higher the price. Many hotels require a multi-night minimum stay. Breakfast, parking and late check-in are not guaranteed — ask explicitly."
+    "nl": "Prijzen liggen in de Vierdaagse-week duidelijk hoger dan in een normale zomerweek. Hoe dichter bij start en finish, hoe eerder vol en hoe hoger de prijs. Reken op minimumverblijf van meerdere nachten bij veel hotels. Ontbijt, parkeren en late check-in zijn geen standaard, vraag dit expliciet na.",
+    "de": "Die Preise in der Vierdaagse-Woche liegen klar über einer normalen Sommerwoche. Je näher an Start und Ziel, desto früher ausgebucht und desto höher der Preis. Viele Hotels verlangen einen Mindestaufenthalt von mehreren Nächten. Frühstück, Parkplatz und später Check-in sind nicht selbstverständlich, frage ausdrücklich nach.",
+    "en": "Prices in Four Days Marches week are clearly higher than a normal summer week. The closer to start and finish, the sooner it sells out and the higher the price. Many hotels require a multi-night minimum stay. Breakfast, parking and late check-in are not guaranteed, ask explicitly."
   },
   "waarTitel": {
     "nl": "Waar te kijken",
@@ -36,38 +36,38 @@
   },
   "waarItems": {
     "nl": [
-      "Nijmegen-centrum — dichtst bij start/finish, meeste keuze, eerst vol en duurst",
-      "Lent, Malden, Beek-Ubbergen — dichtbij, iets rustiger, nog lopend of kort met OV",
-      "Elst, Wijchen, Mook-Molenhoek, Cuijk — snelle trein, vaak meer beschikbaarheid",
-      "Arnhem — veel hotelcapaciteit en ±15 minuten trein naar Nijmegen"
+      "Nijmegen-centrum, dichtst bij start/finish, meeste keuze, eerst vol en duurst",
+      "Lent, Malden, Beek-Ubbergen, dichtbij, iets rustiger, nog lopend of kort met OV",
+      "Elst, Wijchen, Mook-Molenhoek, Cuijk, snelle trein, vaak meer beschikbaarheid",
+      "Arnhem, veel hotelcapaciteit en ±15 minuten trein naar Nijmegen"
     ],
     "de": [
-      "Nijmegen-Zentrum — am nächsten zu Start/Ziel, größte Auswahl, zuerst ausgebucht und teuerste",
-      "Lent, Malden, Beek-Ubbergen — nah, etwas ruhiger, noch zu Fuß oder kurz mit ÖPNV",
-      "Elst, Wijchen, Mook-Molenhoek, Cuijk — schneller Zug, oft mehr Verfügbarkeit",
-      "Arnhem — viel Hotelkapazität und ca. 15 Minuten Zug nach Nijmegen"
+      "Nijmegen-Zentrum, am nächsten zu Start/Ziel, größte Auswahl, zuerst ausgebucht und teuerste",
+      "Lent, Malden, Beek-Ubbergen, nah, etwas ruhiger, noch zu Fuß oder kurz mit ÖPNV",
+      "Elst, Wijchen, Mook-Molenhoek, Cuijk, schneller Zug, oft mehr Verfügbarkeit",
+      "Arnhem, viel Hotelkapazität und ca. 15 Minuten Zug nach Nijmegen"
     ],
     "en": [
-      "Nijmegen centre — closest to start/finish, most choice, first to sell out and most expensive",
-      "Lent, Malden, Beek-Ubbergen — nearby, a bit quieter, still walkable or a short public-transport hop",
-      "Elst, Wijchen, Mook-Molenhoek, Cuijk — fast train, often more availability",
-      "Arnhem — plenty of hotel capacity and about 15 minutes by train to Nijmegen"
+      "Nijmegen centre, closest to start/finish, most choice, first to sell out and most expensive",
+      "Lent, Malden, Beek-Ubbergen, nearby, a bit quieter, still walkable or a short public-transport hop",
+      "Elst, Wijchen, Mook-Molenhoek, Cuijk, fast train, often more availability",
+      "Arnhem, plenty of hotel capacity and about 15 minutes by train to Nijmegen"
     ]
   },
   "lijstTitel": {
-    "nl": "Hotels & B&B's op deze site",
-    "de": "Hotels & B&Bs auf dieser Website",
-    "en": "Hotels & B&Bs on this site"
+    "nl": "Hotels en B&B's in de regio",
+    "de": "Hotels und B&Bs in der Region",
+    "en": "Hotels and B&Bs in the region"
   },
   "leegTitel": {
-    "nl": "Nog geen hotels op deze pagina — wel zo zoeken",
-    "de": "Noch keine Hotels auf dieser Seite — so suchst du trotzdem",
-    "en": "No hotels listed here yet — how to search anyway"
+    "nl": "Zoeken naar een hotel",
+    "de": "Ein Hotel suchen",
+    "en": "Looking for a hotel"
   },
   "leegTekst": {
-    "nl": "We zetten hier binnenkort gecontroleerde hotels en B&B's met duidelijke contactgegevens. Zoek ondertussen op plaatsen met een snelle OV-verbinding (Elst, Wijchen, Cuijk, Arnhem) of dichtbij de start (Malden, Lent). Boek bij voorkeur met gratis annulering zolang je planning nog kan wijzigen. Bekijk ook de gebiedpagina's voor reistijden.",
-    "de": "Bald findest du hier geprüfte Hotels und B&Bs mit klaren Kontaktdaten. Suche inzwischen an Orten mit schneller ÖPNV-Anbindung (Elst, Wijchen, Cuijk, Arnhem) oder nah am Start (Malden, Lent). Buche möglichst mit kostenloser Stornierung, solange dein Plan noch ändern kann. Schau auch die Gebietsseiten für Fahrzeiten.",
-    "en": "We'll soon list verified hotels and B&Bs here with clear contact details. Meanwhile, search places with a fast public-transport link (Elst, Wijchen, Cuijk, Arnhem) or close to the start (Malden, Lent). Prefer free cancellation while your plans can still change. Also check the area pages for travel times."
+    "nl": "Zoek op plaatsen met snelle OV (Elst, Wijchen, Cuijk, Arnhem) of dicht bij de start (Malden, Lent). Boek bij voorkeur met gratis annulering zolang je planning nog kan wijzigen.",
+    "de": "Suche an Orten mit schnellem ÖPNV (Elst, Wijchen, Cuijk, Arnhem) oder nah am Start (Malden, Lent). Buche möglichst mit kostenloser Stornierung, solange dein Plan noch ändern kann.",
+    "en": "Search places with fast public transport (Elst, Wijchen, Cuijk, Arnhem) or close to the start (Malden, Lent). Prefer free cancellation while your plans can still change."
   },
   "aanmeldTitel": {
     "nl": "Hotel of B&B in de regio? Meld je aan",
@@ -80,9 +80,9 @@
     "en": "Do you have a hotel or B&B near Nijmegen and want to be visible during the Four Days Marches? Sign up below. We review every submission manually before it goes live."
   },
   "slotTitel": {
-    "nl": "Nog geen plek gevonden?",
-    "de": "Noch keine Unterkunft gefunden?",
-    "en": "Haven't found a place yet?"
+    "nl": "Andere opties",
+    "de": "Andere Optionen",
+    "en": "Other options"
   },
   "slotTekst": {
     "nl": "Bekijk ook [camping]({{campingPath}}) of [particuliere verhuur]({{particulierPath}}). Of start bij de [gebieden rond Nijmegen](/gebied) om reistijd en bereikbaarheid te vergelijken.",

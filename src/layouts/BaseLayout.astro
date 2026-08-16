@@ -1,6 +1,6 @@
 ---
 import '../styles/tokens.css';
-// Self-hosted via @fontsource — geen request naar een externe font-CDN bij het
+// Self-hosted via @fontsource, geen request naar een externe font-CDN bij het
 // laden van de pagina. Zie beslissing in 23_DECISION_LOG.md (restyle juli 2026).
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/500.css';
@@ -42,7 +42,7 @@ const hreflangMap = {
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="canonical" href={canonicalUrl} />
 
-    {/* hreflang — wijst zoekmachines naar de juiste taalversie per zoeker */}
+    {/* hreflang, wijst zoekmachines naar de juiste taalversie per zoeker */}
     {Object.keys(languages).map((code) => (
       <link
         rel="alternate"

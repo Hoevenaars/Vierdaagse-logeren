@@ -1,3 +1,36 @@
 {
-  "campings": []
+  "campings": [
+    {
+      "naam": "Kampeerterrein De Heizoom",
+      "plaats": "Groesbeek",
+      "type": "Camping",
+      "beschrijving": "Rustige camping aan de rand van Groesbeek, ongeveer 15 minuten met de auto naar Nijmegen. Tentplekken en enkele camperplaatsen. Sanitair, warme douches en een kleine kiosk tijdens de Vierdaagse-week.",
+      "contact": "heizoom@voorbeeld-vierdaagse.nl",
+      "status": "gepubliceerd"
+    },
+    {
+      "naam": "Camping Maaszicht",
+      "plaats": "Cuijk",
+      "type": "Camping",
+      "beschrijving": "Plekken voor tent en camper, dicht bij station Cuijk. Handig als je zonder auto reist: Nijmegen is ongeveer 12 minuten met de trein. Fietsenstalling en ochtendkoffie op het terrein.",
+      "contact": "maaszicht@voorbeeld-vierdaagse.nl",
+      "status": "gepubliceerd"
+    },
+    {
+      "naam": "Kampeerboerderij De Lindehoeve",
+      "plaats": "Mook",
+      "type": "Kampeerboerderij",
+      "beschrijving": "Kleine boerderijcamping met weideplekken en een sanitaire unit. Station Mook-Molenhoek op fietsafstand. Populaire keuze voor groepen die rust zoeken buiten de stad.",
+      "contact": "lindehoeve@voorbeeld-vierdaagse.nl",
+      "status": "gepubliceerd"
+    },
+    {
+      "naam": "Vierdaagseveld Berg en Dal",
+      "plaats": "Berg en Dal",
+      "type": "Camping",
+      "beschrijving": "Tijdelijk kampeerterrein in de Vierdaagse-week, bosrijke omgeving. Basisvoorzieningen, goede bereikbaarheid richting Nijmegen per bus of auto. Boek vroeg: dit type plek raakt snel vol.",
+      "contact": "bergdalveld@voorbeeld-vierdaagse.nl",
+      "status": "gepubliceerd"
+    }
+  ]
 }
