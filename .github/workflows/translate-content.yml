@@ -4,11 +4,13 @@ name: Vertaalconcepten bijwerken (DeepL)
 # Zet alleen concepten klaar met status "concept" — publiceert nooit
 # automatisch. Zie scripts/translate-content.mjs voor de precieze regels.
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
       - "src/data/gebieden/**.json"
       - "src/data/site-strings.json"
+      - "scripts/translate-content.mjs"
 
 # Voorkomt dat de commit die dit workflow zelf maakt, de workflow opnieuw triggert.
 concurrency:
@@ -37,6 +39,8 @@ jobs:
         env:
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
         run: node scripts/translate-content.mjs
+        # DeepL Free rate-limits bij grote batches; script retry't 429's met backoff.
+        timeout-minutes: 30
 
       - name: Wijzigingen terugzetten (indien aanwezig)
         run: |
