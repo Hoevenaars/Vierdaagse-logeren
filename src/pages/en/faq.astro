@@ -2,4 +2,16 @@
 import FaqTemplate from '../../layouts/FaqTemplate.astro';
 import data from '../../data/pages/faq.json';
 ---
-<FaqTemplate data={data} locale="en" />
+<FaqTemplate
+  data={data}
+  locale="en"
+  links={{
+    gidsPath: '/en/gids/wanneer-boeken',
+    overOnsPath: '/en/over-ons',
+    campingPath: '/en/camping',
+    particulierPath: '/en/particuliere-verhuur',
+    hotelsPath: '/en/hotels-bb',
+    gebiedPath: '/en/gebied',
+    privacyPath: '/en/privacy',
+  }}
+/>

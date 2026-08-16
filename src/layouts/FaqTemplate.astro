@@ -1,6 +1,7 @@
 ---
 import ContentPage from './ContentPage.astro';
 import type { Locale } from '../i18n/ui';
+import { linkify } from '../i18n/utils';
 
 interface Veld {
   nl: string;
@@ -16,9 +17,10 @@ interface Props {
     vragen: { vraag: Veld; antwoord: Veld }[];
   };
   locale: Locale;
+  links?: Record<string, string>;
 }
 
-const { data, locale } = Astro.props;
+const { data, locale, links = {} } = Astro.props;
 
 function veld(v: Veld): string {
   return v[locale]?.trim() ? v[locale] : v.nl;
@@ -36,7 +38,7 @@ function veld(v: Veld): string {
       <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="faq-item">
         <h2 itemprop="name">{veld(item.vraag)}</h2>
         <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text">{veld(item.antwoord)}</p>
+          <p itemprop="text" set:html={linkify(veld(item.antwoord), links)} />
         </div>
       </div>
     ))}
