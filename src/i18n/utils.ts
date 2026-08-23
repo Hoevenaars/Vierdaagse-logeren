@@ -36,3 +36,27 @@ export function linkify(text: string, links: Record<string, string> = {}): strin
   }
   return result.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
 }
+
+/** Hide example/demo contact addresses from public listings. */
+export function formatListingContact(
+  contact: string | undefined,
+  _locale: Locale = 'nl'
+): string | null {
+  if (!contact?.trim()) return null;
+  const value = contact.trim();
+  if (/voorbeeld|example\.com|@test\.|localhost/i.test(value)) return null;
+  return value;
+}
+
+export function listingContactLabel(locale: Locale = 'nl'): string {
+  if (locale === 'de') return 'Kontakt';
+  if (locale === 'en') return 'Contact';
+  return 'Contact';
+}
+
+export function listingExampleNote(locale: Locale = 'nl'): string {
+  if (locale === 'de') return 'Beispielanzeige (noch kein öffentlicher Kontakt)';
+  if (locale === 'en') return 'Sample listing (no public contact yet)';
+  return 'Voorbeeldlisting (nog geen openbaar contact)';
+}
+

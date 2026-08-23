@@ -7,6 +7,13 @@
 // src/data/locations.json zodra deze is goedgekeurd (lichte moderatie, zie
 // 24_DECISION_LOG.md — "Verdienmodel particuliere-verhuur-aanmeldingen").
 
+
+function isValidEmail(value: unknown): value is string {
+  if (typeof value !== 'string') return false;
+  // Practical validation: one @, domain with a dot, no spaces.
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
+}
+
 export const config = {
   runtime: 'edge',
 };
@@ -18,7 +25,7 @@ export default async function handler(request: Request): Promise<Response> {
 
   try {
     const body = await request.json();
-    const { naam, plaats, type, beschrijving, contact, categorie, website_hp } = body;
+    const { naam, plaats, type, beschrijving, contact, categorie, website_hp, privacy } = body;
 
     // Honeypot-veld: bots vullen verborgen velden vaak automatisch in.
     // Een mens laat dit leeg; als het gevuld is, doen we alsof het gelukt is
@@ -34,6 +41,20 @@ export default async function handler(request: Request): Promise<Response> {
     if (!naam || !plaats || !contact) {
       return new Response(
         JSON.stringify({ error: 'Vul in ieder geval naam, plaats en contactgegevens in.' }),
+        { status: 400, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    if (!isValidEmail(contact)) {
+      return new Response(
+        JSON.stringify({ error: 'Vul een geldig e-mailadres in.' }),
+        { status: 400, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    if (privacy !== '1' && privacy !== true && privacy !== 'true') {
+      return new Response(
+        JSON.stringify({ error: 'Bevestig dat je akkoord gaat met de privacyverklaring.' }),
         { status: 400, headers: { 'Content-Type': 'application/json' } }
       );
     }

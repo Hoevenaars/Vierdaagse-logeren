@@ -3,7 +3,7 @@ import ContentPage from '../../layouts/ContentPage.astro';
 import AanmeldFormulier from '../../components/AanmeldFormulier.astro';
 import campingsData from '../../data/campings.json';
 import data from '../../data/pages/camping.json';
-import { linkify } from '../../i18n/utils';
+import { linkify, formatListingContact, listingContactLabel, listingExampleNote } from '../../i18n/utils';
 
 const campings = campingsData.campings.filter((c: any) => c.status === 'gepubliceerd');
 const locale = 'en' as const;
@@ -29,7 +29,7 @@ const links = { gebiedPath: '/en/gebied', particulierPath: '/en/particuliere-ver
             <h3>{c.naam}, {c.plaats}</h3>
             <p class="location-type">{c.type}</p>
             <p>{c.beschrijving}</p>
-            <p class="location-contact">Contact: {c.contact}</p>
+            <p class="location-contact">{formatListingContact(c.contact, locale) ? `${listingContactLabel(locale)}: ${formatListingContact(c.contact, locale)}` : listingExampleNote(locale)}</p>
           </div>
         ))}
       </div>

@@ -62,7 +62,7 @@ const hreflangMap = {
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImageUrl} />
-    <meta property="og:locale" content={locale} />
+    <meta property="og:locale" content={locale === 'nl' ? 'nl_NL' : locale === 'de' ? 'de_DE' : 'en_US'} />
     <meta property="og:site_name" content="Vierdaagse Logeren" />
 
     {/* Twitter Card */}
@@ -70,6 +70,21 @@ const hreflangMap = {
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Vierdaagse Logeren',
+      url: Astro.site?.href ?? 'https://www.vierdaagselogeren.nl/',
+      inLanguage: ['nl', 'en', 'de'],
+      publisher: {
+        '@type': 'Organization',
+        name: 'Vierdaagse Logeren',
+        url: Astro.site?.href ?? 'https://www.vierdaagselogeren.nl/',
+        email: 'contact@vierdaagselogeren.nl',
+        logo: new URL('/logos/logo-icon-effen.svg', Astro.site).href,
+      },
+    })} />
   </head>
   <body>
     <a href="#main" class="skip-link">Direct naar inhoud</a>
@@ -79,7 +94,18 @@ const hreflangMap = {
         <a href={getLocalizedPath('/', locale)} class="logo-link">
           <img src="/logos/logo-horizontaal.svg" alt="Vierdaagse Logeren" height="40" />
         </a>
-        <nav aria-label="Hoofdnavigatie">
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-controls="main-nav"
+          aria-expanded="false"
+          aria-label={locale === 'de' ? 'Menü öffnen' : locale === 'en' ? 'Open menu' : 'Menu openen'}
+        >
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav id="main-nav" class="main-nav" aria-label="Hoofdnavigatie">
           <ul>
             <li><a href={getLocalizedPath('/camping', locale)}>{t('nav.camping')}</a></li>
             <li><a href={getLocalizedPath('/particuliere-verhuur', locale)}>{t('nav.particulier')}</a></li>
@@ -116,6 +142,7 @@ const hreflangMap = {
           <a href={getLocalizedPath('/gids/internationale-lopers', locale)}>{t('nav.intlGids')}</a>
         </nav>
         <p class="disclosure">{t('footer.disclosure')}</p>
+        <p class="copyright">© 2026 Vierdaagse Logeren · <a href="mailto:contact@vierdaagselogeren.nl">contact@vierdaagselogeren.nl</a></p>
       </div>
     </footer>
 
@@ -229,11 +256,64 @@ const hreflangMap = {
         opacity: 0.8;
       }
 
+
+      .nav-toggle {
+        display: none;
+        background: transparent;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-base);
+        padding: var(--space-2);
+        cursor: pointer;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .nav-toggle-bar {
+        display: block;
+        width: 1.25rem;
+        height: 2px;
+        background: var(--color-text-dark);
+      }
+      .copyright {
+        font-size: var(--font-size-sm);
+        margin: var(--space-2) 0 0;
+      }
+      .copyright a {
+        color: var(--color-primary);
+      }
+      @media (max-width: 52rem) {
+        .nav-toggle { display: inline-flex; }
+        .main-nav {
+          display: none;
+          width: 100%;
+          order: 3;
+        }
+        .main-nav.is-open { display: block; }
+        .main-nav ul {
+          flex-direction: column;
+          gap: var(--space-2);
+          padding: var(--space-2) 0;
+        }
+        .main-nav a {
+          display: block;
+          padding: var(--space-2) 0;
+          min-height: 44px;
+        }
+        .header-inner { align-items: center; }
+      }
       a:focus-visible,
       button:focus-visible {
         outline: 3px solid var(--color-accent-2);
         outline-offset: 2px;
       }
     </style>
+
+    <script>
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('main-nav');
+      toggle?.addEventListener('click', () => {
+        const open = nav?.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    </script>
   </body>
 </html>

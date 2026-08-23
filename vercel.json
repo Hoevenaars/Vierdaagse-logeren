@@ -1,24 +1,194 @@
 {
   "redirects": [
-    { "source": "/(.*)", "has": [{ "type": "host", "value": "vierdaagsekamperen.nl" }], "destination": "https://vierdaagselogeren.nl/camping", "permanent": true },
-    { "source": "/(.*)", "has": [{ "type": "host", "value": "www.vierdaagsekamperen.nl" }], "destination": "https://vierdaagselogeren.nl/camping", "permanent": true },
-
-    { "source": "/(.*)", "has": [{ "type": "host", "value": "4daagsekamperen.nl" }], "destination": "https://vierdaagselogeren.nl/camping", "permanent": true },
-    { "source": "/(.*)", "has": [{ "type": "host", "value": "www.4daagsekamperen.nl" }], "destination": "https://vierdaagselogeren.nl/camping", "permanent": true },
-
-    { "source": "/(.*)", "has": [{ "type": "host", "value": "vierdaagsecampingplaats.nl" }], "destination": "https://vierdaagselogeren.nl/camping", "permanent": true },
-    { "source": "/(.*)", "has": [{ "type": "host", "value": "www.vierdaagsecampingplaats.nl" }], "destination": "https://vierdaagselogeren.nl/camping", "permanent": true },
-
-    { "source": "/(.*)", "has": [{ "type": "host", "value": "4daagsebedden.nl" }], "destination": "https://vierdaagselogeren.nl/hotels-bb", "permanent": true },
-    { "source": "/(.*)", "has": [{ "type": "host", "value": "www.4daagsebedden.nl" }], "destination": "https://vierdaagselogeren.nl/hotels-bb", "permanent": true },
-
-    { "source": "/(.*)", "has": [{ "type": "host", "value": "4daagseovernachting.nl" }], "destination": "https://vierdaagselogeren.nl/", "permanent": true },
-    { "source": "/(.*)", "has": [{ "type": "host", "value": "www.4daagseovernachting.nl" }], "destination": "https://vierdaagselogeren.nl/", "permanent": true },
-
-    { "source": "/(.*)", "has": [{ "type": "host", "value": "campingpersingen.nl" }], "destination": "https://vierdaagselogeren.nl/gebied", "permanent": true },
-    { "source": "/(.*)", "has": [{ "type": "host", "value": "www.campingpersingen.nl" }], "destination": "https://vierdaagselogeren.nl/gebied", "permanent": true },
-
-    { "source": "/(.*)", "has": [{ "type": "host", "value": "vierdaagseblaar.nl" }], "destination": "https://vierdaagselogeren.nl/blarenzorg", "permanent": true },
-    { "source": "/(.*)", "has": [{ "type": "host", "value": "www.vierdaagseblaar.nl" }], "destination": "https://vierdaagselogeren.nl/blarenzorg", "permanent": true }
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "vierdaagsekamperen.nl"
+        }
+      ],
+      "destination": "https://www.vierdaagselogeren.nl/camping",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.vierdaagsekamperen.nl"
+        }
+      ],
+      "destination": "https://www.vierdaagselogeren.nl/camping",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "4daagsekamperen.nl"
+        }
+      ],
+      "destination": "https://www.vierdaagselogeren.nl/camping",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.4daagsekamperen.nl"
+        }
+      ],
+      "destination": "https://www.vierdaagselogeren.nl/camping",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "vierdaagsecampingplaats.nl"
+        }
+      ],
+      "destination": "https://www.vierdaagselogeren.nl/camping",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.vierdaagsecampingplaats.nl"
+        }
+      ],
+      "destination": "https://www.vierdaagselogeren.nl/camping",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "4daagsebedden.nl"
+        }
+      ],
+      "destination": "https://www.vierdaagselogeren.nl/hotels-bb",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.4daagsebedden.nl"
+        }
+      ],
+      "destination": "https://www.vierdaagselogeren.nl/hotels-bb",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "4daagseovernachting.nl"
+        }
+      ],
+      "destination": "https://www.vierdaagselogeren.nl/",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.4daagseovernachting.nl"
+        }
+      ],
+      "destination": "https://www.vierdaagselogeren.nl/",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "campingpersingen.nl"
+        }
+      ],
+      "destination": "https://www.vierdaagselogeren.nl/gebied",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.campingpersingen.nl"
+        }
+      ],
+      "destination": "https://www.vierdaagselogeren.nl/gebied",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "vierdaagseblaar.nl"
+        }
+      ],
+      "destination": "https://www.vierdaagselogeren.nl/blarenzorg",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.vierdaagseblaar.nl"
+        }
+      ],
+      "destination": "https://www.vierdaagselogeren.nl/blarenzorg",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        }
+      ]
+    },
+    {
+      "source": "/admin/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
   ]
 }

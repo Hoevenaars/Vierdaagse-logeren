@@ -57,3 +57,7 @@ npm run translate   # DeepL-concepten voor lege DE/EN-velden
 
 - Astro: https://docs.astro.build
 - Live site: https://vierdaagselogeren.nl
+
+## Launch
+
+Zie [LAUNCH_CHECKLIST.md](./LAUNCH_CHECKLIST.md) voor de volledige go-live checklist en status.
