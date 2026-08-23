@@ -2,6 +2,13 @@
 // locatie-aanmeldingen, zie submit-location.ts daarvoor).
 // Vereist dezelfde environment variables: RESEND_API_KEY en OWNER_EMAIL.
 
+
+function isValidEmail(value: unknown): value is string {
+  if (typeof value !== 'string') return false;
+  // Practical validation: one @, domain with a dot, no spaces.
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
+}
+
 export const config = {
   runtime: 'edge',
 };
@@ -13,7 +20,7 @@ export default async function handler(request: Request): Promise<Response> {
 
   try {
     const body = await request.json();
-    const { naam, email, telefoon, bericht, website_hp } = body;
+    const { naam, email, telefoon, bericht, website_hp, privacy } = body;
 
     if (website_hp) {
       return new Response(JSON.stringify({ success: true }), {
@@ -25,6 +32,20 @@ export default async function handler(request: Request): Promise<Response> {
     if (!naam || !email || !bericht) {
       return new Response(
         JSON.stringify({ error: 'Vul naam, e-mailadres en bericht in.' }),
+        { status: 400, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    if (!isValidEmail(email)) {
+      return new Response(
+        JSON.stringify({ error: 'Vul een geldig e-mailadres in.' }),
+        { status: 400, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    if (privacy !== '1' && privacy !== true && privacy !== 'true') {
+      return new Response(
+        JSON.stringify({ error: 'Bevestig dat je akkoord gaat met de privacyverklaring.' }),
         { status: 400, headers: { 'Content-Type': 'application/json' } }
       );
     }

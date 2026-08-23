@@ -26,6 +26,8 @@ const copy = {
     gelukt: 'Bedankt! Je aanmelding is verstuurd. We controleren die handmatig.',
     serverfout: 'Er ging iets mis. Probeer het later opnieuw.',
     netwerkfout: 'Er ging iets mis. Controleer je internetverbinding en probeer het opnieuw.',
+    privacy: 'Ik ga akkoord met de verwerking van mijn gegevens volgens de privacyverklaring.',
+    privacyLink: 'privacyverklaring',
   },
   en: {
     naam: 'Name *',
@@ -39,6 +41,8 @@ const copy = {
     gelukt: 'Thanks! Your signup was sent. We review it manually.',
     serverfout: 'Something went wrong. Please try again later.',
     netwerkfout: 'Something went wrong. Check your internet connection and try again.',
+    privacy: 'I agree to the processing of my data according to the privacy statement.',
+    privacyLink: 'privacy statement',
   },
   de: {
     naam: 'Name *',
@@ -52,6 +56,8 @@ const copy = {
     gelukt: 'Danke! Deine Anmeldung wurde gesendet. Wir prüfen sie manuell.',
     serverfout: 'Etwas ist schiefgelaufen. Bitte versuche es später erneut.',
     netwerkfout: 'Etwas ist schiefgelaufen. Überprüfe deine Internetverbindung und versuche es erneut.',
+    privacy: 'Ich stimme der Verarbeitung meiner Daten gemäß der Datenschutzerklärung zu.',
+    privacyLink: 'Datenschutzerklärung',
   },
 }[locale];
 ---
@@ -97,12 +103,30 @@ const copy = {
     <label for={`website_hp-${categorie}`}>{copy.honeypot}</label>
     <input type="text" id={`website_hp-${categorie}`} name="website_hp" tabindex="-1" autocomplete="off" />
   </div>
+  <div class="form-field form-field--checkbox">
+    <label for={`privacy-${categorie}`}>
+      <input type="checkbox" id={`privacy-${categorie}`} name="privacy" value="1" required />
+      <span>{copy.privacy} <a href={locale === 'nl' ? '/privacy' : `/${locale}/privacy`}>{copy.privacyLink}</a></span>
+    </label>
+  </div>
+
 
   <button type="submit">{copy.verstuur}</button>
   <p id={statusId} role="status" aria-live="polite"></p>
 </form>
 
 <style>
+  .form-field--checkbox label {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-2);
+    font-weight: 400;
+  }
+  .form-field--checkbox input {
+    margin-top: 0.2rem;
+  }
+
   .location-form {
     display: flex;
     flex-direction: column;

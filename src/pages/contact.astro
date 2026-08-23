@@ -38,6 +38,13 @@ const status = {
       <label for="website_hp">{v(labels.honeypot)}</label>
       <input type="text" id="website_hp" name="website_hp" tabindex="-1" autocomplete="off" />
     </div>
+    <div class="form-field form-field--checkbox">
+      <label for="privacy">
+        <input type="checkbox" id="privacy" name="privacy" value="1" required />
+        <span>{v(labels.privacy)} <a href={locale === 'nl' ? '/privacy' : `/${locale}/privacy`}>{v(labels.privacyLink)}</a></span>
+      </label>
+    </div>
+
 
     <button type="submit">{v(labels.verstuur)}</button>
     <p id="form-status" role="status" aria-live="polite"></p>

@@ -3,7 +3,7 @@ import ContentPage from '../../layouts/ContentPage.astro';
 import AanmeldFormulier from '../../components/AanmeldFormulier.astro';
 import locationsData from '../../data/locations.json';
 import data from '../../data/pages/particuliere-verhuur.json';
-import { linkify } from '../../i18n/utils';
+import { linkify, formatListingContact, listingContactLabel, listingExampleNote } from '../../i18n/utils';
 
 const locations = locationsData.locations.filter((l: any) => l.status === 'gepubliceerd');
 const locale = 'de' as const;
@@ -35,7 +35,7 @@ const links = { campingPath: '/de/camping', hotelsPath: '/de/hotels-bb' };
             <h3>{loc.naam}, {loc.plaats}</h3>
             <p class="location-type">{loc.type}</p>
             <p>{loc.beschrijving}</p>
-            <p class="location-contact">Contact: {loc.contact}</p>
+            <p class="location-contact">{formatListingContact(loc.contact, locale) ? `${listingContactLabel(locale)}: ${formatListingContact(loc.contact, locale)}` : listingExampleNote(locale)}</p>
           </div>
         ))}
       </div>

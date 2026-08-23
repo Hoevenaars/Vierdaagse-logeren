@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://vierdaagselogeren.nl',
+  site: 'https://www.vierdaagselogeren.nl',
   integrations: [sitemap()],
   i18n: {
     locales: ['nl', 'en', 'de'],
