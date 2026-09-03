@@ -4,7 +4,7 @@
   "titel": {
     "nl": "Overnachten in Grave tijdens de Vierdaagse",
     "de": "Übernachten in Grave während der Vierdaagse",
-    "en": "Staying Overnight in Grave During the Four Days Marches",
+    "en": "Where to Stay in Grave During the Four Days Marches",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
@@ -21,8 +21,8 @@
   },
   "intro": {
     "nl": "Grave is een historische vestingstad op zo'n 22 km van Nijmegen. Rustiger en sfeervol, met een langere reistijd. Goed als je sfeer wilt en niet per se naast de start hoeft te slapen.",
-    "de": "Grave ist eine historische Festungsstadt, etwa 22 km von Nijmegen entfernt. Ruhiger und stimmungsvoll, allerdings mit einer längeren Anfahrtszeit. Ideal, wenn man Wert auf Atmosphäre legt und nicht unbedingt direkt am Start übernachten muss.",
-    "en": "Grave is a historic fortified town about 22 km from Nijmegen. It’s quieter and more charming, though the travel time is longer. It’s a good choice if you’re looking for a nice atmosphere and don’t necessarily need to stay right next to the starting line.",
+    "de": "Grave ist eine historische Festungsstadt, etwa 22 km von Nimwegen entfernt. Ruhiger und stimmungsvoller, allerdings mit einer längeren Anfahrtszeit. Ideal, wenn man Wert auf Atmosphäre legt und nicht unbedingt direkt am Start übernachten muss.",
+    "en": "Grave is a historic fortified town about 22 km from Nijmegen. It’s quieter and has a charming atmosphere, though it takes a little longer to get there. It’s a good choice if you’re looking for a nice atmosphere and don’t necessarily need to stay right next to the starting line.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
@@ -30,7 +30,7 @@
   },
   "afstand": {
     "nl": "Afstand tot de Wedren: ongeveer 22 km. Met de auto zo'n 25 min. Op de fiets reken je op ongeveer 60 min. Met het OV reken je op 40 min bus. Grave heeft zelf geen treinstation. Tip: historische vestingstad.",
-    "de": "Entfernung zu den Wedren: ca. 22 km. Mit dem Auto etwa 25 Minuten. Mit dem Fahrrad solltest du etwa 60 Minuten einplanen. Mit öffentlichen Verkehrsmitteln benötigst du 40 Minuten mit dem Bus. Grave selbst hat keinen Bahnhof. Tipp: historische Festungsstadt.",
+    "de": "Entfernung zu den Wedren: ca. 22 km. Mit dem Auto dauert die Fahrt etwa 25 Minuten. Mit dem Fahrrad solltest du etwa 60 Minuten einplanen. Mit öffentlichen Verkehrsmitteln dauert die Fahrt mit dem Bus 40 Minuten. Grave hat keinen eigenen Bahnhof. Tipp: historische Festungsstadt.",
     "en": "Distance to the Wedren: about 22 km. By car, it takes about 25 minutes. By bike, allow about 60 minutes. By public transportation, allow 40 minutes by bus. Grave does not have its own train station. Tip: historic fortified town.",
     "vertaalstatus": {
       "de": "concept",
@@ -49,14 +49,14 @@
   "praktisch": {
     "nl": "Geen eigen treinstation; bus rond 40 minuten. Auto ongeveer 25 minuten. Voor voorspelbaarheid is eigen vervoer of overnachten dichter bij een station vaak makkelijker.",
     "de": "Kein eigener Bahnhof; mit dem Bus etwa 40 Minuten. Mit dem Auto etwa 25 Minuten. Aus Gründen der Planbarkeit ist es oft einfacher, ein eigenes Fahrzeug zu nutzen oder näher an einem Bahnhof zu übernachten.",
-    "en": "No train station on site; the bus ride takes about 40 minutes. By car, it takes about 25 minutes. For predictability, it’s often easier to use your own transportation or stay overnight closer to a station.",
+    "en": "No train station on site; the bus ride takes about 40 minutes. By car, it takes about 25 minutes. For the sake of predictability, it’s often easier to use your own transportation or stay overnight closer to a station.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
     }
   },
   "vertaalstatus": {
-    "de": "leeg",
-    "en": "leeg"
+    "de": "concept",
+    "en": "concept"
   }
 }

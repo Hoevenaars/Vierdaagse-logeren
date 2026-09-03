@@ -13,7 +13,7 @@
   "seoBeschrijving": {
     "nl": "Overnachten in Berg en Dal tijdens de Vierdaagse, 8 km van Nijmegen, auto 15 min, OV 25 min bus. Bosrijke omgeving.",
     "de": "Übernachtung in Berg en Dal während der Vierdaagse, 8 km von Nijmegen entfernt, mit dem Auto 15 Min., mit öffentlichen Verkehrsmitteln 25 Min. mit dem Bus. Waldreiche Umgebung.",
-    "en": "Accommodations in Berg en Dal during the Four Days Marches, 8 km from Nijmegen; 15 min by car, 25 min by bus. Wooded surroundings.",
+    "en": "Accommodations in Berg en Dal during the Four Days Marches, 8 km from Nijmegen; 15 minutes by car or 25 minutes by bus. Wooded surroundings.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
@@ -30,8 +30,8 @@
   },
   "afstand": {
     "nl": "Afstand tot de Wedren: ongeveer 8 km. Met de auto zo'n 15 min. Op de fiets reken je op ongeveer 25 min. Met het OV reken je op 25 min bus. Dichtstbijzijnde/relevante station: Nijmegen. Tip: bosrijke omgeving.",
-    "de": "Entfernung zu den Wedren: ca. 8 km. Mit dem Auto etwa 15 Min. Mit dem Fahrrad rechnet man mit etwa 25 Min. Mit öffentlichen Verkehrsmitteln rechnet man mit 25 Min. mit dem Bus. Nächstgelegener/relevanter Bahnhof: Nijmegen. Tipp: waldreiche Umgebung.",
-    "en": "Distance to the Wedren: about 8 km. About 15 minutes by car. By bike, allow about 25 minutes. By public transportation, allow 25 minutes by bus. Nearest/relevant station: Nijmegen. Tip: wooded area.",
+    "de": "Entfernung zu den Wedren: ca. 8 km. Mit dem Auto etwa 15 Min. Mit dem Fahrrad etwa 25 Min. Mit öffentlichen Verkehrsmitteln etwa 25 Min. mit dem Bus. Nächstgelegener/relevanter Bahnhof: Nijmegen. Tipp: waldreiche Umgebung.",
+    "en": "Distance to the Wedren: about 8 km. About 15 minutes by car. By bike, it takes about 25 minutes. By public transportation, it takes about 25 minutes by bus. Nearest/relevant station: Nijmegen. Tip: wooded area.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
@@ -39,7 +39,7 @@
   },
   "typeVerblijf": {
     "nl": "Veel B&B's, hotels in de regio en campings. Particuliere verhuur komt ook voor. Het aanbod is vaak “buitenstedelijk”: denk aan rust, uitzicht en iets meer reistijd 's ochtends.",
-    "de": "Zahlreiche B&Bs, Hotels in der Region und Campingplätze. Auch private Unterkünfte sind vorhanden. Das Angebot liegt oft „außerhalb der Stadt“: Denken Sie an Ruhe, Aussicht und etwas längere Anfahrtszeiten am Morgen.",
+    "de": "Zahlreiche B&Bs, Hotels in der Region und Campingplätze. Auch private Vermietungen gibt es. Das Angebot liegt oft „außerhalb der Stadt“: Man denke an Ruhe, Aussicht und etwas längere Fahrzeiten am Morgen.",
     "en": "There are many B&Bs, hotels, and campgrounds in the region. Private rentals are also available. The accommodations are often “outside the city”: think peace and quiet, scenic views, and a slightly longer commute in the morning.",
     "vertaalstatus": {
       "de": "concept",
@@ -48,15 +48,15 @@
   },
   "praktisch": {
     "nl": "Geen eigen treinstation; OV gaat per bus (rond 25 minuten) of via Nijmegen. Auto/fiets zijn gangbaar. Wegen kunnen heuvelachtig zijn, plan fietsenergie en ochtendvertrek realistisch.",
-    "de": "Kein eigener Bahnhof; die Anbindung an den öffentlichen Nahverkehr erfolgt mit dem Bus (ca. 25 Minuten) oder über Nijmegen. Auto und Fahrrad sind gängige Fortbewegungsmittel. Die Straßen können hügelig sein; planen Sie ausreichend Energie für die Radtour ein und legen Sie realistisch den Abfahrtszeitpunkt am Morgen fest.",
-    "en": "There is no train station here; public transportation is by bus (about 25 minutes) or via Nijmegen. Cars and bicycles are common. Roads can be hilly, so plan your cycling energy levels and a realistic morning departure time.",
+    "de": "Kein eigener Bahnhof; die Anbindung an den öffentlichen Nahverkehr erfolgt mit dem Bus (ca. 25 Minuten) oder über Nijmegen. Auto und Fahrrad sind gängige Fortbewegungsmittel. Die Straßen können hügelig sein; planen Sie daher ausreichend Kraftreserven für die Radtour ein und legen Sie realistisch den Abfahrtszeitpunkt am Morgen fest.",
+    "en": "There is no train station here; public transportation is by bus (about 25 minutes) or via Nijmegen. Cars and bicycles are common. Roads can be hilly, so plan your energy levels accordingly and aim for a realistic morning departure time.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
     }
   },
   "vertaalstatus": {
-    "de": "leeg",
-    "en": "leeg"
+    "de": "concept",
+    "en": "concept"
   }
 }

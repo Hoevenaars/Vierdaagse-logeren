@@ -12,8 +12,8 @@
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Beuningen tijdens de Vierdaagse, 10 km van Nijmegen, auto 18 min, OV 25 min bus. Veel voorzieningen.",
-    "de": "Übernachtungsmöglichkeiten in Beuningen während der Vierdaagse, 10 km von Nijmegen entfernt, mit dem Auto 18 Min., mit öffentlichen Verkehrsmitteln 25 Min. mit dem Bus. Viele Annehmlichkeiten.",
-    "en": "Staying overnight in Beuningen during the Four Days Marches, 10 km from Nijmegen; 18 min by car, 25 min by bus. Many amenities.",
+    "de": "Übernachtung in Beuningen während der Vierdaagse, 10 km von Nijmegen entfernt, mit dem Auto 18 Min., mit öffentlichen Verkehrsmitteln 25 Min. mit dem Bus. Viele Annehmlichkeiten.",
+    "en": "Staying overnight in Beuningen during the Four Days Marches, 10 km from Nijmegen—18 minutes by car, 25 minutes by bus. Plenty of amenities.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
@@ -22,7 +22,7 @@
   "intro": {
     "nl": "Beuningen ligt westelijk van Nijmegen, met veel dagelijkse voorzieningen. Je bent met auto of bus in ongeveer een halfuur in de stad. Een solide uitvalsbasis als je winkels, rust en bereikbaarheid wilt combineren.",
     "de": "Beuningen liegt westlich von Nijmegen und bietet zahlreiche Einrichtungen des täglichen Bedarfs. Mit dem Auto oder Bus bist du in etwa einer halben Stunde in der Stadt. Ein idealer Ausgangspunkt, wenn du Einkaufsmöglichkeiten, Ruhe und gute Anbindung miteinander verbinden möchtest.",
-    "en": "Beuningen is located west of Nijmegen and offers many everyday amenities. You can reach the city in about half an hour by car or bus. It’s a great base if you want to combine shopping, tranquility, and easy access.",
+    "en": "Beuningen is located west of Nijmegen and offers many everyday amenities. You can reach the city in about half an hour by car or bus. It’s a great base if you want to combine shopping, peace and quiet, and easy access.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
@@ -30,8 +30,8 @@
   },
   "afstand": {
     "nl": "Afstand tot de Wedren: ongeveer 10 km. Met de auto zo'n 18 min. Op de fiets reken je op ongeveer 35 min. Met het OV reken je op 25 min bus. Dichtstbijzijnde/relevante station: Nijmegen Dukenburg. Tip: veel voorzieningen.",
-    "de": "Entfernung zu den Wedren: ca. 10 km. Mit dem Auto etwa 18 Min. Mit dem Fahrrad rechnest du mit etwa 35 Min. Mit öffentlichen Verkehrsmitteln rechnest du mit 25 Min. mit dem Bus. Nächstgelegene/relevante Haltestelle: Nijmegen Dukenburg. Tipp: Viele Annehmlichkeiten.",
-    "en": "Distance to the Wedren: about 10 km. By car, it takes about 18 minutes. By bike, allow about 35 minutes. By public transportation, allow 25 minutes by bus. Nearest/relevant station: Nijmegen Dukenburg. Tip: plenty of amenities.",
+    "de": "Entfernung zu den Wedren: ca. 10 km. Mit dem Auto etwa 18 Minuten. Mit dem Fahrrad rechnest du mit etwa 35 Minuten. Mit öffentlichen Verkehrsmitteln rechnest du mit 25 Minuten Busfahrt. Nächstgelegene/relevante Haltestelle: Nijmegen Dukenburg. Tipp: Viele Annehmlichkeiten.",
+    "en": "Distance to the Wedren: approximately 10 km. About 18 minutes by car. By bike, allow about 35 minutes. By public transportation, allow 25 minutes by bus. Closest/relevant station: Nijmegen Dukenburg. Tip: plenty of amenities.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
@@ -39,7 +39,7 @@
   },
   "typeVerblijf": {
     "nl": "Verwacht hotels/B&B's in de regio, particuliere verhuur en soms camping in de buurt. Aanbod wisselt sterk per jaar, check alle drie de categorieën en kijk ook naar Nijmegen-Dukenburg als overstap.",
-    "de": "In der Region gibt es Hotels/B&Bs, Privatunterkünfte und manchmal auch Campingplätze in der Nähe. Das Angebot variiert stark von Jahr zu Jahr. Schauen Sie sich alle drei Kategorien an und ziehen Sie auch Nijmegen-Dukenburg als Zwischenstation in Betracht.",
+    "de": "In der Region gibt es Hotels und B&Bs, private Unterkünfte und manchmal auch Campingplätze in der Nähe. Das Angebot variiert stark von Jahr zu Jahr. Schauen Sie sich alle drei Kategorien an und ziehen Sie auch Nijmegen-Dukenburg als Zwischenstation in Betracht.",
     "en": "You can expect to find hotels and B&Bs in the region, private rentals, and occasionally campsites nearby. Availability varies greatly from year to year, so check all three categories and also consider Nijmegen-Dukenburg as an alternative.",
     "vertaalstatus": {
       "de": "concept",
@@ -48,15 +48,15 @@
   },
   "praktisch": {
     "nl": "OV gaat vooral per bus (rond 25 minuten); dichtstbijzijnde treinknooppunt is Nijmegen Dukenburg. Auto is handig, maar plan extra tijd in voor ochtenddrukte. Fietsen is mogelijk maar steviger (rond 35 minuten).",
-    "de": "Mit öffentlichen Verkehrsmitteln gelangt man vor allem mit dem Bus dorthin (ca. 25 Minuten); der nächstgelegene Bahnknotenpunkt ist Nijmegen Dukenburg. Das Auto ist praktisch, aber planen Sie wegen des morgendlichen Berufsverkehrs etwas mehr Zeit ein. Mit dem Fahrrad ist die Strecke ebenfalls möglich, aber etwas anstrengender (ca. 35 Minuten).",
-    "en": "Public transportation is mainly by bus (about 25 minutes); the nearest train hub is Nijmegen Dukenburg. A car is convenient, but allow extra time for morning rush hour. Cycling is an option but takes longer (about 35 minutes).",
+    "de": "Die Anbindung mit öffentlichen Verkehrsmitteln erfolgt hauptsächlich mit dem Bus (ca. 25 Minuten); der nächstgelegene Bahnknotenpunkt ist Nijmegen Dukenburg. Ein Auto ist praktisch, aber planen Sie wegen des morgendlichen Berufsverkehrs etwas mehr Zeit ein. Mit dem Fahrrad ist die Strecke ebenfalls möglich, aber etwas anstrengender (ca. 35 Minuten).",
+    "en": "Public transportation is mainly by bus (about 25 minutes); the nearest train hub is Nijmegen Dukenburg. A car is convenient, but allow extra time for morning traffic. Cycling is possible but takes longer (about 35 minutes).",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
     }
   },
   "vertaalstatus": {
-    "de": "leeg",
-    "en": "leeg"
+    "de": "concept",
+    "en": "concept"
   }
 }

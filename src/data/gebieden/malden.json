@@ -12,7 +12,7 @@
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Malden tijdens de Vierdaagse, 7 km van Nijmegen, auto 12 min, OV 18 min bus. Dichtbij de start.",
-    "de": "Übernachtung in Malden während der Vierdaagse, 7 km von Nijmegen entfernt, mit dem Auto 12 Min., mit öffentlichen Verkehrsmitteln 18 Min. mit dem Bus. In der Nähe des Startpunkts.",
+    "de": "Übernachtungsmöglichkeit in Malden während der Vierdaagse, 7 km von Nijmegen entfernt, mit dem Auto 12 Min., mit öffentlichen Verkehrsmitteln 18 Min. mit dem Bus. In der Nähe des Startpunkts.",
     "en": "Accommodations in Malden during the Four Days Marches, 7 km from Nijmegen; 12 min by car, 18 min by bus. Close to the starting line.",
     "vertaalstatus": {
       "de": "concept",
@@ -21,7 +21,7 @@
   },
   "intro": {
     "nl": "Malden ligt dicht bij de start: zo'n 7 km en vaak binnen 20 minuten fietsen. Ideaal als je kort wilt reizen zonder midden in Nijmegen-centrum te slapen. Raakt daardoor ook relatief vroeg vol.",
-    "de": "Malden liegt ganz in der Nähe des Startpunkts: etwa 7 km und oft in weniger als 20 Minuten mit dem Fahrrad zu erreichen. Ideal, wenn man eine kurze Reise machen möchte, ohne mitten im Zentrum von Nijmegen zu übernachten. Ist daher auch relativ früh ausgebucht.",
+    "de": "Malden liegt ganz in der Nähe des Startpunkts: etwa 7 km und oft in weniger als 20 Minuten mit dem Fahrrad erreichbar. Ideal, wenn man eine kurze Reise machen möchte, ohne mitten im Zentrum von Nijmegen zu übernachten. Daher ist es dort auch relativ früh ausgebucht.",
     "en": "Malden is close to the starting line: about 7 km away, and often within a 20-minute bike ride. It’s ideal if you want to travel a short distance without staying right in the center of Nijmegen. As a result, it tends to fill up relatively early.",
     "vertaalstatus": {
       "de": "concept",
@@ -30,7 +30,7 @@
   },
   "afstand": {
     "nl": "Afstand tot de Wedren: ongeveer 7 km. Met de auto zo'n 12 min. Op de fiets reken je op ongeveer 20 min. Met het OV reken je op 18 min bus. Dichtstbijzijnde/relevante station: Nijmegen Heyendaal. Tip: dichtbij de start.",
-    "de": "Entfernung zu den Wedren: ca. 7 km. Mit dem Auto etwa 12 Min. Mit dem Fahrrad rechnest du mit etwa 20 Min. Mit öffentlichen Verkehrsmitteln rechnest du mit 18 Min. mit dem Bus. Nächstgelegene/relevante Haltestelle: Nijmegen Heyendaal. Tipp: in der Nähe des Startpunkts.",
+    "de": "Entfernung zu den Wedren: ca. 7 km. Mit dem Auto etwa 12 Minuten. Mit dem Fahrrad rechnest du mit etwa 20 Minuten. Mit öffentlichen Verkehrsmitteln rechnest du mit 18 Minuten Busfahrt. Nächstgelegene/relevante Haltestelle: Nijmegen Heyendaal. Tipp: in der Nähe des Startpunkts.",
     "en": "Distance to the Wedren: about 7 km. By car, it takes about 12 minutes. By bike, allow about 20 minutes. By public transportation, allow 18 minutes by bus. Nearest/relevant station: Nijmegen Heyendaal. Tip: close to the starting line.",
     "vertaalstatus": {
       "de": "concept",
@@ -39,8 +39,8 @@
   },
   "typeVerblijf": {
     "nl": "B&B's, hotels in de buurt en particuliere plekken zijn relevant. Campings vind je vaker iets zuidelijker (richting Groesbeek/Mook). Boek vroeg, dichtbij de start betekent snelle vraag.",
-    "de": "B&Bs, Hotels in der Umgebung und private Unterkünfte kommen in Frage. Campingplätze findet man meist etwas weiter südlich (in Richtung Groesbeek/Mook). Buchen Sie frühzeitig, denn in der Nähe des Startpunkts ist die Nachfrage groß.",
-    "en": "B&Bs, nearby hotels, and private accommodations are good options. Campgrounds are more commonly found a bit further south (toward Groesbeek/Mook). Book early—accommodations near the starting line fill up fast.",
+    "de": "B&Bs, Hotels in der Umgebung und private Unterkünfte kommen in Frage. Campingplätze findet man eher etwas weiter südlich (in Richtung Groesbeek/Mook). Buchen Sie frühzeitig, denn in der Nähe des Startpunkts ist die Nachfrage groß.",
+    "en": "B&Bs, nearby hotels, and private accommodations are good options. Campgrounds are more commonly found a bit further south (toward Groesbeek/Mook). Book early—accommodations near the starting line fill up quickly.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
@@ -49,14 +49,14 @@
   "praktisch": {
     "nl": "OV via bus naar Nijmegen (rond 18 minuten); treinstation Nijmegen Heyendaal is een bruikbare overstap. Fietsen naar de start is voor veel lopers de grootste plus. Parkeren is meestal rustiger dan in het centrum.",
     "de": "Mit öffentlichen Verkehrsmitteln per Bus nach Nijmegen (ca. 18 Minuten); der Bahnhof Nijmegen Heyendaal eignet sich gut als Umsteigepunkt. Für viele Läufer ist die Anfahrt mit dem Fahrrad zum Startpunkt der größte Vorteil. Die Parkplatzsituation ist dort meist entspannter als im Stadtzentrum.",
-    "en": "Public transportation by bus to Nijmegen (about 18 minutes); the Nijmegen Heyendaal train station is a convenient transfer point. For many runners, cycling to the starting line is the biggest perk. Parking is usually less crowded than in the city center.",
+    "en": "Public transportation by bus to Nijmegen (about 18 minutes); the Nijmegen Heyendaal train station is a convenient transfer point. For many runners, biking to the starting line is the biggest perk. Parking is usually less crowded than in the city center.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
     }
   },
   "vertaalstatus": {
-    "de": "leeg",
-    "en": "leeg"
+    "de": "concept",
+    "en": "concept"
   }
 }

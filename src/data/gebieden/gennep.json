@@ -12,8 +12,8 @@
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Gennep tijdens de Vierdaagse, 22 km van Nijmegen, auto 25 min, OV 35 min bus. Rustige uitvalsbasis.",
-    "de": "Übernachtung in Gennep während der Vierdaagse, 22 km von Nijmegen entfernt, mit dem Auto 25 Min., mit öffentlichen Verkehrsmitteln 35 Min. mit dem Bus. Ruhiger Ausgangspunkt.",
-    "en": "Accommodations in Gennep during the Four Days Marches, 22 km from Nijmegen; 25 min by car, 35 min by bus. A quiet base.",
+    "de": "Übernachtung in Gennep während der Vierdaagse, 22 km von Nijmegen entfernt, 25 Min. mit dem Auto, 35 Min. mit dem Bus (ÖPNV). Ruhiger Ausgangspunkt.",
+    "en": "Staying overnight in Gennep during the Four Days Marches, 22 km from Nijmegen; 25 min by car, 35 min by bus. A quiet base.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
@@ -21,7 +21,7 @@
   },
   "intro": {
     "nl": "Gennep is een rustige uitvalsbasis aan de Duitse grens. Je bent verder van Nijmegen, maar ontwijkt de grootste drukte. Geschikt als plan B wanneer populaire plaatsen vol zijn.",
-    "de": "Gennep ist ein ruhiger Ausgangspunkt an der deutschen Grenze. Man ist zwar weiter von Nijmegen entfernt, entgeht aber dem größten Trubel. Ideal als Plan B, wenn beliebte Orte ausgebucht sind.",
+    "de": "Gennep ist ein ruhiger Ausgangspunkt an der deutschen Grenze. Man ist zwar weiter von Nimwegen entfernt, entgeht aber dem größten Trubel. Ideal als Plan B, wenn beliebte Orte ausgebucht sind.",
     "en": "Gennep is a quiet base near the German border. It’s farther from Nijmegen, but you’ll avoid the biggest crowds. It’s a good Plan B when popular spots are full.",
     "vertaalstatus": {
       "de": "concept",
@@ -30,7 +30,7 @@
   },
   "afstand": {
     "nl": "Afstand tot de Wedren: ongeveer 22 km. Met de auto zo'n 25 min. Op de fiets reken je op ongeveer 65 min. Met het OV reken je op 35 min bus. Gennep heeft zelf geen treinstation. Tip: rustige uitvalsbasis.",
-    "de": "Entfernung zu den Wedren: ca. 22 km. Mit dem Auto etwa 25 Minuten. Mit dem Fahrrad solltest du etwa 65 Minuten einplanen. Mit öffentlichen Verkehrsmitteln benötigst du 35 Minuten mit dem Bus. Gennep selbst hat keinen Bahnhof. Tipp: ruhiger Ausgangspunkt.",
+    "de": "Entfernung zu den Wedren: ca. 22 km. Mit dem Auto etwa 25 Minuten. Mit dem Fahrrad musst du etwa 65 Minuten einplanen. Mit öffentlichen Verkehrsmitteln dauert die Fahrt mit dem Bus 35 Minuten. Gennep hat keinen eigenen Bahnhof. Tipp: ruhiger Ausgangspunkt.",
     "en": "Distance to the Wedren: about 22 km. By car, it takes about 25 minutes. By bike, allow about 65 minutes. By public transportation, allow 35 minutes by bus. Gennep does not have its own train station. Tip: a quiet place to stay.",
     "vertaalstatus": {
       "de": "concept",
@@ -39,8 +39,8 @@
   },
   "typeVerblijf": {
     "nl": "Mix van hotels/B&B's, particulier en camping in de omgeving. Aanbod is kleiner dan in Nijmegen/Arnhem, zoek breed en boektijd serieus nemen.",
-    "de": "Eine Mischung aus Hotels, B&Bs, Privatunterkünften und Campingplätzen in der Umgebung. Das Angebot ist kleiner als in Nijmegen/Arnhem; suchen Sie daher breit gefächert und nehmen Sie die Buchungsfrist ernst.",
-    "en": "A mix of hotels, B&Bs, private accommodations, and campgrounds in the area. The selection is smaller than in Nijmegen or Arnhem, so be sure to search widely and take your booking time seriously.",
+    "de": "Eine Mischung aus Hotels, B&Bs, Privatunterkünften und Campingplätzen in der Umgebung. Das Angebot ist geringer als in Nimwegen/Arnheim; suchen Sie daher breit gefächert und nehmen Sie die Buchungsfrist ernst.",
+    "en": "A mix of hotels, B&Bs, private accommodations, and campgrounds in the area. The selection is smaller than in Nijmegen or Arnhem, so search widely and take your booking time seriously.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
@@ -49,14 +49,14 @@
   "praktisch": {
     "nl": "Geen treinstation; OV per bus rond 35 minuten. Auto is het meest betrouwbaar. Reken 's ochtends op filegevoelige wegen richting Nijmegen tijdens de Vierdaagse-week.",
     "de": "Kein Bahnhof; mit dem Bus dauert die Fahrt etwa 35 Minuten. Mit dem Auto kommt man am zuverlässigsten ans Ziel. Rechnen Sie während der „Vierdaagse“-Woche morgens mit stauanfälligen Straßen in Richtung Nijmegen.",
-    "en": "There is no train station; public transportation by bus takes about 35 minutes. A car is the most reliable option. Expect traffic jams on the roads heading toward Nijmegen in the mornings during the Four Days Marches week.",
+    "en": "There is no train station; the bus ride takes about 35 minutes. Driving is the most reliable option. Expect traffic jams on the roads toward Nijmegen in the morning during the Four Days Marches week.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
     }
   },
   "vertaalstatus": {
-    "de": "leeg",
-    "en": "leeg"
+    "de": "concept",
+    "en": "concept"
   }
 }

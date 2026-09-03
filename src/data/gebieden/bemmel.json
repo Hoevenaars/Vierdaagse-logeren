@@ -12,8 +12,8 @@
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Bemmel tijdens de Vierdaagse, 10 km van Nijmegen, auto 18 min, OV 30 min. Goede busverbinding.",
-    "de": "Übernachtungsmöglichkeiten in Bemmel während der Vierdaagse, 10 km von Nijmegen entfernt, mit dem Auto 18 Min., mit öffentlichen Verkehrsmitteln 30 Min. Gute Busanbindung.",
-    "en": "Staying overnight in Bemmel during the Four Days Marches, 10 km from Nijmegen; 18 min by car, 30 min by public transit. Good bus service.",
+    "de": "Übernachtung in Bemmel während der Vierdaagse, 10 km von Nijmegen entfernt, mit dem Auto 18 Min., mit öffentlichen Verkehrsmitteln 30 Min. Gute Busanbindung.",
+    "en": "Staying overnight in Bemmel during the Four Days Marches, 10 km from Nijmegen; 18 min by car, 30 min by public transportation. Good bus service.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
@@ -30,8 +30,8 @@
   },
   "afstand": {
     "nl": "Afstand tot de Wedren: ongeveer 10 km. Met de auto zo'n 18 min. Op de fiets reken je op ongeveer 35 min. Met het OV reken je op 30 min. Dichtstbijzijnde/relevante station: Elst of Nijmegen. Tip: goede busverbinding.",
-    "de": "Entfernung zu den Wedren: ca. 10 km. Mit dem Auto etwa 18 Min. Mit dem Fahrrad rechnet man mit etwa 35 Min. Mit öffentlichen Verkehrsmitteln rechnet man mit 30 Min. Nächstgelegener/relevanter Bahnhof: Elst oder Nijmegen. Tipp: Gute Busverbindung.",
-    "en": "Distance to the Wedren: about 10 km. By car, it takes about 18 minutes. By bike, allow about 35 minutes. By public transportation, allow 30 minutes. Nearest/relevant station: Elst or Nijmegen. Tip: Good bus service.",
+    "de": "Entfernung zu den Wedren: ca. 10 km. Mit dem Auto etwa 18 Min. Mit dem Fahrrad rechnest du mit etwa 35 Min. Mit öffentlichen Verkehrsmitteln rechnest du mit 30 Min. Nächstgelegener/relevanter Bahnhof: Elst oder Nijmegen. Tipp: gute Busanbindung.",
+    "en": "Distance to the Wedren: about 10 km. By car, it takes about 18 minutes. By bike, allow about 35 minutes. By public transportation, allow 30 minutes. Closest/relevant station: Elst or Nijmegen. Tip: Good bus service.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
@@ -39,8 +39,8 @@
   },
   "typeVerblijf": {
     "nl": "Denk aan B&B's, particuliere kamers en soms campings in de regio. Hotelcapaciteit is beperkter dan in Nijmegen of Arnhem. Combineer zoeken op particulier, camping en hotels in Elst/Nijmegen als Bemmel weinig aanbod heeft.",
-    "de": "Denken Sie an B&Bs, Privatzimmer und manchmal auch Campingplätze in der Region. Das Hotelangebot ist begrenzter als in Nimwegen oder Arnheim. Kombinieren Sie die Suche nach Privatunterkünften, Campingplätzen und Hotels in Elst/Nimwegen, falls es in Bemmel nur wenige Angebote gibt.",
-    "en": "Consider B&Bs, private rooms, and sometimes campgrounds in the region. Hotel capacity is more limited than in Nijmegen or Arnhem. If there aren't many options in Bemmel, try searching for private accommodations, campgrounds, and hotels in Elst/Nijmegen.",
+    "de": "Denken Sie an B&Bs, Privatzimmer und manchmal auch Campingplätze in der Region. Die Hotelkapazitäten sind begrenzter als in Nimwegen oder Arnheim. Kombinieren Sie die Suche nach Privatunterkünften, Campingplätzen und Hotels in Elst/Nimwegen, falls es in Bemmel nur ein geringes Angebot gibt.",
+    "en": "Consider B&Bs, private rooms, and sometimes campgrounds in the region. Hotel capacity is more limited than in Nijmegen or Arnhem. If there aren’t many options in Bemmel, try searching for private accommodations, campgrounds, and hotels in Elst/Nijmegen.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
@@ -48,15 +48,15 @@
   },
   "praktisch": {
     "nl": "OV gaat vooral per bus (rond 30 minuten); treinstations zitten in Elst of Nijmegen. Auto is vaak het meest voorspelbaar. Controleer buslijnen en last-mile naar je accommodatie vooraf.",
-    "de": "Der öffentliche Nahverkehr erfolgt hauptsächlich mit dem Bus (ca. 30 Minuten); Bahnhöfe gibt es in Elst oder Nijmegen. Mit dem Auto kommt man oft am zuverlässigsten ans Ziel. Informieren Sie sich vorab über die Buslinien und die letzte Etappe bis zu Ihrer Unterkunft.",
-    "en": "Public transportation is mainly by bus (about 30 minutes); train stations are located in Elst or Nijmegen. Driving is often the most reliable option. Check bus routes and the last leg of your trip to your accommodations in advance.",
+    "de": "Der öffentliche Nahverkehr erfolgt hauptsächlich mit dem Bus (ca. 30 Minuten); Bahnhöfe gibt es in Elst oder Nijmegen. Mit dem Auto kommt man oft am zuverlässigsten ans Ziel. Informieren Sie sich im Voraus über die Buslinien und die letzte Etappe bis zu Ihrer Unterkunft.",
+    "en": "Public transportation is mainly by bus (about 30 minutes); train stations are located in Elst or Nijmegen. Driving is often the most reliable option. Check the bus routes and the last leg of your trip to your accommodations in advance.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
     }
   },
   "vertaalstatus": {
-    "de": "leeg",
-    "en": "leeg"
+    "de": "concept",
+    "en": "concept"
   }
 }

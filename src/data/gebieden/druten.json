@@ -12,8 +12,8 @@
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Druten tijdens de Vierdaagse, 26 km van Nijmegen, auto 30 min, OV 45 min bus. Alternatief bij drukte.",
-    "de": "Übernachtung in Druten während der Vierdaagse, 26 km von Nijmegen entfernt, mit dem Auto 30 Min., mit öffentlichen Verkehrsmitteln 45 Min. mit dem Bus. Alternative bei großem Andrang.",
-    "en": "Staying overnight in Druten during the Four Days Marches, 26 km from Nijmegen; 30 minutes by car, 45 minutes by bus. An alternative when it's crowded.",
+    "de": "Übernachtung in Druten während der Vierdaagse, 26 km von Nimwegen entfernt, mit dem Auto 30 Minuten, mit öffentlichen Verkehrsmitteln 45 Minuten mit dem Bus. Alternative bei großem Andrang.",
+    "en": "Staying overnight in Druten during the Four Days Marches, 26 km from Nijmegen; 30 min by car, 45 min by bus. An alternative when it's crowded.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
@@ -22,7 +22,7 @@
   "intro": {
     "nl": "Druten ligt westelijker en fungeert vooral als alternatief bij drukte. Je wint beschikbaarheid, maar levert nabijheid in. Kies dit bewust als dichterbij geen opties meer zijn.",
     "de": "Druten liegt weiter westlich und dient vor allem als Alternative, wenn es zu voll ist. Man gewinnt an Verfügbarkeit, büßt aber an Nähe ein. Entscheiden Sie sich bewusst dafür, wenn es in der näheren Umgebung keine Optionen mehr gibt.",
-    "en": "Druten is located further west and serves primarily as an alternative when things get crowded. You gain in availability but lose in proximity. Choose this option only when there are no other options closer by.",
+    "en": "Druten is located further west and serves primarily as an alternative when things get crowded. You gain in terms of availability, but sacrifice proximity. Choose this option deliberately only when there are no other options closer by.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
@@ -30,7 +30,7 @@
   },
   "afstand": {
     "nl": "Afstand tot de Wedren: ongeveer 26 km. Met de auto zo'n 30 min. Op de fiets reken je op ongeveer 75 min. Met het OV reken je op 45 min bus. Druten heeft zelf geen treinstation. Tip: alternatief bij drukte.",
-    "de": "Entfernung zu den Wedren: ca. 26 km. Mit dem Auto etwa 30 Minuten. Mit dem Fahrrad solltest du etwa 75 Minuten einplanen. Mit öffentlichen Verkehrsmitteln benötigst du 45 Minuten mit dem Bus. Druten selbst hat keinen Bahnhof. Tipp: Alternative bei großem Andrang.",
+    "de": "Entfernung zu den Wedren: ca. 26 km. Mit dem Auto etwa 30 Min. Mit dem Fahrrad solltest du etwa 75 Min. einplanen. Mit öffentlichen Verkehrsmitteln dauert die Fahrt mit dem Bus 45 Min. Druten selbst hat keinen Bahnhof. Tipp: Alternative bei großem Andrang.",
     "en": "Distance to the Wedren: about 26 km. By car, it takes about 30 minutes. By bike, allow about 75 minutes. By public transportation, allow 45 minutes by bus. Druten does not have its own train station. Tip: an alternative when it’s crowded.",
     "vertaalstatus": {
       "de": "concept",
@@ -39,8 +39,8 @@
   },
   "typeVerblijf": {
     "nl": "Beperkter hotel- en campingaanbod; particulier kan een uitkomst zijn. Kijk parallel naar Beuningen, Wijchen of Nijmegen voor kortere reistijd.",
-    "de": "Das Angebot an Hotels und Campingplätzen ist begrenzt; Privatunterkünfte können eine Alternative sein. Schauen Sie sich parallel dazu auch Beuningen, Wijchen oder Nimwegen an, um die Anreisezeit zu verkürzen.",
-    "en": "Limited hotel and campground options; staying with a private host may be a good alternative. Consider Beuningen, Wijchen, or Nijmegen as well for a shorter travel time.",
+    "de": "Das Angebot an Hotels und Campingplätzen ist begrenzt; Privatunterkünfte können hier eine Lösung sein. Schauen Sie sich parallel dazu auch Beuningen, Wijchen oder Nijmegen an, um die Anfahrtszeit zu verkürzen.",
+    "en": "Limited hotel and campground options; staying with a private host may be a good solution. Consider Beuningen, Wijchen, or Nijmegen as well for a shorter travel time.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
@@ -48,15 +48,15 @@
   },
   "praktisch": {
     "nl": "Geen treinstation; bus rond 45 minuten, auto rond 30 minuten. Bouw veel ochtendbuffer in. Dit is een plan-B-locatie, geen snelle start-locatie.",
-    "de": "Kein Bahnhof; mit dem Bus etwa 45 Minuten, mit dem Auto etwa 30 Minuten. Planen Sie morgens viel Zeitpuffer ein. Dies ist ein Plan-B-Standort, kein Standort für einen schnellen Start.",
-    "en": "No train station; about a 45-minute bus ride, about a 30-minute drive. Be sure to allow plenty of extra time in the morning. This is a Plan B location, not a quick-start location.",
+    "de": "Kein Bahnhof; Busfahrt ca. 45 Minuten, Autofahrt ca. 30 Minuten. Planen Sie morgens viel Zeitpuffer ein. Dies ist ein Plan-B-Standort, kein Standort für einen schnellen Start.",
+    "en": "No train station; bus ride takes about 45 minutes, drive takes about 30 minutes. Be sure to allow plenty of extra time in the morning. This is a Plan B location, not a quick-start location.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
     }
   },
   "vertaalstatus": {
-    "de": "leeg",
-    "en": "leeg"
+    "de": "concept",
+    "en": "concept"
   }
 }

@@ -12,7 +12,7 @@
   },
   "seoBeschrijving": {
     "nl": "Overnachten in Oss tijdens de Vierdaagse, 38 km van Nijmegen, auto 35 min, OV 20 min trein. Goede optie als alles vol zit.",
-    "de": "Übernachtung in Oss während der Vierdaagse, 38 km von Nijmegen entfernt, mit dem Auto 35 Minuten, mit öffentlichen Verkehrsmitteln 20 Minuten mit dem Zug. Eine gute Alternative, wenn alles ausgebucht ist.",
+    "de": "Übernachten in Oss während der Vierdaagse, 38 km von Nijmegen entfernt, mit dem Auto 35 Minuten, mit öffentlichen Verkehrsmitteln 20 Minuten mit dem Zug. Eine gute Alternative, wenn überall ausgebucht ist.",
     "en": "Staying overnight in Oss during the Four Days Marches, 38 km from Nijmegen—a 35-minute drive or a 20-minute train ride. A good option if everything else is booked up.",
     "vertaalstatus": {
       "de": "concept",
@@ -31,7 +31,7 @@
   "afstand": {
     "nl": "Afstand tot de Wedren: ongeveer 38 km. Met de auto zo'n 35 min. Fietsen als dagelijkse forensrit is hier meestal niet realistisch. Met het OV reken je op 20 min trein. Dichtstbijzijnde/relevante station: Oss. Tip: goede optie als alles vol zit.",
     "de": "Entfernung zu den Wedren: ca. 38 km. Mit dem Auto etwa 35 Minuten. Das Fahrrad als tägliches Pendlerverkehrsmittel ist hier meist keine realistische Option. Mit öffentlichen Verkehrsmitteln musst du mit einer Zugfahrt von 20 Minuten rechnen. Nächstgelegener/relevanter Bahnhof: Oss. Tipp: Eine gute Alternative, wenn alles ausgebucht ist.",
-    "en": "Distance to the Wedren: about 38 km. About 35 minutes by car. Cycling as part of your daily commute isn’t usually a realistic option here. By public transit, expect a 20-minute train ride. Closest/most relevant station: Oss. Tip: a good option when everything else is full.",
+    "en": "Distance to the Wedren: about 38 km. About 35 minutes by car. Cycling as part of your daily commute isn’t usually a realistic option here. By public transportation, expect a 20-minute train ride. Closest/most relevant station: Oss. Tip: a good option when everything else is full.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
@@ -48,15 +48,15 @@
   },
   "praktisch": {
     "nl": "Trein vanaf station Oss (rond 20 minuten). Auto ongeveer 35 minuten. Fietsen als dagelijkse forensrit is niet realistisch. Plan aankomst in Nijmegen ruim voor je starttijd.",
-    "de": "Mit dem Zug ab Bahnhof Oss (ca. 20 Minuten). Mit dem Auto ca. 35 Minuten. Das Fahrrad als tägliches Pendelmittel ist nicht realistisch. Plane deine Ankunft in Nijmegen rechtzeitig vor deiner Startzeit ein.",
-    "en": "Train from Oss station (about 20 minutes). By car, about 35 minutes. Cycling isn't a realistic option for a daily commute. Plan to arrive in Nijmegen well before your start time.",
+    "de": "Mit dem Zug vom Bahnhof Oss (ca. 20 Minuten). Mit dem Auto ca. 35 Minuten. Das Fahrrad als tägliches Pendlerverkehrsmittel ist nicht realistisch. Planen Sie Ihre Ankunft in Nijmegen rechtzeitig vor Ihrer Startzeit ein.",
+    "en": "Train from Oss station (about 20 minutes). By car, about 35 minutes. Cycling as part of your daily commute isn't realistic. Plan to arrive in Nijmegen well before your start time.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
     }
   },
   "vertaalstatus": {
-    "de": "leeg",
-    "en": "leeg"
+    "de": "concept",
+    "en": "concept"
   }
 }

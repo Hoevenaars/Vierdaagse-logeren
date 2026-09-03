@@ -21,8 +21,8 @@
   },
   "intro": {
     "nl": "Cuijk ligt zo'n 18 km ten zuiden van Nijmegen aan de Maas. Wandelaars kiezen Cuijk vaak omdat er een treinstation is, de reistijd naar Nijmegen kort blijft, en er meer rust en beschikbaarheid is dan in de stad.",
-    "de": "Cuijk liegt etwa 18 km südlich von Nijmegen an der Maas. Wanderer entscheiden sich oft für Cuijk, weil es dort einen Bahnhof gibt, die Fahrzeit nach Nijmegen kurz ist und es dort ruhiger ist und mehr Platz bietet als in der Stadt.",
-    "en": "Cuijk is located about 18 km south of Nijmegen on the Meuse River. Hikers often choose Cuijk because it has a train station, the travel time to Nijmegen is short, and it offers more peace and quiet and has more accommodations available than the city does.",
+    "de": "Cuijk liegt etwa 18 km südlich von Nimwegen an der Maas. Wanderer entscheiden sich oft für Cuijk, weil es dort einen Bahnhof gibt, die Fahrzeit nach Nimwegen kurz ist und es dort ruhiger ist und mehr Platz bietet als in der Stadt.",
+    "en": "Cuijk is located about 18 km south of Nijmegen on the Meuse River. Hikers often choose Cuijk because it has a train station, the travel time to Nijmegen is short, and it offers more peace and quiet and more space than the city does.",
     "vertaalstatus": {
       "de": "concept",
       "en": "concept"
@@ -48,7 +48,7 @@
   },
   "praktisch": {
     "nl": "Station Cuijk ligt gunstig; de rit naar Nijmegen is kort. Plan wel genoeg buffer in tijdens de Vierdaagse-week: treinen en stations kunnen drukker zijn. Parkeren is doorgaans eenvoudiger dan in Nijmegen; combineer anders auto + trein.",
-    "de": "Der Bahnhof Cuijk liegt verkehrsgünstig; die Fahrt nach Nimwegen ist kurz. Planen Sie während der Vierdaagse-Woche jedoch genügend Zeit ein: Züge und Bahnhöfe können stärker frequentiert sein. Das Parken ist in der Regel einfacher als in Nimwegen; andernfalls kombinieren Sie Auto und Zug.",
+    "de": "Der Bahnhof Cuijk liegt verkehrsgünstig; die Fahrt nach Nimwegen ist kurz. Planen Sie während der Vierdaagse-Woche jedoch genügend Zeitpuffer ein: Züge und Bahnhöfe können stärker frequentiert sein. Das Parken ist in der Regel einfacher als in Nimwegen; andernfalls kombinieren Sie Auto und Zug.",
     "en": "Cuijk Station is conveniently located; the trip to Nijmegen is short. Be sure to allow plenty of extra time during the Four Days Marches week: trains and stations may be busier than usual. Parking is generally easier than in Nijmegen; otherwise, consider combining car and train travel.",
     "vertaalstatus": {
       "de": "concept",
@@ -56,7 +56,7 @@
     }
   },
   "vertaalstatus": {
-    "de": "leeg",
-    "en": "leeg"
+    "de": "concept",
+    "en": "concept"
   }
 }
