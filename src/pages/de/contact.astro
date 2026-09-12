@@ -1,6 +1,7 @@
 ---
 import ContentPage from '../../layouts/ContentPage.astro';
 import data from '../../data/pages/contact.json';
+import { getLocalizedPath } from '../../i18n/utils';
 
 const locale = 'de' as const;
 function v(field: Record<string, string>) { return field[locale]?.trim() ? field[locale] : field.nl; }
@@ -41,7 +42,7 @@ const status = {
     <div class="form-field form-field--checkbox">
       <label for="privacy">
         <input type="checkbox" id="privacy" name="privacy" value="1" required />
-        <span>{v(labels.privacy)} <a href={locale === 'nl' ? '/privacy' : `/${locale}/privacy`}>{v(labels.privacyLink)}</a></span>
+        <span>{v(labels.privacy)} <a href={getLocalizedPath('/privacy', locale)}>{v(labels.privacyLink)}</a></span>
       </label>
     </div>
 
