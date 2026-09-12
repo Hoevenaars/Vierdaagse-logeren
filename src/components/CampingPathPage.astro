@@ -1,0 +1,51 @@
+---
+import type { Locale } from '../i18n/ui';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CampingsView from './CampingsView.astro';
+import ProviderDetailView from './ProviderDetailView.astro';
+import { seoFilterCopy, type CampingPathKind } from '../lib/routes';
+import { getProviderBySlug, getProvidersByCity, getPublishedProviders } from '../lib/providers';
+import { defaultSearchQuery, providersForSeoFilter, type SearchQuery } from '../lib/search';
+
+interface Props {
+  locale: Locale;
+  path: CampingPathKind;
+}
+
+const { locale, path } = Astro.props;
+const provider = path.kind === 'provider' ? getProviderBySlug(path.slug) : undefined;
+const cityProviders = path.kind === 'city' ? getProvidersByCity(path.citySlug) : undefined;
+const filterCopy = path.kind === 'filter' ? seoFilterCopy(path.filter, locale) : null;
+const filterProviders = path.kind === 'filter' ? providersForSeoFilter(getPublishedProviders(), path.filter) : undefined;
+const heading = path.kind === 'city'
+  ? (locale === 'de' ? `Vierdaagse-Campings ${path.cityName}` : locale === 'en' ? `Four Days Marches campsites in ${path.cityName}` : `Vierdaagsecampings ${path.cityName}`)
+  : filterCopy?.title ?? '';
+const intro = path.kind === 'city'
+  ? (locale === 'de'
+      ? `Campings in ${path.cityName} zum Vergleich von Gesamtpreis und Distanz zur Wedren.`
+      : locale === 'en'
+        ? `Campsites in ${path.cityName}, comparable on total price and distance to the Wedren.`
+        : `Campings en wandelterreinen in ${path.cityName}, vergelijkbaar op totale prijs en afstand tot de Wedren.`)
+  : filterCopy?.intro ?? '';
+
+const query: SearchQuery = defaultSearchQuery();
+if (path.kind === 'filter' && path.filter === 'met-stroom') query.electricity = true;
+if (path.kind === 'filter' && path.filter === 'met-camper') query.stayType = 'camper';
+---
+
+{provider ? (
+  <BaseLayout title={provider.content.metaTitle} description={provider.content.metaDescription} locale={locale}>
+    <ProviderDetailView locale={locale} provider={provider} />
+  </BaseLayout>
+) : (
+  <BaseLayout title={`${heading} | Vierdaagse Logeren`} description={intro} locale={locale}>
+    <CampingsView
+      locale={locale}
+      heading={heading}
+      intro={intro}
+      providers={cityProviders ?? filterProviders}
+      titleAddon={filterProviders ? `${filterProviders.length}` : undefined}
+      query={query}
+    />
+  </BaseLayout>
+)}

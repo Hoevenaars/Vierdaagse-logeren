@@ -1,6 +1,6 @@
 # Vierdaagse Logeren
 
-Astro-site (NL/EN/DE) die wandelaars helpt een slaapplek te vinden tijdens de Vierdaagse Nijmegen.
+Astro-site (NL/EN/DE) die Vierdaagselopers helpt de juiste camping te vinden: totale prijs, afstand tot de Wedren, vervoer en voorzieningen.
 
 ## Lokaal draaien
 
@@ -20,6 +20,14 @@ astro dev logs
 astro dev stop
 ```
 
+## Tests
+
+```sh
+npm test
+```
+
+Prijs- en rankingengines zijn deterministisch (`packages/pricing-engine`, `packages/ranking-engine`).
+
 ## Build
 
 ```sh
@@ -27,37 +35,27 @@ npm run build
 npm run preview
 ```
 
+## Product
+
+- Keuzehulp op de homepage → `/campings`
+- Providerdetail: `/campings/[slug]`
+- Vergelijking (max. 3): `/vergelijk`
+- Data: `src/data/providers.ts` (zelfde model als `supabase/migrations`)
+- Agents nog uit: `src/lib/feature-flags.ts`
+
 ## Content & CMS
 
-- Pagina-teksten en listings: `src/data/`
-- Decap CMS: `/admin` (GitHub OAuth via `api/auth.ts` + `api/callback.ts`)
-- Config: `public/admin/config.yml` (spiegel van root `config.yml`)
-- Media-uploads: `public/uploads/`
-
-Listings (camping, hotels, particulier, blarenzorg) zijn alleen zichtbaar met status **gepubliceerd**.
+- Pagina-teksten: `src/data/`
+- Decap CMS: `/admin`
+- Campingvergelijking komt uit het gestandaardiseerde datamodel, niet uit Decap-listings
 
 ## Environment variables
 
-Zie `.env.example`:
-
-| Variable | Gebruik |
-| --- | --- |
-| `RESEND_API_KEY` | Mail via contact- en aanmeldformulieren |
-| `OWNER_EMAIL` | Ontvanger van die mails |
-| `OAUTH_GITHUB_CLIENT_ID` / `OAUTH_GITHUB_CLIENT_SECRET` | Inloggen in `/admin` |
-| `DEEPL_API_KEY` | Vertaal-Action (`npm run translate`) |
-
-## Scripts
-
-```sh
-npm run translate   # DeepL-concepten voor lege DE/EN-velden
-```
+Zie `.env.example`.
 
 ## Documentatie
 
-- Astro: https://docs.astro.build
+- `docs/architecture.md`
+- `docs/data-model.md`
+- `docs/agent-rules.md`
 - Live site: https://vierdaagselogeren.nl
-
-## Launch
-
-Zie [LAUNCH_CHECKLIST.md](./LAUNCH_CHECKLIST.md) voor de volledige go-live checklist en status.

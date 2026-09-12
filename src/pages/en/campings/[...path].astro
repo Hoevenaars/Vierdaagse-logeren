@@ -1,0 +1,12 @@
+---
+import CampingPathPage from '../../../components/CampingPathPage.astro';
+import { campingStaticPaths } from '../../../lib/routes';
+
+export function getStaticPaths() {
+  return campingStaticPaths();
+}
+
+const locale = 'en' as const;
+---
+
+<CampingPathPage locale={locale} path={Astro.props} />

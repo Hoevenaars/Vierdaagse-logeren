@@ -1,0 +1,139 @@
+---
+import type { Locale } from '../i18n/ui';
+import { productCopy } from '../lib/copy';
+import { getLocalizedPath } from '../i18n/utils';
+
+interface Props {
+  locale: Locale;
+  defaultStay?: string;
+}
+
+const { locale, defaultStay = 'tent' } = Astro.props;
+---
+
+<section class="alert-box">
+  <h2>{productCopy.alertTitle[locale]}</h2>
+  <p>{productCopy.alertIntro[locale]}</p>
+  <form class="alert-form" data-alert-form>
+    <label>
+      E-mail *
+      <input type="email" name="email" required autocomplete="email" />
+    </label>
+    <label>
+      {productCopy.step1[locale]}
+      <select name="accommodation_type">
+        <option value="tent" selected={defaultStay === 'tent'}>{productCopy.stay.tent[locale]}</option>
+        <option value="caravan" selected={defaultStay === 'caravan'}>{productCopy.stay.caravan[locale]}</option>
+        <option value="camper" selected={defaultStay === 'camper'}>{productCopy.stay.camper[locale]}</option>
+        <option value="furnished" selected={defaultStay === 'furnished'}>{productCopy.stay.furnished[locale]}</option>
+      </select>
+    </label>
+    <label>
+      {productCopy.step2[locale]}
+      <select name="party_size">
+        <option value="1">1</option>
+        <option value="2" selected>2</option>
+        <option value="3">3-4</option>
+        <option value="5">5+</option>
+      </select>
+    </label>
+    <label>
+      {locale === 'de' ? 'Bevorzugte Region' : locale === 'en' ? 'Preferred area' : 'Voorkeurregio'}
+      <input type="text" name="preferred_region" maxlength="80" />
+    </label>
+    <div class="honeypot" aria-hidden="true">
+      <label>Website<input type="text" name="website_hp" tabindex="-1" autocomplete="off" /></label>
+    </div>
+    <label class="check">
+      <input type="checkbox" name="privacy" value="1" required />
+      <span>
+        {locale === 'de' ? 'Ich stimme der Verarbeitung gemäß der' : locale === 'en' ? 'I agree to processing according to the' : 'Ik ga akkoord met verwerking volgens de'}
+        <a href={getLocalizedPath('/privacy', locale)}>{locale === 'de' ? 'Datenschutzerklärung' : locale === 'en' ? 'privacy notice' : 'privacyverklaring'}</a>.
+      </span>
+    </label>
+    <button type="submit">{locale === 'de' ? 'Alert instellen' : locale === 'en' ? 'Set alert' : 'Zet een seintje'}</button>
+    <p class="status" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+<style>
+  .alert-box {
+    background: var(--color-secondary);
+    border-radius: var(--radius-base);
+    padding: var(--space-5);
+    margin: var(--space-6) 0;
+  }
+  .alert-box h2 {
+    margin-top: 0;
+    color: var(--color-primary);
+  }
+  .alert-form {
+    display: grid;
+    gap: var(--space-3);
+    max-width: 32rem;
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+  }
+  input, select {
+    padding: var(--space-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-base);
+    font: inherit;
+  }
+  .check {
+    flex-direction: row;
+    align-items: flex-start;
+    font-weight: 400;
+    gap: var(--space-2);
+  }
+  button {
+    background: var(--color-accent-1);
+    color: var(--color-white);
+    border: 0;
+    border-radius: var(--radius-base);
+    padding: var(--space-3);
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .honeypot {
+    position: absolute;
+    left: -9999px;
+  }
+  .status { margin: 0; }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('[data-alert-form]').forEach((form) => {
+    if (form.dataset.bound === '1') return;
+    form.dataset.bound = '1';
+    const status = form.querySelector('.status');
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (status) status.textContent = '...';
+      const payload = Object.fromEntries(new FormData(form).entries());
+      try {
+        const response = await fetch('/api/submit-alert', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const result = await response.json();
+        if (!response.ok) {
+          if (status) status.textContent = result.error || 'Error';
+          return;
+        }
+        if (status) status.textContent = form.closest('.alert-box')?.getAttribute('data-locale') === 'en'
+          ? 'Saved. We will only email you about booking openings.'
+          : 'Opgeslagen. Je krijgt alleen bericht als boekingen openen.';
+        form.reset();
+      } catch {
+        if (status) status.textContent = 'Netwerkfout';
+      }
+    });
+  });
+</script>

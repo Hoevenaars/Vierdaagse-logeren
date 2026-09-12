@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CompareView from '../../components/CompareView.astro';
+
+const locale = 'de' as const;
+---
+
+<BaseLayout
+  title="Vierdaagse-Campings vergleichen | Vierdaagse Logeren"
+  description="Vergleiche bis zu drei Campingplätze nach Gesamtpreis, Distanz zur Wedren, Anreise und Ausstattung."
+  locale={locale}
+>
+  <CompareView locale={locale} />
+</BaseLayout>

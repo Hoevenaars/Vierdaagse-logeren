@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CampingsView from '../../../components/CampingsView.astro';
+import { productCopy } from '../../../lib/copy';
+
+const locale = 'de' as const;
+---
+
+<BaseLayout
+  title="Vierdaagse-Campings vergleichen | Vierdaagse Logeren"
+  description="Vergleiche Vierdaagse-Campingplätze nach Gesamtpreis, Distanz zur Wedren, Anreise und Ausstattung."
+  locale={locale}
+>
+  <CampingsView
+    locale={locale}
+    heading={productCopy.allCampings[locale]}
+    intro="Filter nach Zelt, Wohnwagen, Wohnmobil oder fertigem Zelt. Zuerst drei Treffer, danach weitere passende Plätze."
+  />
+</BaseLayout>

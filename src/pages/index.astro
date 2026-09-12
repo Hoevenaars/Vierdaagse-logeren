@@ -1,85 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import InfoCard from '../components/InfoCard.astro';
-import { useTranslations } from '../i18n/utils';
+import HomeView from '../components/HomeView.astro';
 
 const locale = 'nl' as const;
-const t = useTranslations(locale);
 ---
 
 <BaseLayout
-  title="Vierdaagse Logeren | Op tijd een slaapplek voor de Vierdaagse"
-  description="Vind op tijd een slaapplek voor de Vierdaagse Nijmegen: camping, particuliere verhuur of hotel."
+  title="Vierdaagse Logeren | Vind de Vierdaagsecamping die bij jou past"
+  description="Vergelijk Vierdaagsecampings op totale prijs, afstand tot de Wedren, vervoer en voorzieningen."
   locale={locale}
 >
-  <section class="hero">
-    <h1>{t('home.h1')}</h1>
-    <p class="intro">{t('home.intro')}</p>
-  </section>
-
-  <section class="cards" aria-label="Type verblijf">
-    <InfoCard title={t('card.camping.title')} text={t('card.camping.text')} href="/camping" />
-    <InfoCard title={t('card.particulier.title')} text={t('card.particulier.text')} href="/particuliere-verhuur" />
-    <InfoCard title={t('card.hotels.title')} text={t('card.hotels.text')} href="/hotels-bb" />
-  </section>
-
-  <section class="areas">
-    <h2>{t('home.gebied.title')}</h2>
-    <p>{t('home.gebied.text')}</p>
-    <a href="/gebied">{t('home.gebied.cta')}</a>
-  </section>
-
-  <section class="urgency">
-    <h2>Wanneer moet je boeken?</h2>
-    <p>
-      Campings en centraal gelegen accommodaties raken doorgaans als eerste vol, vaak al
-      maanden vóór het evenement. Begin op tijd, het scheelt geld en stress.
-    </p>
-    <p class="cta-row">
-      <a href="/gids/wanneer-boeken">Lees de volledige gids &rarr;</a>
-      <a href="/gids/internationale-lopers">{t('home.intl.cta')}</a>
-    </p>
-  </section>
+  <HomeView locale={locale} />
 </BaseLayout>
-
-<style>
-  .hero {
-    text-align: center;
-    max-width: 40rem;
-    margin: 0 auto var(--space-6);
-    padding: var(--space-6) var(--space-4);
-    background: var(--color-secondary);
-    border-radius: var(--radius-base);
-  }
-  .hero h1 {
-    font-size: var(--font-size-2xl);
-    color: var(--color-primary);
-    margin-top: 0;
-  }
-  .intro {
-    font-size: var(--font-size-lg);
-  }
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    gap: var(--space-4);
-    margin-bottom: var(--space-6);
-  }
-  .areas,
-  .urgency {
-    background: var(--color-secondary);
-    padding: var(--space-5);
-    border-radius: var(--radius-base);
-    margin-bottom: var(--space-5);
-  }
-  .areas h2,
-  .urgency h2 {
-    color: var(--color-accent-1);
-    margin-top: 0;
-  }
-  .cta-row {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-  }
-</style>

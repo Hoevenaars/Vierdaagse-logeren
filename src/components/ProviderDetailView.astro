@@ -1,0 +1,281 @@
+---
+import type { Locale } from '../i18n/ui';
+import type { Provider } from '../../packages/database/src/index.ts';
+import PriceBreakdown from './PriceBreakdown.astro';
+import ProviderMap from './ProviderMap.astro';
+import AlertCapture from './AlertCapture.astro';
+import CompareBar from './CompareBar.astro';
+import { STAY_TYPE_TO_ACCOMMODATION, type TravelerStayType } from '../../packages/database/src/index.ts';
+import { defaultSearchQuery, priceForProvider } from '../lib/search';
+import { stayLabel, preferenceLabel } from '../lib/copy';
+import { formatKm, formatMinutes } from '../lib/format';
+import { availabilityLabel, productCopy, transportLabel } from '../lib/copy';
+import { amenityLabel } from '../../packages/database/src/amenities.ts';
+import { getLocalizedPath } from '../i18n/utils';
+import AanmeldFormulier from './AanmeldFormulier.astro';
+
+interface Props {
+  locale: Locale;
+  provider: Provider;
+}
+
+const { locale, provider } = Astro.props;
+const stayTypes = (['tent', 'caravan', 'camper', 'furnished'] as TravelerStayType[]).filter((stay) =>
+  provider.accommodationTypes.some((item) => STAY_TYPE_TO_ACCOMMODATION[stay].includes(item.type) && item.available)
+);
+const initialStay = stayTypes.includes('tent') ? 'tent' : stayTypes[0] ?? 'tent';
+const priced = priceForProvider(provider, { ...defaultSearchQuery(), stayType: initialStay });
+const status = provider.availability[0]?.status ?? 'unknown';
+const lastVerified = provider.lastVerifiedAt
+  ? new Date(provider.lastVerifiedAt).toLocaleDateString(locale === 'de' ? 'de-DE' : locale === 'en' ? 'en-GB' : 'nl-NL')
+  : null;
+const bookingHref = provider.bookingUrl || provider.websiteUrl;
+---
+
+<article class="detail">
+  <p class="kicker">{provider.city} · {provider.providerType.replace('_', ' ')}</p>
+  <h1>{provider.name}</h1>
+  <p class="lead">{provider.content.intro}</p>
+  <ul class="highlights">
+    <li>{formatKm(provider.distanceToWedrenKm, locale)} {locale === 'de' ? 'zur Wedren' : locale === 'en' ? 'to the Wedren' : 'tot de Wedren'}</li>
+    <li>{formatMinutes(provider.cyclingMinutesToWedren, locale)}</li>
+    <li>{provider.transportModes.map((mode) => transportLabel(locale, mode)).join(' · ')}</li>
+    <li>{availabilityLabel(locale, status)}</li>
+    {provider.verified && <li>{locale === 'de' ? 'Verifiziert' : locale === 'en' ? 'Verified' : 'Geverifieerd'}</li>}
+  </ul>
+
+  <form class="scenario-form" data-price-form data-slug={provider.slug} data-locale={locale}>
+    <fieldset>
+      <legend>{locale === 'de' ? 'Preis für dein Szenario' : locale === 'en' ? 'Price for your scenario' : 'Prijs voor jouw scenario'}</legend>
+      <label>
+        {productCopy.step1[locale]}
+        <select name="type">
+          {stayTypes.map((stay) => <option value={stay} selected={stay === initialStay}>{stayLabel(locale, stay)}</option>)}
+        </select>
+      </label>
+      <label>
+        {productCopy.step2[locale]}
+        <select name="party">
+          <option value="1">1</option>
+          <option value="2" selected>2</option>
+          <option value="3-4">3-4</option>
+          <option value="5plus">5+</option>
+        </select>
+      </label>
+      <label class="check"><input type="checkbox" name="electricity" value="1" /> {preferenceLabel(locale, 'electricity')}</label>
+      <label class="check"><input type="checkbox" name="parking" value="1" /> {preferenceLabel(locale, 'parking')}</label>
+    </fieldset>
+  </form>
+  <PriceBreakdown locale={locale} price={priced.price} />
+  <p class="scenario">{productCopy.scenario[locale]}</p>
+
+  <h2>{locale === 'de' ? 'Unterkunftsarten' : locale === 'en' ? 'Stay types' : 'Accommodatieopties'}</h2>
+  <ul>
+    {provider.accommodationTypes.map((item) => (
+      <li>
+        {item.type.replace('_', ' ')} · max. {item.maxPeople}
+        {item.electricityPossible ? ` · ${locale === 'de' ? 'Strom möglich' : locale === 'en' ? 'electricity possible' : 'stroom mogelijk'}` : ''}
+      </li>
+    ))}
+  </ul>
+
+  <h2>{locale === 'de' ? 'Ausstattung' : locale === 'en' ? 'Facilities' : 'Voorzieningen'}</h2>
+  <ul class="amenities">
+    {provider.amenities.filter((item) => item.available).map((item) => (
+      <li>
+        {amenityLabel(item.amenityId, locale)}
+        {item.included
+          ? ` (${locale === 'de' ? 'inkl.' : locale === 'en' ? 'included' : 'inbegrepen'})`
+          : item.price != null
+            ? ` (+€${item.price})`
+            : ''}
+      </li>
+    ))}
+  </ul>
+
+  <h2>{locale === 'de' ? 'Lage' : locale === 'en' ? 'Location' : 'Locatie en reistijd'}</h2>
+  <p>{provider.content.summary}</p>
+  <ProviderMap locale={locale} providers={[provider]} />
+
+  <h2>{locale === 'de' ? 'Warum interessant' : locale === 'en' ? 'Why it is relevant' : 'Waarom interessant'}</h2>
+  <p>{provider.content.whyInteresting}</p>
+
+  <h2>{locale === 'de' ? 'Hinweise' : locale === 'en' ? 'Points to check' : 'Aandachtspunten'}</h2>
+  <ul>
+    {provider.content.caveats.map((item) => <li>{item}</li>)}
+  </ul>
+
+  <p class="verified">
+    {productCopy.lastVerified[locale]}: {lastVerified ?? '—'}
+    {locale === 'de' ? '. Quelle: manuell erfasste Stammdaten.' : locale === 'en' ? '. Source: manually recorded master data.' : '. Bron: handmatig vastgelegde stamgegevens.'}
+  </p>
+
+  <div class="cta-row">
+    {bookingHref ? (
+      <a class="button" href={bookingHref} rel="noopener noreferrer" data-outbound={provider.slug}>{productCopy.book[locale]}</a>
+    ) : (
+      <p>{availabilityLabel(locale, status)}</p>
+    )}
+    <button type="button" class="button button--ghost" data-compare-toggle={provider.slug}>{productCopy.compare[locale]}</button>
+    <a href={getLocalizedPath('/campings', locale)}>{productCopy.allCampings[locale]}</a>
+  </div>
+
+  <section class="lead-box">
+    <h2>{productCopy.leadTitle[locale]}</h2>
+    <form class="lead-form" data-lead-form data-provider={provider.slug}>
+      <input type="hidden" name="provider_id" value={provider.slug} />
+      <input type="hidden" name="source_page" value={Astro.url.pathname} />
+      <label>E-mail *<input type="email" name="email" required /></label>
+      <label>{productCopy.step2[locale]}<input type="number" name="party_size" min="1" max="12" value="2" /></label>
+      <label>{locale === 'de' ? 'Nachricht' : locale === 'en' ? 'Message' : 'Bericht'}<textarea name="message" rows="3"></textarea></label>
+      <div class="honeypot" aria-hidden="true"><input type="text" name="website_hp" tabindex="-1" autocomplete="off" /></div>
+      <label class="check">
+        <input type="checkbox" name="privacy" value="1" required />
+        <span>
+          <a href={getLocalizedPath('/privacy', locale)}>Privacy</a>
+        </span>
+      </label>
+      <button type="submit">{locale === 'de' ? 'Senden' : locale === 'en' ? 'Send' : 'Verstuur'}</button>
+      <p class="status" role="status"></p>
+    </form>
+  </section>
+</article>
+
+<AlertCapture locale={locale} />
+<AanmeldFormulier
+  locale={locale}
+  categorie="camping"
+  typeOpties={['Camping', 'Tijdelijke camping', 'Glamping', 'Anders']}
+  titel={locale === 'de' ? 'Betreiber? Melde dich an' : locale === 'en' ? 'Site owner? Sign up' : 'Camping-eigenaar? Meld je aan'}
+  introtekst={locale === 'de' ? 'Neue relevante Vierdaagse-Campings prüfen wir manuell.' : locale === 'en' ? 'We review new relevant Four Days Marches campsites manually.' : 'Nieuwe relevante Vierdaagsecampings controleren we handmatig.'}
+/>
+<CompareBar locale={locale} />
+
+<script>
+  import { trackBrowserEvent } from '../lib/tracking.ts';
+  import { getProviderBySlug } from '../lib/providers.ts';
+  import { parseSearchParams, priceForProvider, defaultSearchQuery } from '../lib/search.ts';
+  import { formatEuro } from '../lib/format.ts';
+  import { productCopy } from '../lib/copy.ts';
+  import type { Locale } from '../i18n/ui.ts';
+  import type { SearchQuery } from '../lib/search.ts';
+
+  const form = document.querySelector<HTMLFormElement>('[data-price-form]');
+  const box = document.querySelector('[data-price-box]');
+  const locale = (form?.dataset.locale as Locale) ?? 'nl';
+  const provider = form?.dataset.slug ? getProviderBySlug(form.dataset.slug) : undefined;
+
+  function queryFromForm(): SearchQuery {
+    if (!form) return defaultSearchQuery();
+    const data = new FormData(form);
+    const params = new URLSearchParams();
+    const type = String(data.get('type') ?? 'tent');
+    const party = String(data.get('party') ?? '2');
+    params.set('type', type);
+    params.set('party', party);
+    params.set('electricity', data.get('electricity') ? '1' : '0');
+    params.set('parking', data.get('parking') ? '1' : '0');
+    return parseSearchParams(params) ?? { ...defaultSearchQuery(), stayType: type as SearchQuery['stayType'] };
+  }
+
+  function renderPrice(query: SearchQuery) {
+    if (!provider || !box) return;
+    const { price } = priceForProvider(provider, query);
+    const rows = price.breakdown.map((line) => {
+      const hint = line.optional ? productCopy.optional[locale] : productCopy.mandatory[locale];
+      return `<tr><th>${line.label}<span class="hint">${hint}</span></th><td>${formatEuro(line.amount, locale)}</td></tr>`;
+    }).join('');
+    const total = price.complete ? formatEuro(price.total, locale) : productCopy.incompletePrice[locale];
+    const warnings = price.warnings.map((warning) => `<li>${warning}</li>`).join('');
+    const table = price.breakdown.length
+      ? `<table><tbody>${rows}<tr class="total"><th>${productCopy.totalLabel[locale]}</th><td>${total}</td></tr></tbody></table>`
+      : `<p>${productCopy.incompletePrice[locale]}</p>`;
+    const heading = box.querySelector('h2')?.outerHTML ?? '';
+    box.innerHTML = `${heading}${table}${warnings ? `<ul class="warnings">${warnings}</ul>` : ''}`;
+  }
+
+  if (form && provider) {
+    const fromUrl = parseSearchParams(new URLSearchParams(window.location.search));
+    if (fromUrl) {
+      const type = form.elements.namedItem('type') as HTMLSelectElement | null;
+      const party = form.elements.namedItem('party') as HTMLSelectElement | null;
+      const electricity = form.elements.namedItem('electricity') as HTMLInputElement | null;
+      const parking = form.elements.namedItem('parking') as HTMLInputElement | null;
+      if (type) type.value = fromUrl.stayType;
+      if (party) {
+        party.value = fromUrl.partySize >= 5 ? '5plus' : fromUrl.partySize === 3 || fromUrl.partySize === 4 ? '3-4' : String(fromUrl.partySize);
+      }
+      if (electricity) electricity.checked = fromUrl.electricity;
+      if (parking) parking.checked = fromUrl.parking;
+      renderPrice(fromUrl);
+    }
+    form.addEventListener('change', () => renderPrice(queryFromForm()));
+  }
+
+  trackBrowserEvent('provider_view', { provider: document.querySelector<HTMLFormElement>('[data-lead-form]')?.dataset.provider });
+  document.querySelectorAll('[data-outbound]').forEach((link) => {
+    link.addEventListener('click', () => {
+      trackBrowserEvent('outbound_booking_click', { provider: (link as HTMLElement).dataset.outbound });
+    });
+  });
+  document.querySelectorAll<HTMLFormElement>('[data-lead-form]').forEach((leadForm) => {
+    leadForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const status = leadForm.querySelector('.status');
+      const payload = Object.fromEntries(new FormData(leadForm).entries());
+      const response = await fetch('/api/submit-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json();
+      if (status) status.textContent = response.ok ? 'Verstuurd.' : result.error || 'Fout';
+      if (response.ok) leadForm.reset();
+    });
+  });
+</script>
+
+<style>
+  .detail { max-width: 46rem; }
+  .kicker { color: var(--color-accent-1); font-weight: 700; }
+  h1 { color: var(--color-primary); margin-top: 0; }
+  .lead { font-size: var(--font-size-lg); }
+  .highlights, .amenities { display: flex; flex-wrap: wrap; gap: var(--space-2); list-style: none; padding: 0; }
+  .highlights li, .amenities li {
+    background: var(--color-secondary);
+    border-radius: 99px;
+    padding: 0.3rem 0.8rem;
+  }
+  h2 { color: var(--color-accent-1); }
+  .cta-row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; margin: var(--space-5) 0; }
+  .button {
+    background: var(--color-primary);
+    color: var(--color-text-light);
+    text-decoration: none;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-base);
+    font-weight: 700;
+    border: 0;
+    cursor: pointer;
+    font: inherit;
+  }
+  .button--ghost { background: transparent; color: var(--color-primary); border: 1px solid var(--color-primary); }
+  .lead-box, .lead-form { display: grid; gap: var(--space-3); }
+  .lead-form label { display: flex; flex-direction: column; font-weight: 600; font-size: var(--font-size-sm); }
+  .lead-form input, .lead-form textarea { font: inherit; padding: var(--space-2); border-radius: var(--radius-base); border: 1px solid var(--color-border); }
+  .honeypot { position: absolute; left: -9999px; }
+  .verified { font-size: var(--font-size-sm); opacity: 0.8; }
+  .scenario-form fieldset {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-base);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    align-items: end;
+    padding: var(--space-4);
+    margin: 0 0 var(--space-4);
+  }
+  .scenario-form label { display: flex; flex-direction: column; gap: var(--space-1); font-weight: 600; font-size: var(--font-size-sm); }
+  .scenario-form .check { flex-direction: row; align-items: center; }
+  .scenario-form select { font: inherit; padding: var(--space-2); border-radius: var(--radius-base); border: 1px solid var(--color-border); }
+</style>

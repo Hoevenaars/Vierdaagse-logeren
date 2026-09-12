@@ -6,6 +6,11 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://www.vierdaagselogeren.nl',
   integrations: [sitemap()],
+  redirects: {
+    '/camping': '/campings',
+    '/en/camping': '/en/campings',
+    '/de/camping': '/de/campings',
+  },
   i18n: {
     locales: ['nl', 'en', 'de'],
     defaultLocale: 'nl',

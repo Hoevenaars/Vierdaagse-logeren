@@ -1,0 +1,198 @@
+---
+import type { Locale } from '../i18n/ui';
+import ProviderCard from './ProviderCard.astro';
+import ProviderMap from './ProviderMap.astro';
+import CompareBar from './CompareBar.astro';
+import AlertCapture from './AlertCapture.astro';
+import { getPublishedProviders, getProviderCities } from '../lib/providers';
+import { defaultSearchQuery, searchProviders, type SearchQuery } from '../lib/search';
+import { productCopy, stayLabel } from '../lib/copy';
+import { getLocalizedPath } from '../i18n/utils';
+import type { Provider, TravelerStayType } from '../../packages/database/src/index.ts';
+
+interface Props {
+  locale: Locale;
+  heading: string;
+  intro: string;
+  query?: SearchQuery;
+  titleAddon?: string;
+  providers?: Provider[];
+}
+
+const { locale, heading, intro, query = defaultSearchQuery(), titleAddon, providers } = Astro.props;
+const all = providers ?? getPublishedProviders();
+const matches = searchProviders(all, query);
+const primary = matches.filter((item) => item.ranked.primary);
+const rest = matches.filter((item) => !item.ranked.primary);
+const cities = getProviderCities();
+const stayTypes: TravelerStayType[] = ['tent', 'caravan', 'camper', 'furnished'];
+const campingsPath = getLocalizedPath('/campings', locale);
+---
+
+<section class="intro" data-results-locale={locale} data-incomplete={productCopy.incompletePrice[locale]}>
+  <h1>{heading}</h1>
+  <p>{intro}</p>
+  {titleAddon && <p class="addon">{titleAddon}</p>}
+  <p class="scenario">{productCopy.scenario[locale]} · {stayLabel(locale, query.stayType)} · {query.partySize}p</p>
+</section>
+
+<form class="filters" method="get" action={campingsPath}>
+  <fieldset>
+    <legend>{productCopy.filtersTitle[locale]}</legend>
+    <label>
+      {productCopy.step1[locale]}
+      <select name="type">
+        {stayTypes.map((stay) => (
+          <option value={stay} selected={stay === query.stayType}>{stayLabel(locale, stay)}</option>
+        ))}
+      </select>
+    </label>
+    <label>
+      {productCopy.step2[locale]}
+      <select name="party">
+        <option value="1" selected={query.partySize === 1}>1</option>
+        <option value="2" selected={query.partySize === 2}>2</option>
+        <option value="3-4" selected={query.partySize === 3}>3-4</option>
+        <option value="5plus" selected={query.partySize >= 5}>5+</option>
+      </select>
+    </label>
+    <button type="submit">{productCopy.matchCta[locale]}</button>
+  </fieldset>
+</form>
+
+<nav class="seo-filters" aria-label="Themapagina's">
+  <a href={getLocalizedPath('/campings/dicht-bij-wedren', locale)}>{locale === 'de' ? 'Nah an der Wedren' : locale === 'en' ? 'Close to the Wedren' : 'Dicht bij de Wedren'}</a>
+  <a href={getLocalizedPath('/campings/met-stroom', locale)}>{locale === 'de' ? 'Mit Strom' : locale === 'en' ? 'With electricity' : 'Met stroom'}</a>
+  <a href={getLocalizedPath('/campings/met-camper', locale)}>{locale === 'de' ? 'Mit Wohnmobil' : locale === 'en' ? 'With camper' : 'Met camper'}</a>
+  <a href={getLocalizedPath('/campings/met-massage', locale)}>{locale === 'de' ? 'Mit Massage / Blasenpflege' : locale === 'en' ? 'With massage / blister care' : 'Met massage / blarenzorg'}</a>
+  <a href={getLocalizedPath('/campings/goedkoop', locale)}>{locale === 'de' ? 'Günstig' : locale === 'en' ? 'Lower total price' : 'Goedkoopst'}</a>
+  {cities.filter((city) => city.count >= 1).map((city) => (
+    <a href={getLocalizedPath(`/campings/${city.slug}`, locale)}>{city.name}</a>
+  ))}
+</nav>
+
+{primary.length > 0 && (
+  <section>
+    <h2>{productCopy.primaryMatches[locale]}</h2>
+    <div class="grid" data-results-primary>
+      {primary.map((match) => <ProviderCard locale={locale} match={match} primary />)}
+    </div>
+  </section>
+)}
+
+{rest.length > 0 && (
+  <section>
+    <h2>{productCopy.otherMatches[locale]}</h2>
+    <div class="grid" data-results-rest>
+      {rest.map((match) => <ProviderCard locale={locale} match={match} />)}
+    </div>
+  </section>
+)}
+
+{matches.length === 0 && (
+  <p>{locale === 'de' ? 'Keine passenden Campings für diese Auswahl.' : locale === 'en' ? 'No campsites match this selection.' : 'Geen passende campings voor deze keuze.'}</p>
+)}
+
+<ProviderMap locale={locale} providers={matches.map((item) => item.provider)} />
+<AlertCapture locale={locale} defaultStay={query.stayType} />
+<CompareBar locale={locale} />
+
+<script>
+  import { getPublishedProviders } from '../lib/providers.ts';
+  import { parseSearchParams, searchProviders } from '../lib/search.ts';
+  import { trackBrowserEvent } from '../lib/tracking.ts';
+  import { formatEuro } from '../lib/format.ts';
+  import type { Locale } from '../i18n/ui.ts';
+
+  const query = parseSearchParams(new URLSearchParams(window.location.search));
+  if (query) {
+    const locale = (document.querySelector('[data-results-locale]') as HTMLElement | null)?.dataset.resultsLocale as Locale ?? 'nl';
+    const incomplete = (document.querySelector('[data-results-locale]') as HTMLElement | null)?.dataset.incomplete ?? '';
+    const matches = searchProviders(getPublishedProviders(), query);
+    const primary = document.querySelector('[data-results-primary]');
+    const rest = document.querySelector('[data-results-rest]');
+    const cards = new Map(
+      [...document.querySelectorAll<HTMLElement>('[data-provider-card]')].map((card) => [card.dataset.slug, card])
+    );
+    matches.forEach((match, index) => {
+      const card = cards.get(match.provider.slug);
+      if (!card) return;
+      const score = card.querySelector('.score');
+      if (score) score.textContent = `${match.ranked.matchPercent}%`;
+      const total = card.querySelector('[data-total]');
+      if (total) {
+        total.textContent = match.price.complete ? formatEuro(match.price.total, locale) : incomplete;
+      }
+      const parent = index < 3 ? primary : rest;
+      parent?.append(card);
+    });
+    for (const [slug, card] of cards) {
+      if (!matches.some((match) => match.provider.slug === slug)) card.remove();
+    }
+    const search = window.location.search;
+    document.querySelectorAll<HTMLAnchorElement>('[data-result-click]').forEach((link) => {
+      if (!search) return;
+      const url = new URL(link.href, window.location.origin);
+      const incoming = new URLSearchParams(search);
+      incoming.forEach((value, key) => url.searchParams.append(key, value));
+      link.href = `${url.pathname}?${url.searchParams.toString()}`;
+    });
+  }
+
+  document.querySelectorAll('[data-result-click]').forEach((link) => {
+    link.addEventListener('click', () => {
+      trackBrowserEvent('result_click', { provider: (link as HTMLElement).dataset.resultClick });
+    });
+  });
+</script>
+
+<style>
+  .intro h1 { color: var(--color-primary); }
+  .scenario { font-weight: 600; }
+  .filters fieldset {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-base);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    align-items: end;
+    padding: var(--space-4);
+    margin: 0 0 var(--space-4);
+  }
+  .filters label { display: flex; flex-direction: column; gap: var(--space-1); font-weight: 600; }
+  .filters select, .filters button {
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-base);
+    border: 1px solid var(--color-border);
+    font: inherit;
+  }
+  .filters button {
+    background: var(--color-primary);
+    color: var(--color-text-light);
+    border: 0;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .seo-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-bottom: var(--space-5);
+  }
+  .seo-filters a {
+    background: var(--color-secondary);
+    color: var(--color-text-dark);
+    text-decoration: none;
+    padding: 0.35rem 0.75rem;
+    border-radius: 99px;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: var(--space-4);
+    margin-bottom: var(--space-5);
+  }
+  h2 { color: var(--color-accent-1); }
+</style>

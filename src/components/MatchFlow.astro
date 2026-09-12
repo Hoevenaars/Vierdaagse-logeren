@@ -1,0 +1,223 @@
+---
+import type { Locale } from '../i18n/ui';
+import { productCopy, preferenceLabel, stayLabel } from '../lib/copy';
+import type { PreferenceId, TravelerStayType } from '../../packages/database/src/index.ts';
+
+interface Props {
+  locale: Locale;
+  action: string;
+}
+
+const { locale, action } = Astro.props;
+const stayTypes: TravelerStayType[] = ['tent', 'caravan', 'camper', 'furnished'];
+const partyKeys = ['1', '2', '3-4', '5plus'] as const;
+const preferences: PreferenceId[] = [
+  'close_to_start',
+  'quiet',
+  'social',
+  'lowest_price',
+  'many_amenities',
+  'early_breakfast',
+  'blister_care',
+  'bike_rental',
+  'parking',
+  'electricity',
+];
+const copy = productCopy;
+---
+
+<form class="matchflow" method="get" action={action} data-locale={locale}>
+  <div class="matchflow-progress" aria-hidden="true">
+    <span data-step-indicator="1" class="is-active"></span>
+    <span data-step-indicator="2"></span>
+    <span data-step-indicator="3"></span>
+  </div>
+
+  <fieldset class="matchflow-step is-visible" data-step="1">
+    <legend>{copy.step1[locale]}</legend>
+    <div class="choice-grid">
+      {stayTypes.map((stay) => (
+        <label class="choice">
+          <input type="radio" name="type" value={stay} required />
+          <span>{stayLabel(locale, stay)}</span>
+        </label>
+      ))}
+    </div>
+    <button type="button" class="matchflow-next" data-next="2">{locale === 'de' ? 'Weiter' : locale === 'en' ? 'Next' : 'Volgende'}</button>
+  </fieldset>
+
+  <fieldset class="matchflow-step" data-step="2">
+    <legend>{copy.step2[locale]}</legend>
+    <div class="choice-grid">
+      {partyKeys.map((party) => (
+        <label class="choice">
+          <input type="radio" name="party" value={party} required={party === '1'} />
+          <span>{copy.party[party][locale]}</span>
+        </label>
+      ))}
+    </div>
+    <div class="matchflow-nav">
+      <button type="button" class="matchflow-back" data-back="1">{locale === 'de' ? 'Zurück' : locale === 'en' ? 'Back' : 'Terug'}</button>
+      <button type="button" class="matchflow-next" data-next="3">{locale === 'de' ? 'Weiter' : locale === 'en' ? 'Next' : 'Volgende'}</button>
+    </div>
+  </fieldset>
+
+  <fieldset class="matchflow-step" data-step="3">
+    <legend>{copy.step3[locale]}</legend>
+    <p class="hint">{locale === 'de' ? 'Mehrfachauswahl möglich.' : locale === 'en' ? 'Select all that apply.' : 'Meerdere keuzes mogelijk.'}</p>
+    <div class="choice-grid choice-grid--chips">
+      {preferences.map((preference) => (
+        <label class="choice choice--chip">
+          <input type="checkbox" name="prefs" value={preference} />
+          <span>{preferenceLabel(locale, preference)}</span>
+        </label>
+      ))}
+    </div>
+    <div class="matchflow-nav">
+      <button type="button" class="matchflow-back" data-back="2">{locale === 'de' ? 'Zurück' : locale === 'en' ? 'Back' : 'Terug'}</button>
+      <button type="submit" class="matchflow-submit">{copy.matchCta[locale]}</button>
+    </div>
+  </fieldset>
+</form>
+
+<style>
+  .matchflow {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-base);
+    padding: var(--space-5);
+    text-align: left;
+  }
+  .matchflow-progress {
+    display: flex;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+  }
+  .matchflow-progress span {
+    height: 6px;
+    flex: 1;
+    border-radius: 99px;
+    background: var(--color-border);
+  }
+  .matchflow-progress span.is-active {
+    background: var(--color-primary);
+  }
+  .matchflow-step {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+  .matchflow-step legend {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    margin-bottom: var(--space-3);
+    padding: 0;
+  }
+  .hint {
+    margin: 0 0 var(--space-3);
+    font-size: var(--font-size-sm);
+  }
+  .choice-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3);
+  }
+  .choice {
+    display: block;
+    cursor: pointer;
+  }
+  .choice input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .choice span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.25rem;
+    padding: var(--space-3);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-base);
+    font-weight: 600;
+    text-align: center;
+    background: var(--color-white);
+  }
+  .choice input:focus-visible + span {
+    outline: 3px solid var(--color-accent-2);
+    outline-offset: 2px;
+  }
+  .choice input:checked + span {
+    border-color: var(--color-primary);
+    background: var(--color-secondary);
+    color: var(--color-primary);
+  }
+  .choice-grid--chips {
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  }
+  .matchflow-nav,
+  .matchflow-next,
+  .matchflow-submit {
+    margin-top: var(--space-4);
+  }
+  .matchflow-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-3);
+  }
+  .matchflow-next,
+  .matchflow-submit,
+  .matchflow-back {
+    border: 0;
+    border-radius: var(--radius-base);
+    padding: var(--space-3) var(--space-4);
+    font-weight: 700;
+    cursor: pointer;
+    font-size: var(--font-size-base);
+  }
+  .matchflow-next,
+  .matchflow-submit {
+    background: var(--color-primary);
+    color: var(--color-text-light);
+  }
+  .matchflow-back {
+    background: transparent;
+    color: var(--color-text-dark);
+    border: 1px solid var(--color-border);
+  }
+</style>
+
+<script>
+  const form = document.querySelector('.matchflow') as HTMLFormElement | null;
+  if (form) {
+    const show = (step: number) => {
+      form.querySelectorAll('.matchflow-step').forEach((fieldset) => {
+        const el = fieldset as HTMLFieldSetElement;
+        const active = Number(el.dataset.step) === step;
+        el.hidden = !active;
+        el.classList.toggle('is-visible', active);
+      });
+      form.querySelectorAll('[data-step-indicator]').forEach((dot) => {
+        dot.classList.toggle('is-active', Number((dot as HTMLElement).dataset.stepIndicator) <= step);
+      });
+    };
+
+    form.querySelectorAll('[data-next]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const current = button.closest('.matchflow-step') as HTMLFieldSetElement | null;
+        const input = current?.querySelector('input:checked, input[required]');
+        if (current && !current.querySelector('input:checked')) {
+          (input as HTMLInputElement | null)?.reportValidity?.();
+          return;
+        }
+        show(Number((button as HTMLElement).dataset.next));
+      });
+    });
+    form.querySelectorAll('[data-back]').forEach((button) => {
+      button.addEventListener('click', () => show(Number((button as HTMLElement).dataset.back)));
+    });
+    show(1);
+  }
+</script>

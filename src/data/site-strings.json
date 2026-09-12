@@ -2,9 +2,19 @@
   "strings": [
     {
       "key": "nav.camping",
-      "nl": "Camping",
-      "de": "Camping",
-      "en": "Camping",
+      "nl": "Campings",
+      "de": "Campings",
+      "en": "Campsites",
+      "vertaalstatus": {
+        "de": "gecontroleerd",
+        "en": "gecontroleerd"
+      }
+    },
+    {
+      "key": "nav.vergelijken",
+      "nl": "Vergelijken",
+      "de": "Vergleichen",
+      "en": "Compare",
       "vertaalstatus": {
         "de": "gecontroleerd",
         "en": "gecontroleerd"
@@ -72,9 +82,9 @@
     },
     {
       "key": "home.h1",
-      "nl": "Op tijd een slaapplek voor de Vierdaagse",
-      "de": "Rechtzeitig eine Unterkunft für den Vierdaagse",
-      "en": "Book your Four Days Marches stay in time",
+      "nl": "Vind de Vierdaagsecamping die bij jou past",
+      "de": "Finde den Vierdaagse-Campingplatz, der zu dir passt",
+      "en": "Find the Four Days Marches campsite that fits you",
       "vertaalstatus": {
         "de": "gecontroleerd",
         "en": "gecontroleerd"
@@ -82,9 +92,9 @@
     },
     {
       "key": "home.intro",
-      "nl": "Elk jaar weer hetzelfde: de Vierdaagse trekt duizenden wandelaars en bezoekers naar Nijmegen, en het aantal overnachtingsplekken groeit niet mee. Wie op tijd is, heeft ruime keuze. Wie wacht, betaalt meer voor minder. Vierdaagse Logeren helpt je op tijd de juiste plek te vinden, camping, particulier of hotel.",
-      "de": "Jedes Jahr dasselbe: Der Vierdaagse bringt Tausende Wanderer und Besucher nach Nijmegen, doch das Unterkunftsangebot wächst nicht mit. Wer früh bucht, hat die Wahl. Wer wartet, zahlt mehr für weniger. Vierdaagse Logeren hilft dir, rechtzeitig die richtige Unterkunft zu finden, Camping, privat oder Hotel.",
-      "en": "Every year the same story: the Four Days Marches brings thousands of walkers and visitors to Nijmegen, and the number of places to stay does not grow with it. Book early and you have plenty of choice. Wait, and you pay more for less. Vierdaagse Logeren helps you find the right place in time, camping, a private stay, or a hotel.",
+      "nl": "Vergelijk totale prijs, afstand tot de Wedren, vervoer en voorzieningen. Binnen twee minuten een shortlist van Vierdaagsecampings.",
+      "de": "Vergleiche Gesamtpreis, Distanz zur Wedren, Anreise und Ausstattung. In zwei Minuten eine Shortlist von Vierdaagse-Campings.",
+      "en": "Compare total price, distance to the Wedren, transport and facilities. A shortlist of Four Days Marches campsites in about two minutes.",
       "vertaalstatus": {
         "de": "gecontroleerd",
         "en": "gecontroleerd"

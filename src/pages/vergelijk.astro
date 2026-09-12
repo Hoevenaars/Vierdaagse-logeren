@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CompareView from '../components/CompareView.astro';
+
+const locale = 'nl' as const;
+---
+
+<BaseLayout
+  title="Vergelijk Vierdaagsecampings | Vierdaagse Logeren"
+  description="Vergelijk maximaal drie Vierdaagsecampings op totale prijs, afstand tot de Wedren, vervoer en voorzieningen."
+  locale={locale}
+>
+  <CompareView locale={locale} />
+</BaseLayout>
