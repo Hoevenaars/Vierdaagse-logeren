@@ -36,7 +36,7 @@ const highlightAmenities = provider.amenities.filter((item) => item.available).s
   <dl class="facts">
     <div>
       <dt>{productCopy.totalLabel[locale]}</dt>
-      <dd>
+      <dd data-total>
         {price.complete ? formatEuro(price.total, locale) : productCopy.incompletePrice[locale]}
       </dd>
     </div>

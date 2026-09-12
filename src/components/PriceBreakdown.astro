@@ -12,7 +12,7 @@ interface Props {
 const { locale, price } = Astro.props;
 ---
 
-<section class="price-box">
+<section class="price-box" data-price-box>
   <h2>{productCopy.breakdownTitle[locale]}</h2>
   {price.breakdown.length === 0 ? (
     <p>{productCopy.incompletePrice[locale]}</p>

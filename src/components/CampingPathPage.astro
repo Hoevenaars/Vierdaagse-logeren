@@ -5,7 +5,7 @@ import CampingsView from './CampingsView.astro';
 import ProviderDetailView from './ProviderDetailView.astro';
 import { seoFilterCopy, type CampingPathKind } from '../lib/routes';
 import { getProviderBySlug, getProvidersByCity, getPublishedProviders } from '../lib/providers';
-import { defaultSearchQuery, providersForSeoFilter } from '../lib/search';
+import { defaultSearchQuery, providersForSeoFilter, type SearchQuery } from '../lib/search';
 
 interface Props {
   locale: Locale;
@@ -27,6 +27,10 @@ const intro = path.kind === 'city'
         ? `Campsites in ${path.cityName}, comparable on total price and distance to the Wedren.`
         : `Campings en wandelterreinen in ${path.cityName}, vergelijkbaar op totale prijs en afstand tot de Wedren.`)
   : filterCopy?.intro ?? '';
+
+const query: SearchQuery = defaultSearchQuery();
+if (path.kind === 'filter' && path.filter === 'met-stroom') query.electricity = true;
+if (path.kind === 'filter' && path.filter === 'met-camper') query.stayType = 'camper';
 ---
 
 {provider ? (
@@ -41,7 +45,7 @@ const intro = path.kind === 'city'
       intro={intro}
       providers={cityProviders ?? filterProviders}
       titleAddon={filterProviders ? `${filterProviders.length}` : undefined}
-      query={defaultSearchQuery()}
+      query={query}
     />
   </BaseLayout>
 )}

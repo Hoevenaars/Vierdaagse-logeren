@@ -29,7 +29,7 @@ const stayTypes: TravelerStayType[] = ['tent', 'caravan', 'camper', 'furnished']
 const campingsPath = getLocalizedPath('/campings', locale);
 ---
 
-<section class="intro">
+<section class="intro" data-results-locale={locale} data-incomplete={productCopy.incompletePrice[locale]}>
   <h1>{heading}</h1>
   <p>{intro}</p>
   {titleAddon && <p class="addon">{titleAddon}</p>}
@@ -101,9 +101,13 @@ const campingsPath = getLocalizedPath('/campings', locale);
   import { getPublishedProviders } from '../lib/providers.ts';
   import { parseSearchParams, searchProviders } from '../lib/search.ts';
   import { trackBrowserEvent } from '../lib/tracking.ts';
+  import { formatEuro } from '../lib/format.ts';
+  import type { Locale } from '../i18n/ui.ts';
 
   const query = parseSearchParams(new URLSearchParams(window.location.search));
   if (query) {
+    const locale = (document.querySelector('[data-results-locale]') as HTMLElement | null)?.dataset.resultsLocale as Locale ?? 'nl';
+    const incomplete = (document.querySelector('[data-results-locale]') as HTMLElement | null)?.dataset.incomplete ?? '';
     const matches = searchProviders(getPublishedProviders(), query);
     const primary = document.querySelector('[data-results-primary]');
     const rest = document.querySelector('[data-results-rest]');
@@ -115,12 +119,24 @@ const campingsPath = getLocalizedPath('/campings', locale);
       if (!card) return;
       const score = card.querySelector('.score');
       if (score) score.textContent = `${match.ranked.matchPercent}%`;
+      const total = card.querySelector('[data-total]');
+      if (total) {
+        total.textContent = match.price.complete ? formatEuro(match.price.total, locale) : incomplete;
+      }
       const parent = index < 3 ? primary : rest;
       parent?.append(card);
     });
     for (const [slug, card] of cards) {
       if (!matches.some((match) => match.provider.slug === slug)) card.remove();
     }
+    const search = window.location.search;
+    document.querySelectorAll<HTMLAnchorElement>('[data-result-click]').forEach((link) => {
+      if (!search) return;
+      const url = new URL(link.href, window.location.origin);
+      const incoming = new URLSearchParams(search);
+      incoming.forEach((value, key) => url.searchParams.append(key, value));
+      link.href = `${url.pathname}?${url.searchParams.toString()}`;
+    });
   }
 
   document.querySelectorAll('[data-result-click]').forEach((link) => {

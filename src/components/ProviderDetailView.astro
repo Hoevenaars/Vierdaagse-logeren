@@ -5,7 +5,9 @@ import PriceBreakdown from './PriceBreakdown.astro';
 import ProviderMap from './ProviderMap.astro';
 import AlertCapture from './AlertCapture.astro';
 import CompareBar from './CompareBar.astro';
+import { STAY_TYPE_TO_ACCOMMODATION, type TravelerStayType } from '../../packages/database/src/index.ts';
 import { defaultSearchQuery, priceForProvider } from '../lib/search';
+import { stayLabel, preferenceLabel } from '../lib/copy';
 import { formatKm, formatMinutes } from '../lib/format';
 import { availabilityLabel, productCopy, transportLabel } from '../lib/copy';
 import { amenityLabel } from '../../packages/database/src/amenities.ts';
@@ -18,9 +20,11 @@ interface Props {
 }
 
 const { locale, provider } = Astro.props;
-const query = defaultSearchQuery();
-const tentQuery = { ...query, stayType: 'tent' as const };
-const priced = priceForProvider(provider, provider.accommodationTypes.some((item) => item.type.includes('tent')) ? tentQuery : { ...query, stayType: provider.accommodationTypes[0]?.type === 'camper' ? 'camper' : provider.accommodationTypes[0]?.type === 'furnished_tent' || provider.accommodationTypes[0]?.type === 'room' ? 'furnished' : 'caravan' });
+const stayTypes = (['tent', 'caravan', 'camper', 'furnished'] as TravelerStayType[]).filter((stay) =>
+  provider.accommodationTypes.some((item) => STAY_TYPE_TO_ACCOMMODATION[stay].includes(item.type) && item.available)
+);
+const initialStay = stayTypes.includes('tent') ? 'tent' : stayTypes[0] ?? 'tent';
+const priced = priceForProvider(provider, { ...defaultSearchQuery(), stayType: initialStay });
 const status = provider.availability[0]?.status ?? 'unknown';
 const lastVerified = provider.lastVerifiedAt
   ? new Date(provider.lastVerifiedAt).toLocaleDateString(locale === 'de' ? 'de-DE' : locale === 'en' ? 'en-GB' : 'nl-NL')
@@ -40,6 +44,28 @@ const bookingHref = provider.bookingUrl || provider.websiteUrl;
     {provider.verified && <li>{locale === 'de' ? 'Verifiziert' : locale === 'en' ? 'Verified' : 'Geverifieerd'}</li>}
   </ul>
 
+  <form class="scenario-form" data-price-form data-slug={provider.slug} data-locale={locale}>
+    <fieldset>
+      <legend>{locale === 'de' ? 'Preis für dein Szenario' : locale === 'en' ? 'Price for your scenario' : 'Prijs voor jouw scenario'}</legend>
+      <label>
+        {productCopy.step1[locale]}
+        <select name="type">
+          {stayTypes.map((stay) => <option value={stay} selected={stay === initialStay}>{stayLabel(locale, stay)}</option>)}
+        </select>
+      </label>
+      <label>
+        {productCopy.step2[locale]}
+        <select name="party">
+          <option value="1">1</option>
+          <option value="2" selected>2</option>
+          <option value="3-4">3-4</option>
+          <option value="5plus">5+</option>
+        </select>
+      </label>
+      <label class="check"><input type="checkbox" name="electricity" value="1" /> {preferenceLabel(locale, 'electricity')}</label>
+      <label class="check"><input type="checkbox" name="parking" value="1" /> {preferenceLabel(locale, 'parking')}</label>
+    </fieldset>
+  </form>
   <PriceBreakdown locale={locale} price={priced.price} />
   <p class="scenario">{productCopy.scenario[locale]}</p>
 
@@ -127,17 +153,76 @@ const bookingHref = provider.bookingUrl || provider.websiteUrl;
 
 <script>
   import { trackBrowserEvent } from '../lib/tracking.ts';
+  import { getProviderBySlug } from '../lib/providers.ts';
+  import { parseSearchParams, priceForProvider, defaultSearchQuery } from '../lib/search.ts';
+  import { formatEuro } from '../lib/format.ts';
+  import { productCopy } from '../lib/copy.ts';
+  import type { Locale } from '../i18n/ui.ts';
+  import type { SearchQuery } from '../lib/search.ts';
+
+  const form = document.querySelector<HTMLFormElement>('[data-price-form]');
+  const box = document.querySelector('[data-price-box]');
+  const locale = (form?.dataset.locale as Locale) ?? 'nl';
+  const provider = form?.dataset.slug ? getProviderBySlug(form.dataset.slug) : undefined;
+
+  function queryFromForm(): SearchQuery {
+    if (!form) return defaultSearchQuery();
+    const data = new FormData(form);
+    const params = new URLSearchParams();
+    const type = String(data.get('type') ?? 'tent');
+    const party = String(data.get('party') ?? '2');
+    params.set('type', type);
+    params.set('party', party);
+    params.set('electricity', data.get('electricity') ? '1' : '0');
+    params.set('parking', data.get('parking') ? '1' : '0');
+    return parseSearchParams(params) ?? { ...defaultSearchQuery(), stayType: type as SearchQuery['stayType'] };
+  }
+
+  function renderPrice(query: SearchQuery) {
+    if (!provider || !box) return;
+    const { price } = priceForProvider(provider, query);
+    const rows = price.breakdown.map((line) => {
+      const hint = line.optional ? productCopy.optional[locale] : productCopy.mandatory[locale];
+      return `<tr><th>${line.label}<span class="hint">${hint}</span></th><td>${formatEuro(line.amount, locale)}</td></tr>`;
+    }).join('');
+    const total = price.complete ? formatEuro(price.total, locale) : productCopy.incompletePrice[locale];
+    const warnings = price.warnings.map((warning) => `<li>${warning}</li>`).join('');
+    const table = price.breakdown.length
+      ? `<table><tbody>${rows}<tr class="total"><th>${productCopy.totalLabel[locale]}</th><td>${total}</td></tr></tbody></table>`
+      : `<p>${productCopy.incompletePrice[locale]}</p>`;
+    const heading = box.querySelector('h2')?.outerHTML ?? '';
+    box.innerHTML = `${heading}${table}${warnings ? `<ul class="warnings">${warnings}</ul>` : ''}`;
+  }
+
+  if (form && provider) {
+    const fromUrl = parseSearchParams(new URLSearchParams(window.location.search));
+    if (fromUrl) {
+      const type = form.elements.namedItem('type') as HTMLSelectElement | null;
+      const party = form.elements.namedItem('party') as HTMLSelectElement | null;
+      const electricity = form.elements.namedItem('electricity') as HTMLInputElement | null;
+      const parking = form.elements.namedItem('parking') as HTMLInputElement | null;
+      if (type) type.value = fromUrl.stayType;
+      if (party) {
+        party.value = fromUrl.partySize >= 5 ? '5plus' : fromUrl.partySize === 3 || fromUrl.partySize === 4 ? '3-4' : String(fromUrl.partySize);
+      }
+      if (electricity) electricity.checked = fromUrl.electricity;
+      if (parking) parking.checked = fromUrl.parking;
+      renderPrice(fromUrl);
+    }
+    form.addEventListener('change', () => renderPrice(queryFromForm()));
+  }
+
   trackBrowserEvent('provider_view', { provider: document.querySelector<HTMLFormElement>('[data-lead-form]')?.dataset.provider });
   document.querySelectorAll('[data-outbound]').forEach((link) => {
     link.addEventListener('click', () => {
       trackBrowserEvent('outbound_booking_click', { provider: (link as HTMLElement).dataset.outbound });
     });
   });
-  document.querySelectorAll<HTMLFormElement>('[data-lead-form]').forEach((form) => {
-    form.addEventListener('submit', async (event) => {
+  document.querySelectorAll<HTMLFormElement>('[data-lead-form]').forEach((leadForm) => {
+    leadForm.addEventListener('submit', async (event) => {
       event.preventDefault();
-      const status = form.querySelector('.status');
-      const payload = Object.fromEntries(new FormData(form).entries());
+      const status = leadForm.querySelector('.status');
+      const payload = Object.fromEntries(new FormData(leadForm).entries());
       const response = await fetch('/api/submit-lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -145,7 +230,7 @@ const bookingHref = provider.bookingUrl || provider.websiteUrl;
       });
       const result = await response.json();
       if (status) status.textContent = response.ok ? 'Verstuurd.' : result.error || 'Fout';
-      if (response.ok) form.reset();
+      if (response.ok) leadForm.reset();
     });
   });
 </script>
@@ -180,4 +265,17 @@ const bookingHref = provider.bookingUrl || provider.websiteUrl;
   .lead-form input, .lead-form textarea { font: inherit; padding: var(--space-2); border-radius: var(--radius-base); border: 1px solid var(--color-border); }
   .honeypot { position: absolute; left: -9999px; }
   .verified { font-size: var(--font-size-sm); opacity: 0.8; }
+  .scenario-form fieldset {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-base);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    align-items: end;
+    padding: var(--space-4);
+    margin: 0 0 var(--space-4);
+  }
+  .scenario-form label { display: flex; flex-direction: column; gap: var(--space-1); font-weight: 600; font-size: var(--font-size-sm); }
+  .scenario-form .check { flex-direction: row; align-items: center; }
+  .scenario-form select { font: inherit; padding: var(--space-2); border-radius: var(--radius-base); border: 1px solid var(--color-border); }
 </style>
