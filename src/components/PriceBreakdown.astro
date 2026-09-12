@@ -1,0 +1,87 @@
+---
+import type { Locale } from '../i18n/ui';
+import type { PriceResult } from '../../packages/pricing-engine/src/index.ts';
+import { formatEuro } from '../lib/format';
+import { productCopy } from '../lib/copy';
+
+interface Props {
+  locale: Locale;
+  price: PriceResult;
+}
+
+const { locale, price } = Astro.props;
+---
+
+<section class="price-box">
+  <h2>{productCopy.breakdownTitle[locale]}</h2>
+  {price.breakdown.length === 0 ? (
+    <p>{productCopy.incompletePrice[locale]}</p>
+  ) : (
+    <table>
+      <tbody>
+        {price.breakdown.map((line) => (
+          <tr>
+            <th>
+              {line.label}
+              <span class="hint">{line.optional ? productCopy.optional[locale] : productCopy.mandatory[locale]}</span>
+            </th>
+            <td>{formatEuro(line.amount, locale)}</td>
+          </tr>
+        ))}
+        <tr class="total">
+          <th>{productCopy.totalLabel[locale]}</th>
+          <td>{price.complete ? formatEuro(price.total, locale) : productCopy.incompletePrice[locale]}</td>
+        </tr>
+      </tbody>
+    </table>
+  )}
+  {price.warnings.length > 0 && (
+    <ul class="warnings">
+      {price.warnings.map((warning) => <li>{warning}</li>)}
+    </ul>
+  )}
+  {price.deposit != null && (
+    <p class="deposit">{locale === 'de' ? 'Kaution' : locale === 'en' ? 'Deposit' : 'Borg'}: {formatEuro(price.deposit, locale)}</p>
+  )}
+</section>
+
+<style>
+  .price-box {
+    background: var(--color-secondary);
+    border-radius: var(--radius-base);
+    padding: var(--space-4);
+  }
+  .price-box h2 {
+    margin-top: 0;
+    color: var(--color-accent-1);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th {
+    text-align: left;
+    font-weight: 500;
+    padding: var(--space-2) 0;
+  }
+  td {
+    text-align: right;
+    font-weight: 700;
+  }
+  .hint {
+    display: block;
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+    opacity: 0.7;
+  }
+  .total th,
+  .total td {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-3);
+    font-size: var(--font-size-lg);
+  }
+  .warnings {
+    color: var(--color-accent-1);
+    padding-left: var(--space-4);
+  }
+</style>

@@ -1,0 +1,96 @@
+---
+import type { Locale } from '../i18n/ui';
+import { productCopy } from '../lib/copy';
+import { getLocalizedPath } from '../i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const comparePath = getLocalizedPath('/vergelijk', locale);
+---
+
+<div class="compare-bar" data-compare-bar hidden>
+  <p>
+    <span data-compare-count>0</span>/3 {locale === 'de' ? 'Campings gewählt' : locale === 'en' ? 'campsites selected' : 'campings geselecteerd'}
+  </p>
+  <a class="compare-link" data-compare-link href={comparePath}>{productCopy.compareNow[locale]}</a>
+</div>
+
+<style>
+  .compare-bar {
+    position: sticky;
+    bottom: var(--space-3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-3);
+    background: var(--color-text-dark);
+    color: var(--color-text-light);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-base);
+    z-index: 20;
+  }
+  .compare-link {
+    color: var(--color-text-dark);
+    background: var(--color-accent-2);
+    text-decoration: none;
+    font-weight: 700;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-base);
+  }
+  .compare-bar[hidden] { display: none; }
+</style>
+
+<script>
+  const STORAGE_KEY = 'vierdaagse-compare';
+  const maxItems = 3;
+
+  function read(): string[] {
+    try {
+      const raw = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      return Array.isArray(raw) ? raw.filter((item) => typeof item === 'string').slice(0, maxItems) : [];
+    } catch {
+      return [];
+    }
+  }
+
+  function write(slugs: string[]) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(slugs.slice(0, maxItems)));
+    sync();
+  }
+
+  function sync() {
+    const slugs = read();
+    const bar = document.querySelector<HTMLElement>('[data-compare-bar]');
+    const count = document.querySelector('[data-compare-count]');
+    const link = document.querySelector<HTMLAnchorElement>('[data-compare-link]');
+    if (count) count.textContent = String(slugs.length);
+    if (bar) bar.hidden = slugs.length === 0;
+    if (link) {
+      const url = new URL(link.href, window.location.origin);
+      url.searchParams.set('ids', slugs.join(','));
+      link.href = `${url.pathname}?${url.searchParams.toString()}`;
+    }
+    document.querySelectorAll<HTMLButtonElement>('[data-compare-toggle]').forEach((button) => {
+      const slug = button.dataset.compareToggle;
+      button.classList.toggle('is-selected', Boolean(slug && slugs.includes(slug)));
+    });
+  }
+
+  document.addEventListener('click', (event) => {
+    const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-compare-toggle]');
+    if (!button?.dataset.compareToggle) return;
+    const slug = button.dataset.compareToggle;
+    const current = read();
+    if (current.includes(slug)) {
+      write(current.filter((item) => item !== slug));
+      return;
+    }
+    if (current.length >= maxItems) return;
+    write([...current, slug]);
+  });
+
+  sync();
+</script>

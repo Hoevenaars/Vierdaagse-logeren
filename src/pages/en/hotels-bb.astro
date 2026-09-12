@@ -9,10 +9,11 @@ const hotels = hotelsData.hotels.filter((h: any) => h.status === 'gepubliceerd')
 const locale = 'en' as const;
 function v(field: Record<string, string>) { return field[locale]?.trim() ? field[locale] : field.nl; }
 function vArr(field: Record<string, string[]>) { return field[locale]?.length ? field[locale] : field.nl; }
-const links = { campingPath: '/camping', particulierPath: '/particuliere-verhuur' };
+const links = { campingPath: '/en/campings', particulierPath: '/en/particuliere-verhuur' };
 ---
 
 <ContentPage title={v(data.paginaTitel)} description={v(data.seoBeschrijving)} locale={locale} h1={v(data.titel)}>
+  <p class="callout callout--tip">Looking for a Four Days Marches campsite? <a href="/en/campings">Compare total price, distance to the Wedren and facilities</a>.</p>
   <p>{v(data.intro)}</p>
 
   <h2>{v(data.verwachtTitel)}</h2>

@@ -1,0 +1,159 @@
+---
+import type { Locale } from '../i18n/ui';
+import type { SearchMatch } from '../lib/search';
+import { formatEuro, formatKm, formatMinutes } from '../lib/format';
+import { availabilityLabel, productCopy, transportLabel } from '../lib/copy';
+import { amenityLabel } from '../../packages/database/src/amenities.ts';
+import { getLocalizedPath } from '../i18n/utils';
+
+interface Props {
+  locale: Locale;
+  match: SearchMatch;
+  primary?: boolean;
+}
+
+const { locale, match, primary = false } = Astro.props;
+const { provider, ranked, price } = match;
+const href = getLocalizedPath(`/campings/${provider.slug}`, locale);
+const status = provider.availability[0]?.status ?? 'unknown';
+const highlightAmenities = provider.amenities.filter((item) => item.available).slice(0, 4);
+---
+
+<article
+  class:list={['provider-card', primary && 'provider-card--primary']}
+  data-provider-card
+  data-slug={provider.slug}
+  data-featured={provider.featured ? '1' : '0'}
+>
+  <div class="card-top">
+    <p class="kicker">
+      {provider.city}
+      {provider.featured && <span class="badge">{productCopy.sponsored[locale]}</span>}
+    </p>
+    <h3><a href={href} data-result-click={provider.slug}>{provider.name}</a></h3>
+    <p class="score">{ranked.matchPercent}% {productCopy.matchScore[locale]}</p>
+  </div>
+  <dl class="facts">
+    <div>
+      <dt>{productCopy.totalLabel[locale]}</dt>
+      <dd>
+        {price.complete ? formatEuro(price.total, locale) : productCopy.incompletePrice[locale]}
+      </dd>
+    </div>
+    <div>
+      <dt>Wedren</dt>
+      <dd>{formatKm(provider.distanceToWedrenKm, locale)} · {formatMinutes(provider.cyclingMinutesToWedren, locale)}</dd>
+    </div>
+    <div>
+      <dt>{locale === 'de' ? 'Anreise' : locale === 'en' ? 'Transport' : 'Vervoer'}</dt>
+      <dd>{provider.transportModes.map((mode) => transportLabel(locale, mode)).join(' · ')}</dd>
+    </div>
+    <div>
+      <dt>{locale === 'de' ? 'Status' : locale === 'en' ? 'Status' : 'Status'}</dt>
+      <dd>{availabilityLabel(locale, status)}</dd>
+    </div>
+  </dl>
+  <ul class="amenities">
+    {highlightAmenities.map((item) => <li>{amenityLabel(item.amenityId, locale)}</li>)}
+  </ul>
+  <div class="actions">
+    <a class="button" href={href} data-result-click={provider.slug}>{productCopy.details[locale]}</a>
+    <button type="button" class="button button--ghost" data-compare-toggle={provider.slug}>{productCopy.compare[locale]}</button>
+  </div>
+</article>
+
+<style>
+  .provider-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-base);
+    padding: var(--space-4);
+    background: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  .provider-card--primary {
+    border-color: var(--color-primary);
+    box-shadow: 0 8px 24px rgba(15, 110, 86, 0.08);
+  }
+  .kicker {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-2);
+    margin: 0;
+    font-size: var(--font-size-sm);
+    color: var(--color-accent-1);
+    font-weight: 700;
+  }
+  .badge {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+    border-radius: 99px;
+    padding: 0.1rem 0.6rem;
+    font-size: 0.75rem;
+  }
+  h3 {
+    margin: 0;
+    font-size: var(--font-size-lg);
+  }
+  h3 a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+  .score {
+    margin: 0;
+    font-weight: 700;
+  }
+  .facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+    margin: 0;
+  }
+  .facts dt {
+    font-size: var(--font-size-sm);
+    opacity: 0.75;
+  }
+  .facts dd {
+    margin: 0;
+    font-weight: 600;
+  }
+  .amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .amenities li {
+    background: var(--color-secondary);
+    border-radius: 99px;
+    padding: 0.2rem 0.7rem;
+    font-size: var(--font-size-sm);
+  }
+  .actions {
+    display: flex;
+    gap: var(--space-2);
+    margin-top: auto;
+  }
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-base);
+    background: var(--color-primary);
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-weight: 700;
+    border: 0;
+    cursor: pointer;
+    font: inherit;
+  }
+  .button--ghost {
+    background: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+  }
+</style>

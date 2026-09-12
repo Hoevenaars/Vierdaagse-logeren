@@ -1,0 +1,83 @@
+---
+import type { Locale } from '../i18n/ui';
+import { WEDREN } from '../../packages/database/src/index.ts';
+import type { Provider } from '../../packages/database/src/index.ts';
+import { productCopy } from '../lib/copy';
+
+interface Props {
+  locale: Locale;
+  providers: Provider[];
+}
+
+const { locale, providers } = Astro.props;
+const markers = providers.map((provider) => ({
+  slug: provider.slug,
+  name: provider.name,
+  city: provider.city,
+  lat: provider.latitude,
+  lon: provider.longitude,
+}));
+---
+
+<section class="map-block">
+  <h2>{productCopy.mapTitle[locale]}</h2>
+  <div
+    class="map"
+    data-provider-map
+    data-wedren={JSON.stringify(WEDREN)}
+    data-markers={JSON.stringify(markers)}
+  ></div>
+  <p class="map-note">
+    {locale === 'de'
+      ? 'Karte: OpenStreetMap. Marker zeigen die Campings, der orangefarbene Punkt ist die Wedren.'
+      : locale === 'en'
+        ? 'Map: OpenStreetMap. Markers are campsites; the orange point is the Wedren start.'
+        : 'Kaart: OpenStreetMap. Markers zijn campings; het oranje punt is de Wedren.'}
+  </p>
+</section>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<style>
+  .map-block { margin: var(--space-6) 0; }
+  .map-block h2 { color: var(--color-accent-1); }
+  .map {
+    height: 22rem;
+    border-radius: var(--radius-base);
+    border: 1px solid var(--color-border);
+    z-index: 0;
+  }
+  .map-note { font-size: var(--font-size-sm); opacity: 0.8; }
+</style>
+
+<script>
+  const el = document.querySelector<HTMLElement>('[data-provider-map]');
+  if (el && !el.dataset.ready) {
+    el.dataset.ready = '1';
+    const leaflet = document.createElement('script');
+    leaflet.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+    leaflet.onload = () => {
+      const L = (window as unknown as { L: any }).L;
+      const wedren = JSON.parse(el.dataset.wedren || '{}');
+      const markers = JSON.parse(el.dataset.markers || '[]') as Array<{ lat: number; lon: number; name: string; city: string }>;
+      const map = L.map(el).setView([wedren.latitude, wedren.longitude], 10);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap',
+        maxZoom: 18,
+      }).addTo(map);
+      const bounds = L.latLngBounds([[wedren.latitude, wedren.longitude]]);
+      L.circleMarker([wedren.latitude, wedren.longitude], {
+        radius: 9,
+        color: '#D85A30',
+        fillColor: '#EF9F27',
+        fillOpacity: 1,
+      }).addTo(map).bindPopup('Wedren, Nijmegen');
+      for (const marker of markers) {
+        bounds.extend([marker.lat, marker.lon]);
+        L.marker([marker.lat, marker.lon]).addTo(map).bindPopup(`${marker.name}<br>${marker.city}`);
+      }
+      if (markers.length) map.fitBounds(bounds.pad(0.15));
+    };
+    document.head.appendChild(leaflet);
+  }
+</script>

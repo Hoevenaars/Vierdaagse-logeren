@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CampingsView from '../../../components/CampingsView.astro';
+import { productCopy } from '../../../lib/copy';
+
+const locale = 'en' as const;
+---
+
+<BaseLayout
+  title="Compare Four Days Marches campsites | Vierdaagse Logeren"
+  description="Compare Four Days Marches campsites on total price, distance to the Wedren, transport and facilities."
+  locale={locale}
+>
+  <CampingsView
+    locale={locale}
+    heading={productCopy.allCampings[locale]}
+    intro="Filter by tent, caravan, camper or ready-pitched tent. We show three matches first, then other relevant sites."
+  />
+</BaseLayout>

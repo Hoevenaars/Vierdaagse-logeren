@@ -107,10 +107,8 @@ const hreflangMap = {
         </button>
         <nav id="main-nav" class="main-nav" aria-label="Hoofdnavigatie">
           <ul>
-            <li><a href={getLocalizedPath('/camping', locale)}>{t('nav.camping')}</a></li>
-            <li><a href={getLocalizedPath('/particuliere-verhuur', locale)}>{t('nav.particulier')}</a></li>
-            <li><a href={getLocalizedPath('/hotels-bb', locale)}>{t('nav.hotels')}</a></li>
-            <li><a href={getLocalizedPath('/blarenzorg', locale)}>{t('nav.blarenzorg')}</a></li>
+            <li><a href={getLocalizedPath('/campings', locale)}>{t('nav.camping')}</a></li>
+            <li><a href={getLocalizedPath('/vergelijk', locale)}>{t('nav.vergelijken')}</a></li>
             <li><a href={getLocalizedPath('/gebied', locale)}>{t('nav.gebieden')}</a></li>
             <li><a href={getLocalizedPath('/gids/wanneer-boeken', locale)}>{t('nav.gids')}</a></li>
           </ul>
@@ -140,6 +138,9 @@ const hreflangMap = {
           <a href={getLocalizedPath('/contact', locale)}>{t('nav.contact')}</a>
           <a href={getLocalizedPath('/privacy', locale)}>{t('nav.privacy')}</a>
           <a href={getLocalizedPath('/gids/internationale-lopers', locale)}>{t('nav.intlGids')}</a>
+          <a href={getLocalizedPath('/hotels-bb', locale)}>{t('nav.hotels')}</a>
+          <a href={getLocalizedPath('/particuliere-verhuur', locale)}>{t('nav.particulier')}</a>
+          <a href={getLocalizedPath('/blarenzorg', locale)}>{t('nav.blarenzorg')}</a>
         </nav>
         <p class="disclosure">{t('footer.disclosure')}</p>
         <p class="copyright">© 2026 Vierdaagse Logeren · <a href="mailto:contact@vierdaagselogeren.nl">contact@vierdaagselogeren.nl</a></p>

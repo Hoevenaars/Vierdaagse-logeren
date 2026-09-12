@@ -1,15 +1,16 @@
 # Vierdaagse Logeren
 
-> Onafhankelijk platform dat wandelaars en bezoekers helpt op tijd een slaapplek te
-> vinden tijdens de Vierdaagse Nijmegen. Niet verbonden aan Stichting DE4D of de
-> gemeente Nijmegen.
+> Vergelijkingsplatform voor Vierdaagsecampings rond Nijmegen: totale prijs,
+> afstand tot de Wedren, vervoer en voorzieningen. Onafhankelijk van Stichting
+> DE4D en de gemeente Nijmegen.
 
 ## Kernpagina's
 
-- [Homepage](https://vierdaagselogeren.nl/): overzicht van alle verblijfsopties
-- [Camping](https://vierdaagselogeren.nl/camping): kamperen tijdens de Vierdaagse
-- [Particuliere verhuur](https://vierdaagselogeren.nl/particuliere-verhuur): logeren bij een local
-- [Hotels & B&B](https://vierdaagselogeren.nl/hotels-bb): hotelovernachtingen in de regio
+- [Homepage](https://vierdaagselogeren.nl/): keuzehulp naar een camping-shortlist
+- [Campings](https://vierdaagselogeren.nl/campings): vergelijking en filters
+- [Vergelijken](https://vierdaagselogeren.nl/vergelijk): maximaal drie terreinen naast elkaar
+- [Particuliere verhuur](https://vierdaagselogeren.nl/particuliere-verhuur): naslag, geen kerncategorie
+- [Hotels & B&B](https://vierdaagselogeren.nl/hotels-bb): naslag, geen kerncategorie
 - [Wanneer boeken](https://vierdaagselogeren.nl/gids/wanneer-boeken): planningsgids
 - [Internationale lopers](https://vierdaagselogeren.nl/gids/internationale-lopers): gids voor buitenlandse bezoekers
 - [FAQ](https://vierdaagselogeren.nl/faq): veelgestelde vragen

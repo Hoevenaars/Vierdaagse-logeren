@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CampingsView from '../../components/CampingsView.astro';
+import { productCopy } from '../../lib/copy';
+
+const locale = 'nl' as const;
+---
+
+<BaseLayout
+  title="Vierdaagsecampings vergelijken | Vierdaagse Logeren"
+  description="Vergelijk Vierdaagsecampings op totale prijs, afstand tot de Wedren, vervoer en voorzieningen."
+  locale={locale}
+>
+  <CampingsView
+    locale={locale}
+    heading={productCopy.allCampings[locale]}
+    intro="Filter op tent, caravan, camper of ingerichte tent. We tonen eerst drie matches en daarna de overige relevante terreinen."
+  />
+</BaseLayout>

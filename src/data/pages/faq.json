@@ -46,9 +46,21 @@
         "en": "What does an overnight stay cost during the Four Days Marches?"
       },
       "antwoord": {
-        "nl": "Dat verschilt per type verblijf: [kamperen]({{campingPath}}) is doorgaans het goedkoopst, [particuliere verhuur]({{particulierPath}}) zit er vaak tussenin, en [hotels]({{hotelsPath}}) zijn het duurst, zeker centraal gelegen.",
-        "de": "Das hängt von der Unterkunftsart ab: [Camping]({{campingPath}}) ist meist am günstigsten, [Privatunterkünfte]({{particulierPath}}) liegen dazwischen, und [Hotels]({{hotelsPath}}) sind am teuersten, besonders zentral gelegene.",
-        "en": "It depends on the type of stay: [camping]({{campingPath}}) is usually the cheapest, [private stays]({{particulierPath}}) fall in between, and [hotels]({{hotelsPath}}) are the most expensive, especially centrally located ones."
+        "nl": "We vergelijken de [totale verblijfskosten van Vierdaagsecampings]({{campingPath}}): standplaats, personen, stroom, parkeren en verplichte toeslagen. Hotels en particuliere verhuur blijven naslag, niet de kernvergelijking.",
+        "de": "Wir vergleichen die [Gesamtkosten von Vierdaagse-Campings]({{campingPath}}): Stellplatz, Personen, Strom, Parken und Pflichtgebühren. Hotels und Privatunterkünfte bleiben Nachschlage-Seiten.",
+        "en": "We compare [total stay costs of Four Days Marches campsites]({{campingPath}}): pitch, people, electricity, parking and mandatory fees. Hotels and private stays remain reference pages."
+      }
+    },
+    {
+      "vraag": {
+        "nl": "Hoe werkt de keuzehulp?",
+        "de": "Wie funktioniert die Auswahlhilfe?",
+        "en": "How does the match tool work?"
+      },
+      "antwoord": {
+        "nl": "Op de homepage kies je verblijfstype, gezelschap en wat belangrijk is. Daarna zie je maximaal drie primaire matches plus overige relevante [Vierdaagsecampings]({{campingPath}}), met matchscore, totale prijs en afstand tot de Wedren.",
+        "de": "Auf der Startseite wählst du Unterkunftsart, Gruppe und Prioritäten. Danach siehst du bis zu drei Haupttreffer plus weitere [Vierdaagse-Campings]({{campingPath}}), mit Matchscore, Gesamtpreis und Distanz zur Wedren.",
+        "en": "On the homepage you choose stay type, group size and what matters. You then see up to three primary matches plus other relevant [campsites]({{campingPath}}), with match score, total price and distance to the Wedren."
       }
     },
     {

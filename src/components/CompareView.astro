@@ -1,0 +1,102 @@
+---
+import type { Locale } from '../i18n/ui';
+import { getPublishedProviders } from '../lib/providers';
+import { defaultSearchQuery, priceForProvider } from '../lib/search';
+import { amenityLabel } from '../../packages/database/src/amenities.ts';
+import { productCopy } from '../lib/copy';
+import { getLocalizedPath } from '../i18n/utils';
+import CompareBar from './CompareBar.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const query = defaultSearchQuery();
+const payload = getPublishedProviders().map((provider) => ({
+  slug: provider.slug,
+  name: provider.name,
+  city: provider.city,
+  href: getLocalizedPath(`/campings/${provider.slug}`, locale),
+  total: priceForProvider(provider, query).price.total,
+  complete: priceForProvider(provider, query).price.complete,
+  km: provider.distanceToWedrenKm,
+  bike: provider.cyclingMinutesToWedren,
+  transport: provider.transportModes,
+  status: provider.availability[0]?.status ?? 'unknown',
+  amenities: provider.amenities.filter((item) => item.available).map((item) => item.amenityId),
+}));
+---
+
+<section>
+  <h1>{locale === 'de' ? 'Campings vergleichen' : locale === 'en' ? 'Compare campsites' : 'Campings vergelijken'}</h1>
+  <p>{productCopy.scenario[locale]} · max. 3</p>
+  <p id="compare-empty">
+    {locale === 'de' ? 'Wähle zwei oder drei Campings auf der Übersicht.' : locale === 'en' ? 'Pick two or three campsites from the list.' : 'Kies twee of drie campings op de overzichtspagina.'}
+    <a href={getLocalizedPath('/campings', locale)}> {productCopy.allCampings[locale]}</a>
+  </p>
+  <div class="table-wrap" id="compare-table-wrap" hidden></div>
+  <script id="compare-data" type="application/json" set:html={JSON.stringify({ locale, payload, labels: productCopy.availability, amenityLabels: Object.fromEntries(payload.flatMap((row) => row.amenities).filter((id, index, all) => all.indexOf(id) === index).map((id) => [id, amenityLabel(id, locale)])) })} />
+</section>
+<CompareBar locale={locale} />
+
+<style>
+  h1 { color: var(--color-primary); }
+  .table-wrap { overflow-x: auto; }
+  :global(table.compare-table) { width: 100%; border-collapse: collapse; min-width: 40rem; }
+  :global(table.compare-table th),
+  :global(table.compare-table td) { border-bottom: 1px solid var(--color-border); padding: var(--space-3); text-align: left; vertical-align: top; }
+  a { color: var(--color-primary); font-weight: 700; }
+</style>
+
+<script>
+  type Row = {
+    slug: string;
+    name: string;
+    city: string;
+    href: string;
+    total: number | null;
+    complete: boolean;
+    km: number;
+    bike: number;
+    transport: string[];
+    status: string;
+    amenities: string[];
+  };
+
+  const node = document.getElementById('compare-data');
+  const wrap = document.getElementById('compare-table-wrap');
+  const empty = document.getElementById('compare-empty');
+  if (node && wrap) {
+    const data = JSON.parse(node.textContent || '{}') as {
+      payload: Row[];
+      labels: Record<string, { nl: string; en: string; de: string }>;
+      amenityLabels: Record<string, string>;
+      locale: 'nl' | 'en' | 'de';
+    };
+    const fromUrl = new URLSearchParams(window.location.search).get('ids')?.split(',').filter(Boolean) ?? [];
+    let fromStore: string[] = [];
+    try {
+      const parsed = JSON.parse(localStorage.getItem('vierdaagse-compare') || '[]');
+      fromStore = Array.isArray(parsed) ? parsed.filter((item: unknown) => typeof item === 'string') : [];
+    } catch {
+      fromStore = [];
+    }
+    const slugs = (fromUrl.length ? fromUrl : fromStore).slice(0, 3);
+    const rows = slugs.map((slug) => data.payload.find((row) => row.slug === slug)).filter(Boolean) as Row[];
+    if (rows.length >= 2) {
+      empty?.setAttribute('hidden', '');
+      wrap.hidden = false;
+      const amenityIds = [...new Set(rows.flatMap((row) => row.amenities))];
+      const euro = (value: number | null) => value == null ? '—' : new Intl.NumberFormat('nl-NL', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(value);
+      wrap.innerHTML = `<table class="compare-table"><thead><tr><th></th>${rows.map((row) => `<th><a href="${row.href}">${row.name}</a><div>${row.city}</div></th>`).join('')}</tr></thead><tbody>
+        <tr><th>Totaal</th>${rows.map((row) => `<td>${row.complete ? euro(row.total) : '—'}</td>`).join('')}</tr>
+        <tr><th>Wedren</th>${rows.map((row) => `<td>${row.km} km</td>`).join('')}</tr>
+        <tr><th>Fiets</th>${rows.map((row) => `<td>${row.bike} min</td>`).join('')}</tr>
+        <tr><th>Vervoer</th>${rows.map((row) => `<td>${row.transport.join(', ')}</td>`).join('')}</tr>
+        <tr><th>Status</th>${rows.map((row) => `<td>${data.labels[row.status]?.[data.locale] ?? row.status}</td>`).join('')}</tr>
+        ${amenityIds.map((id) => `<tr><th>${data.amenityLabels[id] ?? id}</th>${rows.map((row) => `<td>${row.amenities.includes(id) ? 'Ja' : 'Nee'}</td>`).join('')}</tr>`).join('')}
+      </tbody></table>`;
+    }
+  }
+</script>

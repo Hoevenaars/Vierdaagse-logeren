@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CompareView from '../../components/CompareView.astro';
+
+const locale = 'en' as const;
+---
+
+<BaseLayout
+  title="Compare Four Days Marches campsites | Vierdaagse Logeren"
+  description="Compare up to three campsites on total price, distance to the Wedren, transport and facilities."
+  locale={locale}
+>
+  <CompareView locale={locale} />
+</BaseLayout>
